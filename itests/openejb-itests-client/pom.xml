@@ -99,8 +99,12 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>activemq-ra-shade</artifactId>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-ra</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-client</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

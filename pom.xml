@@ -208,7 +208,7 @@
     <!-- com.sun -->
     <version.impl.saaj>2.0.1</version.impl.saaj>
     <!-- org.apache -->
-    <version.activemq>5.18.3</version.activemq>
+    <version.activemq>6.0.0</version.activemq>
     <version.batchee>2.0.0-SNAPSHOT</version.batchee>
     <version.bval>3.0.0</version.bval>
     <version.cxf>4.0.3</version.cxf>
@@ -658,6 +658,14 @@
           <id>Apache Snapshots</id>
           <url>https://repository.apache.org/content/repositories/snapshots</url>
         </repository>
+        <repository>
+          <id>orgapacheactivemq-1381</id>
+          <name>orgapacheactivemq-1381</name>
+          <url>https://repository.apache.org/content/repositories/orgapacheactivemq-1381</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </repository>
       </repositories>
     </profile>
     <profile>
@@ -1019,6 +1027,15 @@
       <id>B_shibboleth</id>
       <name>OpenSAML</name>
       <url>https://build.shibboleth.net/nexus/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+
+    <repository>
+      <id>orgapacheactivemq-1381</id>
+      <name>orgapacheactivemq-1381</name>
+      <url>https://repository.apache.org/content/repositories/orgapacheactivemq-1381</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1415,15 +1432,9 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>activemq-ra-shade</artifactId>
-        <version>${project.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-ra</artifactId>
-          </exclusion>
-        </exclusions>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-ra</artifactId>
+        <version>${version.activemq}</version>
       </dependency>
       <dependency>
         <groupId>commons-net</groupId>
@@ -1432,30 +1443,23 @@
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
-        <artifactId>activemq-client-jakarta</artifactId>
+        <artifactId>activemq-client</artifactId>
         <version>${version.activemq}</version>
       </dependency>
       <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>activemq-kahadb-store-shade</artifactId>
-        <version>${project.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-kahadb-store</artifactId>
-          </exclusion>
-        </exclusions>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-kahadb-store</artifactId>
+        <version>${version.activemq}</version>
       </dependency>
       <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>activemq-broker-shade</artifactId>
-        <version>${project.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-broker</artifactId>
-          </exclusion>
-        </exclusions>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-broker</artifactId>
+        <version>${version.activemq}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-ra</artifactId>
+        <version>${version.activemq}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
