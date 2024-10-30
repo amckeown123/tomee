@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAnyElement;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElements;
 import jakarta.xml.bind.annotation.XmlType;
@@ -48,8 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "faces-config-absoluteOrderingType", propOrder = {
-    "nameOrOthers",
-    "others"
+    "nameOrOthers"
 })
 public class FacesAbsoluteOrdering {
 
@@ -58,9 +56,6 @@ public class FacesAbsoluteOrdering {
         @XmlElement(name = "name", type = String.class)
     })
     protected List<Object> nameOrOthers;
-
-    @XmlAnyElement
-    protected List<Object> others;
 
     /**
      * Gets the value of the nameOrOthers property.

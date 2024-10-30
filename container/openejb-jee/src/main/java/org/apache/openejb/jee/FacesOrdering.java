@@ -18,10 +18,7 @@ package org.apache.openejb.jee;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAnyElement;
 import jakarta.xml.bind.annotation.XmlType;
-
-import java.util.List;
 
 
 /**
@@ -47,17 +44,12 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "faces-config-orderingType", propOrder = {
     "after",
-    "before",
-    "others"
+    "before"
 })
 public class FacesOrdering {
 
     protected FacesOrderingOrdering after;
     protected FacesOrderingOrdering before;
-
-    @XmlAnyElement
-    protected List<Object> others;
-
 
     /**
      * Gets the value of the after property.

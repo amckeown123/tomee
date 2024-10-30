@@ -1,27 +1,21 @@
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+    * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.openejb.jee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import org.metatype.sxc.jaxb.JAXBObject;
 import org.metatype.sxc.jaxb.LifecycleCallback;
 import org.metatype.sxc.jaxb.RuntimeContext;
@@ -29,6 +23,11 @@ import org.metatype.sxc.util.Attribute;
 import org.metatype.sxc.util.XoXMLStreamReader;
 import org.metatype.sxc.util.XoXMLStreamWriter;
 
+import javax.xml.XMLConstants;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.apache.openejb.jee.FacesPropertyExtension$JAXB.readFacesPropertyExtension;
 import static org.apache.openejb.jee.FacesPropertyExtension$JAXB.writeFacesPropertyExtension;
@@ -41,35 +40,30 @@ import static org.apache.openejb.jee.Text$JAXB.writeText;
     "StringEquality"
 })
 public class FacesProperty$JAXB
-    extends JAXBObject<FacesProperty>
-{
+    extends JAXBObject<FacesProperty> {
 
 
     public FacesProperty$JAXB() {
         super(FacesProperty.class, null, new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-config-propertyType".intern()), Text$JAXB.class, Icon$JAXB.class, FacesPropertyExtension$JAXB.class);
     }
 
-    public static FacesProperty readFacesProperty(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public static FacesProperty readFacesProperty(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static void writeFacesProperty(XoXMLStreamWriter writer, FacesProperty facesProperty, RuntimeContext context)
-        throws Exception
-    {
+    public static void writeFacesProperty(final XoXMLStreamWriter writer, final FacesProperty facesProperty, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesProperty, context);
     }
 
-    public void write(XoXMLStreamWriter writer, FacesProperty facesProperty, RuntimeContext context)
-        throws Exception
-    {
+    public void write(final XoXMLStreamWriter writer, final FacesProperty facesProperty, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesProperty, context);
     }
 
-    public static final FacesProperty _read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final static FacesProperty _read(final XoXMLStreamReader reader, RuntimeContext context)
+        throws Exception {
 
         // Check for xsi:nil
         if (reader.isXsiNil()) {
@@ -80,7 +74,7 @@ public class FacesProperty$JAXB
             context = new RuntimeContext();
         }
 
-        FacesProperty facesProperty = new FacesProperty();
+        final FacesProperty facesProperty = new FacesProperty();
         context.beforeUnmarshal(facesProperty, LifecycleCallback.NONE);
 
         ArrayList<Text> descriptions = null;
@@ -89,114 +83,114 @@ public class FacesProperty$JAXB
         List<FacesPropertyExtension> propertyExtension = null;
 
         // Check xsi:type
-        QName xsiType = reader.getXsiType();
-        if (xsiType!= null) {
-            if (("faces-config-propertyType"!= xsiType.getLocalPart())||("http://java.sun.com/xml/ns/javaee"!= xsiType.getNamespaceURI())) {
+        final QName xsiType = reader.getXsiType();
+        if (xsiType != null) {
+            if (("faces-config-propertyType" != xsiType.getLocalPart()) || ("http://java.sun.com/xml/ns/javaee" != xsiType.getNamespaceURI())) {
                 return context.unexpectedXsiType(reader, FacesProperty.class);
             }
         }
 
         // Read attributes
-        for (Attribute attribute: reader.getAttributes()) {
-            if (("id" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+        for (final Attribute attribute : reader.getAttributes()) {
+            if (("id" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: id
-                String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
+                final String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
                 context.addXmlId(reader, id, facesProperty);
                 facesProperty.id = id;
-            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI!= attribute.getNamespace()) {
+            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI != attribute.getNamespace()) {
                 context.unexpectedAttribute(attribute, new QName("", "id"));
             }
         }
 
         // Read elements
-        for (XoXMLStreamReader elementReader: reader.getChildElements()) {
-            if (("description" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+        for (final XoXMLStreamReader elementReader : reader.getChildElements()) {
+            if (("description" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: descriptions
-                Text descriptionsItem = readText(elementReader, context);
+                final Text descriptionsItem = readText(elementReader, context);
                 if (descriptions == null) {
-                    descriptions = new ArrayList<>();
+                    descriptions = new ArrayList<Text>();
                 }
                 descriptions.add(descriptionsItem);
-            } else if (("display-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("display-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: displayNames
-                Text displayNamesItem = readText(elementReader, context);
+                final Text displayNamesItem = readText(elementReader, context);
                 if (displayNames == null) {
-                    displayNames = new ArrayList<>();
+                    displayNames = new ArrayList<Text>();
                 }
                 displayNames.add(displayNamesItem);
-            } else if (("icon" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("icon" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: icon
-                Icon iconItem = readIcon(elementReader, context);
+                final Icon iconItem = readIcon(elementReader, context);
                 if (icon == null) {
                     icon = facesProperty.icon;
-                    if (icon!= null) {
+                    if (icon != null) {
                         icon.clear();
                     } else {
-                        icon = new LocalCollection<>();
+                        icon = new LocalCollection<Icon>();
                     }
                 }
                 icon.add(iconItem);
-            } else if (("property-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("property-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: propertyName
-                String propertyNameRaw = elementReader.getElementText();
+                final String propertyNameRaw = elementReader.getElementAsString();
 
-                String propertyName;
+                final String propertyName;
                 try {
                     propertyName = Adapters.collapsedStringAdapterAdapter.unmarshal(propertyNameRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 facesProperty.propertyName = propertyName;
-            } else if (("property-class" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("property-class" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: propertyClass
-                String propertyClassRaw = elementReader.getElementText();
+                final String propertyClassRaw = elementReader.getElementAsString();
 
-                String propertyClass;
+                final String propertyClass;
                 try {
                     propertyClass = Adapters.collapsedStringAdapterAdapter.unmarshal(propertyClassRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 facesProperty.propertyClass = propertyClass;
-            } else if (("default-value" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("default-value" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: defaultValue
-                String defaultValueRaw = elementReader.getElementText();
+                final String defaultValueRaw = elementReader.getElementAsString();
 
-                String defaultValue;
+                final String defaultValue;
                 try {
                     defaultValue = Adapters.collapsedStringAdapterAdapter.unmarshal(defaultValueRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 facesProperty.defaultValue = defaultValue;
-            } else if (("suggested-value" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("suggested-value" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: suggestedValue
-                String suggestedValueRaw = elementReader.getElementText();
+                final String suggestedValueRaw = elementReader.getElementAsString();
 
-                String suggestedValue;
+                final String suggestedValue;
                 try {
                     suggestedValue = Adapters.collapsedStringAdapterAdapter.unmarshal(suggestedValueRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 facesProperty.suggestedValue = suggestedValue;
-            } else if (("property-extension" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("property-extension" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: propertyExtension
-                FacesPropertyExtension propertyExtensionItem = readFacesPropertyExtension(elementReader, context);
+                final FacesPropertyExtension propertyExtensionItem = readFacesPropertyExtension(elementReader, context);
                 if (propertyExtension == null) {
                     propertyExtension = facesProperty.propertyExtension;
-                    if (propertyExtension!= null) {
+                    if (propertyExtension != null) {
                         propertyExtension.clear();
                     } else {
-                        propertyExtension = new ArrayList<>();
+                        propertyExtension = new ArrayList<FacesPropertyExtension>();
                     }
                 }
                 propertyExtension.add(propertyExtensionItem);
@@ -204,24 +198,24 @@ public class FacesProperty$JAXB
                 context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "description"), new QName("http://java.sun.com/xml/ns/javaee", "display-name"), new QName("http://java.sun.com/xml/ns/javaee", "icon"), new QName("http://java.sun.com/xml/ns/javaee", "property-name"), new QName("http://java.sun.com/xml/ns/javaee", "property-class"), new QName("http://java.sun.com/xml/ns/javaee", "default-value"), new QName("http://java.sun.com/xml/ns/javaee", "suggested-value"), new QName("http://java.sun.com/xml/ns/javaee", "property-extension"));
             }
         }
-        if (descriptions!= null) {
+        if (descriptions != null) {
             try {
-                facesProperty.setDescriptions(descriptions.toArray(new Text[descriptions.size()] ));
-            } catch (Exception e) {
+                facesProperty.setDescriptions(descriptions.toArray(new Text[descriptions.size()]));
+            } catch (final Exception e) {
                 context.setterError(reader, FacesProperty.class, "setDescriptions", Text[].class, e);
             }
         }
-        if (displayNames!= null) {
+        if (displayNames != null) {
             try {
-                facesProperty.setDisplayNames(displayNames.toArray(new Text[displayNames.size()] ));
-            } catch (Exception e) {
+                facesProperty.setDisplayNames(displayNames.toArray(new Text[displayNames.size()]));
+            } catch (final Exception e) {
                 context.setterError(reader, FacesProperty.class, "setDisplayNames", Text[].class, e);
             }
         }
-        if (icon!= null) {
+        if (icon != null) {
             facesProperty.icon = icon;
         }
-        if (propertyExtension!= null) {
+        if (propertyExtension != null) {
             facesProperty.propertyExtension = propertyExtension;
         }
 
@@ -230,40 +224,38 @@ public class FacesProperty$JAXB
         return facesProperty;
     }
 
-    public final FacesProperty read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final FacesProperty read(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static final void _write(XoXMLStreamWriter writer, FacesProperty facesProperty, RuntimeContext context)
-        throws Exception
-    {
+    public final static void _write(final XoXMLStreamWriter writer, final FacesProperty facesProperty, RuntimeContext context)
+        throws Exception {
         if (facesProperty == null) {
             writer.writeXsiNil();
-            return ;
+            return;
         }
 
         if (context == null) {
             context = new RuntimeContext();
         }
 
-        String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
-        if (FacesProperty.class!= facesProperty.getClass()) {
+        final String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
+        if (FacesProperty.class != facesProperty.getClass()) {
             context.unexpectedSubclass(writer, facesProperty, FacesProperty.class);
-            return ;
+            return;
         }
 
         context.beforeMarshal(facesProperty, LifecycleCallback.NONE);
 
 
         // ATTRIBUTE: id
-        String idRaw = facesProperty.id;
-        if (idRaw!= null) {
+        final String idRaw = facesProperty.id;
+        if (idRaw != null) {
             String id = null;
             try {
                 id = Adapters.collapsedStringAdapterAdapter.marshal(idRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(facesProperty, "id", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "id", id);
@@ -273,12 +265,12 @@ public class FacesProperty$JAXB
         Text[] descriptions = null;
         try {
             descriptions = facesProperty.getDescriptions();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.getterError(facesProperty, "descriptions", FacesProperty.class, "getDescriptions", e);
         }
-        if (descriptions!= null) {
-            for (Text descriptionsItem: descriptions) {
-                if (descriptionsItem!= null) {
+        if (descriptions != null) {
+            for (final Text descriptionsItem : descriptions) {
+                if (descriptionsItem != null) {
                     writer.writeStartElement(prefix, "description", "http://java.sun.com/xml/ns/javaee");
                     writeText(writer, descriptionsItem, context);
                     writer.writeEndElement();
@@ -292,12 +284,12 @@ public class FacesProperty$JAXB
         Text[] displayNames = null;
         try {
             displayNames = facesProperty.getDisplayNames();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.getterError(facesProperty, "displayNames", FacesProperty.class, "getDisplayNames", e);
         }
-        if (displayNames!= null) {
-            for (Text displayNamesItem: displayNames) {
-                if (displayNamesItem!= null) {
+        if (displayNames != null) {
+            for (final Text displayNamesItem : displayNames) {
+                if (displayNamesItem != null) {
                     writer.writeStartElement(prefix, "display-name", "http://java.sun.com/xml/ns/javaee");
                     writeText(writer, displayNamesItem, context);
                     writer.writeEndElement();
@@ -308,10 +300,10 @@ public class FacesProperty$JAXB
         }
 
         // ELEMENT: icon
-        LocalCollection<Icon> icon = facesProperty.icon;
-        if (icon!= null) {
-            for (Icon iconItem: icon) {
-                if (iconItem!= null) {
+        final LocalCollection<Icon> icon = facesProperty.icon;
+        if (icon != null) {
+            for (final Icon iconItem : icon) {
+                if (iconItem != null) {
                     writer.writeStartElement(prefix, "icon", "http://java.sun.com/xml/ns/javaee");
                     writeIcon(writer, iconItem, context);
                     writer.writeEndElement();
@@ -322,14 +314,14 @@ public class FacesProperty$JAXB
         }
 
         // ELEMENT: propertyName
-        String propertyNameRaw = facesProperty.propertyName;
+        final String propertyNameRaw = facesProperty.propertyName;
         String propertyName = null;
         try {
             propertyName = Adapters.collapsedStringAdapterAdapter.marshal(propertyNameRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(facesProperty, "propertyName", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (propertyName!= null) {
+        if (propertyName != null) {
             writer.writeStartElement(prefix, "property-name", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(propertyName);
             writer.writeEndElement();
@@ -338,14 +330,14 @@ public class FacesProperty$JAXB
         }
 
         // ELEMENT: propertyClass
-        String propertyClassRaw = facesProperty.propertyClass;
+        final String propertyClassRaw = facesProperty.propertyClass;
         String propertyClass = null;
         try {
             propertyClass = Adapters.collapsedStringAdapterAdapter.marshal(propertyClassRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(facesProperty, "propertyClass", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (propertyClass!= null) {
+        if (propertyClass != null) {
             writer.writeStartElement(prefix, "property-class", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(propertyClass);
             writer.writeEndElement();
@@ -354,38 +346,38 @@ public class FacesProperty$JAXB
         }
 
         // ELEMENT: defaultValue
-        String defaultValueRaw = facesProperty.defaultValue;
+        final String defaultValueRaw = facesProperty.defaultValue;
         String defaultValue = null;
         try {
             defaultValue = Adapters.collapsedStringAdapterAdapter.marshal(defaultValueRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(facesProperty, "defaultValue", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (defaultValue!= null) {
+        if (defaultValue != null) {
             writer.writeStartElement(prefix, "default-value", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(defaultValue);
             writer.writeEndElement();
         }
 
         // ELEMENT: suggestedValue
-        String suggestedValueRaw = facesProperty.suggestedValue;
+        final String suggestedValueRaw = facesProperty.suggestedValue;
         String suggestedValue = null;
         try {
             suggestedValue = Adapters.collapsedStringAdapterAdapter.marshal(suggestedValueRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(facesProperty, "suggestedValue", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (suggestedValue!= null) {
+        if (suggestedValue != null) {
             writer.writeStartElement(prefix, "suggested-value", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(suggestedValue);
             writer.writeEndElement();
         }
 
         // ELEMENT: propertyExtension
-        List<FacesPropertyExtension> propertyExtension = facesProperty.propertyExtension;
-        if (propertyExtension!= null) {
-            for (FacesPropertyExtension propertyExtensionItem: propertyExtension) {
-                if (propertyExtensionItem!= null) {
+        final List<FacesPropertyExtension> propertyExtension = facesProperty.propertyExtension;
+        if (propertyExtension != null) {
+            for (final FacesPropertyExtension propertyExtensionItem : propertyExtension) {
+                if (propertyExtensionItem != null) {
                     writer.writeStartElement(prefix, "property-extension", "http://java.sun.com/xml/ns/javaee");
                     writeFacesPropertyExtension(writer, propertyExtensionItem, context);
                     writer.writeEndElement();

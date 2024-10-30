@@ -104,10 +104,7 @@ import java.util.Map;
     "jmsDestinations",
     "securityRoleRef",
     "securityIdentity",
-    "contextService",
-    "managedExecutor",
-    "managedScheduledExecutor",
-    "managedThreadFactory"
+    "contextService"
 })
 public class MessageDrivenBean implements EnterpriseBean, TimerConsumer, Invokable {
 
@@ -178,13 +175,7 @@ public class MessageDrivenBean implements EnterpriseBean, TimerConsumer, Invokab
     @XmlID
     protected String id;
     @XmlElement(name="context-service")
-    protected KeyedCollection<String, ContextService> contextService;
-    @XmlElement(name="managed-executor")
-    protected KeyedCollection<String, ManagedExecutor> managedExecutor;
-    @XmlElement(name = "managed-scheduled-executor")
-    protected KeyedCollection<String, ManagedScheduledExecutor> managedScheduledExecutor;
-    @XmlElement(name = "managed-thread-factory")
-    protected KeyedCollection<String, ManagedThreadFactory> managedThreadFactory;
+    private KeyedCollection<String, ContextService> contextService;
 
     public MessageDrivenBean() {
     }
@@ -662,31 +653,5 @@ public class MessageDrivenBean implements EnterpriseBean, TimerConsumer, Invokab
             contextService = new KeyedCollection<String, ContextService>();
         }
         return this.contextService.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedExecutor> getManagedExecutorMap() {
-        if (managedExecutor == null) {
-            managedExecutor = new KeyedCollection();
-        }
-        return this.managedExecutor.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedScheduledExecutor> getManagedScheduledExecutorMap() {
-        if (managedScheduledExecutor == null) {
-            managedScheduledExecutor = new KeyedCollection<>();
-        }
-
-        return this.managedScheduledExecutor.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedThreadFactory> getManagedThreadFactoryMap() {
-        if (managedThreadFactory == null) {
-            managedThreadFactory = new KeyedCollection<>();
-        }
-
-        return this.managedThreadFactory.toMap();
     }
 }

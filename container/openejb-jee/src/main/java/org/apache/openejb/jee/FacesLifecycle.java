@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAnyElement;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlID;
@@ -54,8 +53,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "faces-config-lifecycleType", propOrder = {
     "phaseListener",
-    "lifecycleExtension",
-    "others"
+    "lifecycleExtension"
 })
 public class FacesLifecycle {
 
@@ -68,9 +66,6 @@ public class FacesLifecycle {
     @XmlID
     @XmlSchemaType(name = "ID")
     protected java.lang.String id;
-
-    @XmlAnyElement
-    protected List<Object> others;
 
     /**
      * Gets the value of the phaseListener property.

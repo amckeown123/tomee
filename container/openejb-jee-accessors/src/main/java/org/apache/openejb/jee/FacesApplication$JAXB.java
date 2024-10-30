@@ -1,27 +1,21 @@
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+    * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.openejb.jee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import org.metatype.sxc.jaxb.JAXBObject;
 import org.metatype.sxc.jaxb.LifecycleCallback;
 import org.metatype.sxc.jaxb.RuntimeContext;
@@ -29,6 +23,11 @@ import org.metatype.sxc.util.Attribute;
 import org.metatype.sxc.util.XoXMLStreamReader;
 import org.metatype.sxc.util.XoXMLStreamWriter;
 
+import javax.xml.XMLConstants;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.apache.openejb.jee.FacesApplicationExtension$JAXB.readFacesApplicationExtension;
 import static org.apache.openejb.jee.FacesApplicationExtension$JAXB.writeFacesApplicationExtension;
@@ -45,35 +44,30 @@ import static org.apache.openejb.jee.FacesValidator$JAXB.writeFacesValidator;
     "StringEquality"
 })
 public class FacesApplication$JAXB
-    extends JAXBObject<FacesApplication>
-{
+    extends JAXBObject<FacesApplication> {
 
 
     public FacesApplication$JAXB() {
         super(FacesApplication.class, null, new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-config-applicationType".intern()), FacesSystemEventListener$JAXB.class, FacesLocaleConfig$JAXB.class, FacesApplicationResourceBundle$JAXB.class, FacesApplicationExtension$JAXB.class, FacesValidator$JAXB.class);
     }
 
-    public static FacesApplication readFacesApplication(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public static FacesApplication readFacesApplication(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static void writeFacesApplication(XoXMLStreamWriter writer, FacesApplication facesApplication, RuntimeContext context)
-        throws Exception
-    {
+    public static void writeFacesApplication(final XoXMLStreamWriter writer, final FacesApplication facesApplication, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesApplication, context);
     }
 
-    public void write(XoXMLStreamWriter writer, FacesApplication facesApplication, RuntimeContext context)
-        throws Exception
-    {
+    public void write(final XoXMLStreamWriter writer, final FacesApplication facesApplication, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesApplication, context);
     }
 
-    public static final FacesApplication _read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final static FacesApplication _read(final XoXMLStreamReader reader, RuntimeContext context)
+        throws Exception {
 
         // Check for xsi:nil
         if (reader.isXsiNil()) {
@@ -84,7 +78,7 @@ public class FacesApplication$JAXB
             context = new RuntimeContext();
         }
 
-        FacesApplication facesApplication = new FacesApplication();
+        final FacesApplication facesApplication = new FacesApplication();
         context.beforeUnmarshal(facesApplication, LifecycleCallback.NONE);
 
         List<String> actionListener = null;
@@ -101,349 +95,338 @@ public class FacesApplication$JAXB
         List<FacesLocaleConfig> localeConfig = null;
         List<FacesApplicationExtension> applicationExtension = null;
         List<FacesValidator> defaultValidators = null;
-        List<Object> others = null;
 
         // Check xsi:type
-        QName xsiType = reader.getXsiType();
-        if (xsiType!= null) {
-            if (("faces-config-applicationType"!= xsiType.getLocalPart())||("http://java.sun.com/xml/ns/javaee"!= xsiType.getNamespaceURI())) {
+        final QName xsiType = reader.getXsiType();
+        if (xsiType != null) {
+            if (("faces-config-applicationType" != xsiType.getLocalPart()) || ("http://java.sun.com/xml/ns/javaee" != xsiType.getNamespaceURI())) {
                 return context.unexpectedXsiType(reader, FacesApplication.class);
             }
         }
 
         // Read attributes
-        for (Attribute attribute: reader.getAttributes()) {
-            if (("id" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+        for (final Attribute attribute : reader.getAttributes()) {
+            if (("id" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: id
-                String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
+                final String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
                 context.addXmlId(reader, id, facesApplication);
                 facesApplication.id = id;
-            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI!= attribute.getNamespace()) {
+            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI != attribute.getNamespace()) {
                 context.unexpectedAttribute(attribute, new QName("", "id"));
             }
         }
 
         // Read elements
-        for (XoXMLStreamReader elementReader: reader.getChildElements()) {
-            if (("action-listener" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+        for (final XoXMLStreamReader elementReader : reader.getChildElements()) {
+            if (("action-listener" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: actionListener
-                String actionListenerItemRaw = elementReader.getElementText();
+                final String actionListenerItemRaw = elementReader.getElementAsString();
 
-                String actionListenerItem;
+                final String actionListenerItem;
                 try {
                     actionListenerItem = Adapters.collapsedStringAdapterAdapter.unmarshal(actionListenerItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (actionListener == null) {
                     actionListener = facesApplication.actionListener;
-                    if (actionListener!= null) {
+                    if (actionListener != null) {
                         actionListener.clear();
                     } else {
-                        actionListener = new ArrayList<>();
+                        actionListener = new ArrayList<String>();
                     }
                 }
                 actionListener.add(actionListenerItem);
-            } else if (("default-render-kit-id" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("default-render-kit-id" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: defaultRenderKitId
-                String defaultRenderKitIdItemRaw = elementReader.getElementText();
+                final String defaultRenderKitIdItemRaw = elementReader.getElementAsString();
 
-                String defaultRenderKitIdItem;
+                final String defaultRenderKitIdItem;
                 try {
                     defaultRenderKitIdItem = Adapters.collapsedStringAdapterAdapter.unmarshal(defaultRenderKitIdItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (defaultRenderKitId == null) {
                     defaultRenderKitId = facesApplication.defaultRenderKitId;
-                    if (defaultRenderKitId!= null) {
+                    if (defaultRenderKitId != null) {
                         defaultRenderKitId.clear();
                     } else {
-                        defaultRenderKitId = new ArrayList<>();
+                        defaultRenderKitId = new ArrayList<String>();
                     }
                 }
                 defaultRenderKitId.add(defaultRenderKitIdItem);
-            } else if (("message-bundle" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("message-bundle" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: messageBundle
-                String messageBundleItemRaw = elementReader.getElementText();
+                final String messageBundleItemRaw = elementReader.getElementAsString();
 
-                String messageBundleItem;
+                final String messageBundleItem;
                 try {
                     messageBundleItem = Adapters.collapsedStringAdapterAdapter.unmarshal(messageBundleItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (messageBundle == null) {
                     messageBundle = facesApplication.messageBundle;
-                    if (messageBundle!= null) {
+                    if (messageBundle != null) {
                         messageBundle.clear();
                     } else {
-                        messageBundle = new ArrayList<>();
+                        messageBundle = new ArrayList<String>();
                     }
                 }
                 messageBundle.add(messageBundleItem);
-            } else if (("navigation-handler" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("navigation-handler" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: navigationHandler
-                String navigationHandlerItemRaw = elementReader.getElementText();
+                final String navigationHandlerItemRaw = elementReader.getElementAsString();
 
-                String navigationHandlerItem;
+                final String navigationHandlerItem;
                 try {
                     navigationHandlerItem = Adapters.collapsedStringAdapterAdapter.unmarshal(navigationHandlerItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (navigationHandler == null) {
                     navigationHandler = facesApplication.navigationHandler;
-                    if (navigationHandler!= null) {
+                    if (navigationHandler != null) {
                         navigationHandler.clear();
                     } else {
-                        navigationHandler = new ArrayList<>();
+                        navigationHandler = new ArrayList<String>();
                     }
                 }
                 navigationHandler.add(navigationHandlerItem);
-            } else if (("view-handler" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("view-handler" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: viewHandler
-                String viewHandlerItemRaw = elementReader.getElementText();
+                final String viewHandlerItemRaw = elementReader.getElementAsString();
 
-                String viewHandlerItem;
+                final String viewHandlerItem;
                 try {
                     viewHandlerItem = Adapters.collapsedStringAdapterAdapter.unmarshal(viewHandlerItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (viewHandler == null) {
                     viewHandler = facesApplication.viewHandler;
-                    if (viewHandler!= null) {
+                    if (viewHandler != null) {
                         viewHandler.clear();
                     } else {
-                        viewHandler = new ArrayList<>();
+                        viewHandler = new ArrayList<String>();
                     }
                 }
                 viewHandler.add(viewHandlerItem);
-            } else if (("state-manager" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("state-manager" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: stateManager
-                String stateManagerItemRaw = elementReader.getElementText();
+                final String stateManagerItemRaw = elementReader.getElementAsString();
 
-                String stateManagerItem;
+                final String stateManagerItem;
                 try {
                     stateManagerItem = Adapters.collapsedStringAdapterAdapter.unmarshal(stateManagerItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (stateManager == null) {
                     stateManager = facesApplication.stateManager;
-                    if (stateManager!= null) {
+                    if (stateManager != null) {
                         stateManager.clear();
                     } else {
-                        stateManager = new ArrayList<>();
+                        stateManager = new ArrayList<String>();
                     }
                 }
                 stateManager.add(stateManagerItem);
-            } else if (("el-resolver" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("el-resolver" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: elResolver
-                String elResolverItemRaw = elementReader.getElementText();
+                final String elResolverItemRaw = elementReader.getElementAsString();
 
-                String elResolverItem;
+                final String elResolverItem;
                 try {
                     elResolverItem = Adapters.collapsedStringAdapterAdapter.unmarshal(elResolverItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (elResolver == null) {
                     elResolver = facesApplication.elResolver;
-                    if (elResolver!= null) {
+                    if (elResolver != null) {
                         elResolver.clear();
                     } else {
-                        elResolver = new ArrayList<>();
+                        elResolver = new ArrayList<String>();
                     }
                 }
                 elResolver.add(elResolverItem);
-            } else if (("property-resolver" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("property-resolver" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: propertyResolver
-                String propertyResolverItemRaw = elementReader.getElementText();
+                final String propertyResolverItemRaw = elementReader.getElementAsString();
 
-                String propertyResolverItem;
+                final String propertyResolverItem;
                 try {
                     propertyResolverItem = Adapters.collapsedStringAdapterAdapter.unmarshal(propertyResolverItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (propertyResolver == null) {
                     propertyResolver = facesApplication.propertyResolver;
-                    if (propertyResolver!= null) {
+                    if (propertyResolver != null) {
                         propertyResolver.clear();
                     } else {
-                        propertyResolver = new ArrayList<>();
+                        propertyResolver = new ArrayList<String>();
                     }
                 }
                 propertyResolver.add(propertyResolverItem);
-            } else if (("variable-resolver" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("variable-resolver" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: variableResolver
-                String variableResolverItemRaw = elementReader.getElementText();
+                final String variableResolverItemRaw = elementReader.getElementAsString();
 
-                String variableResolverItem;
+                final String variableResolverItem;
                 try {
                     variableResolverItem = Adapters.collapsedStringAdapterAdapter.unmarshal(variableResolverItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (variableResolver == null) {
                     variableResolver = facesApplication.variableResolver;
-                    if (variableResolver!= null) {
+                    if (variableResolver != null) {
                         variableResolver.clear();
                     } else {
-                        variableResolver = new ArrayList<>();
+                        variableResolver = new ArrayList<String>();
                     }
                 }
                 variableResolver.add(variableResolverItem);
-            } else if (("resource-handler" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("resource-handler" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: resourceHandler
-                String resourceHandlerItemRaw = elementReader.getElementText();
+                final String resourceHandlerItemRaw = elementReader.getElementAsString();
 
-                String resourceHandlerItem;
+                final String resourceHandlerItem;
                 try {
                     resourceHandlerItem = Adapters.collapsedStringAdapterAdapter.unmarshal(resourceHandlerItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (resourceHandler == null) {
                     resourceHandler = facesApplication.resourceHandler;
-                    if (resourceHandler!= null) {
+                    if (resourceHandler != null) {
                         resourceHandler.clear();
                     } else {
-                        resourceHandler = new ArrayList<>();
+                        resourceHandler = new ArrayList<String>();
                     }
                 }
                 resourceHandler.add(resourceHandlerItem);
-            } else if (("system-event-listener" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("system-event-listener" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: systemEventListener
-                FacesSystemEventListener systemEventListenerItem = readFacesSystemEventListener(elementReader, context);
+                final FacesSystemEventListener systemEventListenerItem = readFacesSystemEventListener(elementReader, context);
                 if (systemEventListener == null) {
                     systemEventListener = facesApplication.systemEventListener;
-                    if (systemEventListener!= null) {
+                    if (systemEventListener != null) {
                         systemEventListener.clear();
                     } else {
-                        systemEventListener = new ArrayList<>();
+                        systemEventListener = new ArrayList<FacesSystemEventListener>();
                     }
                 }
                 systemEventListener.add(systemEventListenerItem);
-            } else if (("locale-config" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("locale-config" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: localeConfig
-                FacesLocaleConfig localeConfigItem = readFacesLocaleConfig(elementReader, context);
+                final FacesLocaleConfig localeConfigItem = readFacesLocaleConfig(elementReader, context);
                 if (localeConfig == null) {
                     localeConfig = facesApplication.localeConfig;
-                    if (localeConfig!= null) {
+                    if (localeConfig != null) {
                         localeConfig.clear();
                     } else {
-                        localeConfig = new ArrayList<>();
+                        localeConfig = new ArrayList<FacesLocaleConfig>();
                     }
                 }
                 localeConfig.add(localeConfigItem);
-            } else if (("resource-bundle" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("resource-bundle" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: resourceBundle
-                FacesApplicationResourceBundle resourceBundle = readFacesApplicationResourceBundle(elementReader, context);
+                final FacesApplicationResourceBundle resourceBundle = readFacesApplicationResourceBundle(elementReader, context);
                 facesApplication.resourceBundle = resourceBundle;
-            } else if (("application-extension" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("application-extension" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: applicationExtension
-                FacesApplicationExtension applicationExtensionItem = readFacesApplicationExtension(elementReader, context);
+                final FacesApplicationExtension applicationExtensionItem = readFacesApplicationExtension(elementReader, context);
                 if (applicationExtension == null) {
                     applicationExtension = facesApplication.applicationExtension;
-                    if (applicationExtension!= null) {
+                    if (applicationExtension != null) {
                         applicationExtension.clear();
                     } else {
-                        applicationExtension = new ArrayList<>();
+                        applicationExtension = new ArrayList<FacesApplicationExtension>();
                     }
                 }
                 applicationExtension.add(applicationExtensionItem);
-            } else if (("default-validators" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("default-validators" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: defaultValidators
-                FacesValidator defaultValidatorsItem = readFacesValidator(elementReader, context);
+                final FacesValidator defaultValidatorsItem = readFacesValidator(elementReader, context);
                 if (defaultValidators == null) {
                     defaultValidators = facesApplication.defaultValidators;
-                    if (defaultValidators!= null) {
+                    if (defaultValidators != null) {
                         defaultValidators.clear();
                     } else {
-                        defaultValidators = new ArrayList<>();
+                        defaultValidators = new ArrayList<FacesValidator>();
                     }
                 }
                 defaultValidators.add(defaultValidatorsItem);
             } else {
-                // ELEMENT_REF: others
-                if (others == null) {
-                    others = facesApplication.others;
-                    if (others!= null) {
-                        others.clear();
-                    } else {
-                        others = new ArrayList<>();
-                    }
-                }
-                others.add(context.readXmlAny(elementReader, Object.class, false));
+                // just here ATM to not prevent users to get JSF 2.2 feature because we can't read it
+                // TODO: handle it properly
+                // context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "action-listener"), new QName("http://java.sun.com/xml/ns/javaee", "default-render-kit-id"), new QName("http://java.sun.com/xml/ns/javaee", "message-bundle"), new QName("http://java.sun.com/xml/ns/javaee", "navigation-handler"), new QName("http://java.sun.com/xml/ns/javaee", "view-handler"), new QName("http://java.sun.com/xml/ns/javaee", "state-manager"), new QName("http://java.sun.com/xml/ns/javaee", "el-resolver"), new QName("http://java.sun.com/xml/ns/javaee", "property-resolver"), new QName("http://java.sun.com/xml/ns/javaee", "variable-resolver"), new QName("http://java.sun.com/xml/ns/javaee", "resource-handler"), new QName("http://java.sun.com/xml/ns/javaee", "system-event-listener"), new QName("http://java.sun.com/xml/ns/javaee", "locale-config"), new QName("http://java.sun.com/xml/ns/javaee", "resource-bundle"), new QName("http://java.sun.com/xml/ns/javaee", "application-extension"), new QName("http://java.sun.com/xml/ns/javaee", "default-validators"));
             }
         }
-        if (actionListener!= null) {
+        if (actionListener != null) {
             facesApplication.actionListener = actionListener;
         }
-        if (defaultRenderKitId!= null) {
+        if (defaultRenderKitId != null) {
             facesApplication.defaultRenderKitId = defaultRenderKitId;
         }
-        if (messageBundle!= null) {
+        if (messageBundle != null) {
             facesApplication.messageBundle = messageBundle;
         }
-        if (navigationHandler!= null) {
+        if (navigationHandler != null) {
             facesApplication.navigationHandler = navigationHandler;
         }
-        if (viewHandler!= null) {
+        if (viewHandler != null) {
             facesApplication.viewHandler = viewHandler;
         }
-        if (stateManager!= null) {
+        if (stateManager != null) {
             facesApplication.stateManager = stateManager;
         }
-        if (elResolver!= null) {
+        if (elResolver != null) {
             facesApplication.elResolver = elResolver;
         }
-        if (propertyResolver!= null) {
+        if (propertyResolver != null) {
             facesApplication.propertyResolver = propertyResolver;
         }
-        if (variableResolver!= null) {
+        if (variableResolver != null) {
             facesApplication.variableResolver = variableResolver;
         }
-        if (resourceHandler!= null) {
+        if (resourceHandler != null) {
             facesApplication.resourceHandler = resourceHandler;
         }
-        if (systemEventListener!= null) {
+        if (systemEventListener != null) {
             facesApplication.systemEventListener = systemEventListener;
         }
-        if (localeConfig!= null) {
+        if (localeConfig != null) {
             facesApplication.localeConfig = localeConfig;
         }
-        if (applicationExtension!= null) {
+        if (applicationExtension != null) {
             facesApplication.applicationExtension = applicationExtension;
         }
-        if (defaultValidators!= null) {
+        if (defaultValidators != null) {
             facesApplication.defaultValidators = defaultValidators;
-        }
-        if (others!= null) {
-            facesApplication.others = others;
         }
 
         context.afterUnmarshal(facesApplication, LifecycleCallback.NONE);
@@ -451,56 +434,54 @@ public class FacesApplication$JAXB
         return facesApplication;
     }
 
-    public final FacesApplication read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final FacesApplication read(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static final void _write(XoXMLStreamWriter writer, FacesApplication facesApplication, RuntimeContext context)
-        throws Exception
-    {
+    public final static void _write(final XoXMLStreamWriter writer, final FacesApplication facesApplication, RuntimeContext context)
+        throws Exception {
         if (facesApplication == null) {
             writer.writeXsiNil();
-            return ;
+            return;
         }
 
         if (context == null) {
             context = new RuntimeContext();
         }
 
-        String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
-        if (FacesApplication.class!= facesApplication.getClass()) {
+        final String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
+        if (FacesApplication.class != facesApplication.getClass()) {
             context.unexpectedSubclass(writer, facesApplication, FacesApplication.class);
-            return ;
+            return;
         }
 
         context.beforeMarshal(facesApplication, LifecycleCallback.NONE);
 
 
         // ATTRIBUTE: id
-        String idRaw = facesApplication.id;
-        if (idRaw!= null) {
+        final String idRaw = facesApplication.id;
+        if (idRaw != null) {
             String id = null;
             try {
                 id = Adapters.collapsedStringAdapterAdapter.marshal(idRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(facesApplication, "id", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "id", id);
         }
 
         // ELEMENT: actionListener
-        List<String> actionListenerRaw = facesApplication.actionListener;
-        if (actionListenerRaw!= null) {
-            for (String actionListenerItem: actionListenerRaw) {
+        final List<String> actionListenerRaw = facesApplication.actionListener;
+        if (actionListenerRaw != null) {
+            for (final String actionListenerItem : actionListenerRaw) {
                 String actionListener = null;
                 try {
                     actionListener = Adapters.collapsedStringAdapterAdapter.marshal(actionListenerItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "actionListener", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (actionListener!= null) {
+                if (actionListener != null) {
                     writer.writeStartElement(prefix, "action-listener", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(actionListener);
                     writer.writeEndElement();
@@ -509,16 +490,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: defaultRenderKitId
-        List<String> defaultRenderKitIdRaw = facesApplication.defaultRenderKitId;
-        if (defaultRenderKitIdRaw!= null) {
-            for (String defaultRenderKitIdItem: defaultRenderKitIdRaw) {
+        final List<String> defaultRenderKitIdRaw = facesApplication.defaultRenderKitId;
+        if (defaultRenderKitIdRaw != null) {
+            for (final String defaultRenderKitIdItem : defaultRenderKitIdRaw) {
                 String defaultRenderKitId = null;
                 try {
                     defaultRenderKitId = Adapters.collapsedStringAdapterAdapter.marshal(defaultRenderKitIdItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "defaultRenderKitId", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (defaultRenderKitId!= null) {
+                if (defaultRenderKitId != null) {
                     writer.writeStartElement(prefix, "default-render-kit-id", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(defaultRenderKitId);
                     writer.writeEndElement();
@@ -527,16 +508,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: messageBundle
-        List<String> messageBundleRaw = facesApplication.messageBundle;
-        if (messageBundleRaw!= null) {
-            for (String messageBundleItem: messageBundleRaw) {
+        final List<String> messageBundleRaw = facesApplication.messageBundle;
+        if (messageBundleRaw != null) {
+            for (final String messageBundleItem : messageBundleRaw) {
                 String messageBundle = null;
                 try {
                     messageBundle = Adapters.collapsedStringAdapterAdapter.marshal(messageBundleItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "messageBundle", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (messageBundle!= null) {
+                if (messageBundle != null) {
                     writer.writeStartElement(prefix, "message-bundle", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(messageBundle);
                     writer.writeEndElement();
@@ -545,16 +526,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: navigationHandler
-        List<String> navigationHandlerRaw = facesApplication.navigationHandler;
-        if (navigationHandlerRaw!= null) {
-            for (String navigationHandlerItem: navigationHandlerRaw) {
+        final List<String> navigationHandlerRaw = facesApplication.navigationHandler;
+        if (navigationHandlerRaw != null) {
+            for (final String navigationHandlerItem : navigationHandlerRaw) {
                 String navigationHandler = null;
                 try {
                     navigationHandler = Adapters.collapsedStringAdapterAdapter.marshal(navigationHandlerItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "navigationHandler", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (navigationHandler!= null) {
+                if (navigationHandler != null) {
                     writer.writeStartElement(prefix, "navigation-handler", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(navigationHandler);
                     writer.writeEndElement();
@@ -563,16 +544,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: viewHandler
-        List<String> viewHandlerRaw = facesApplication.viewHandler;
-        if (viewHandlerRaw!= null) {
-            for (String viewHandlerItem: viewHandlerRaw) {
+        final List<String> viewHandlerRaw = facesApplication.viewHandler;
+        if (viewHandlerRaw != null) {
+            for (final String viewHandlerItem : viewHandlerRaw) {
                 String viewHandler = null;
                 try {
                     viewHandler = Adapters.collapsedStringAdapterAdapter.marshal(viewHandlerItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "viewHandler", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (viewHandler!= null) {
+                if (viewHandler != null) {
                     writer.writeStartElement(prefix, "view-handler", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(viewHandler);
                     writer.writeEndElement();
@@ -581,16 +562,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: stateManager
-        List<String> stateManagerRaw = facesApplication.stateManager;
-        if (stateManagerRaw!= null) {
-            for (String stateManagerItem: stateManagerRaw) {
+        final List<String> stateManagerRaw = facesApplication.stateManager;
+        if (stateManagerRaw != null) {
+            for (final String stateManagerItem : stateManagerRaw) {
                 String stateManager = null;
                 try {
                     stateManager = Adapters.collapsedStringAdapterAdapter.marshal(stateManagerItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "stateManager", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (stateManager!= null) {
+                if (stateManager != null) {
                     writer.writeStartElement(prefix, "state-manager", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(stateManager);
                     writer.writeEndElement();
@@ -599,16 +580,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: elResolver
-        List<String> elResolverRaw = facesApplication.elResolver;
-        if (elResolverRaw!= null) {
-            for (String elResolverItem: elResolverRaw) {
+        final List<String> elResolverRaw = facesApplication.elResolver;
+        if (elResolverRaw != null) {
+            for (final String elResolverItem : elResolverRaw) {
                 String elResolver = null;
                 try {
                     elResolver = Adapters.collapsedStringAdapterAdapter.marshal(elResolverItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "elResolver", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (elResolver!= null) {
+                if (elResolver != null) {
                     writer.writeStartElement(prefix, "el-resolver", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(elResolver);
                     writer.writeEndElement();
@@ -617,16 +598,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: propertyResolver
-        List<String> propertyResolverRaw = facesApplication.propertyResolver;
-        if (propertyResolverRaw!= null) {
-            for (String propertyResolverItem: propertyResolverRaw) {
+        final List<String> propertyResolverRaw = facesApplication.propertyResolver;
+        if (propertyResolverRaw != null) {
+            for (final String propertyResolverItem : propertyResolverRaw) {
                 String propertyResolver = null;
                 try {
                     propertyResolver = Adapters.collapsedStringAdapterAdapter.marshal(propertyResolverItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "propertyResolver", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (propertyResolver!= null) {
+                if (propertyResolver != null) {
                     writer.writeStartElement(prefix, "property-resolver", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(propertyResolver);
                     writer.writeEndElement();
@@ -635,16 +616,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: variableResolver
-        List<String> variableResolverRaw = facesApplication.variableResolver;
-        if (variableResolverRaw!= null) {
-            for (String variableResolverItem: variableResolverRaw) {
+        final List<String> variableResolverRaw = facesApplication.variableResolver;
+        if (variableResolverRaw != null) {
+            for (final String variableResolverItem : variableResolverRaw) {
                 String variableResolver = null;
                 try {
                     variableResolver = Adapters.collapsedStringAdapterAdapter.marshal(variableResolverItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "variableResolver", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (variableResolver!= null) {
+                if (variableResolver != null) {
                     writer.writeStartElement(prefix, "variable-resolver", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(variableResolver);
                     writer.writeEndElement();
@@ -653,16 +634,16 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: resourceHandler
-        List<String> resourceHandlerRaw = facesApplication.resourceHandler;
-        if (resourceHandlerRaw!= null) {
-            for (String resourceHandlerItem: resourceHandlerRaw) {
+        final List<String> resourceHandlerRaw = facesApplication.resourceHandler;
+        if (resourceHandlerRaw != null) {
+            for (final String resourceHandlerItem : resourceHandlerRaw) {
                 String resourceHandler = null;
                 try {
                     resourceHandler = Adapters.collapsedStringAdapterAdapter.marshal(resourceHandlerItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesApplication, "resourceHandler", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (resourceHandler!= null) {
+                if (resourceHandler != null) {
                     writer.writeStartElement(prefix, "resource-handler", "http://java.sun.com/xml/ns/javaee");
                     writer.writeCharacters(resourceHandler);
                     writer.writeEndElement();
@@ -671,10 +652,10 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: systemEventListener
-        List<FacesSystemEventListener> systemEventListener = facesApplication.systemEventListener;
-        if (systemEventListener!= null) {
-            for (FacesSystemEventListener systemEventListenerItem: systemEventListener) {
-                if (systemEventListenerItem!= null) {
+        final List<FacesSystemEventListener> systemEventListener = facesApplication.systemEventListener;
+        if (systemEventListener != null) {
+            for (final FacesSystemEventListener systemEventListenerItem : systemEventListener) {
+                if (systemEventListenerItem != null) {
                     writer.writeStartElement(prefix, "system-event-listener", "http://java.sun.com/xml/ns/javaee");
                     writeFacesSystemEventListener(writer, systemEventListenerItem, context);
                     writer.writeEndElement();
@@ -683,10 +664,10 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: localeConfig
-        List<FacesLocaleConfig> localeConfig = facesApplication.localeConfig;
-        if (localeConfig!= null) {
-            for (FacesLocaleConfig localeConfigItem: localeConfig) {
-                if (localeConfigItem!= null) {
+        final List<FacesLocaleConfig> localeConfig = facesApplication.localeConfig;
+        if (localeConfig != null) {
+            for (final FacesLocaleConfig localeConfigItem : localeConfig) {
+                if (localeConfigItem != null) {
                     writer.writeStartElement(prefix, "locale-config", "http://java.sun.com/xml/ns/javaee");
                     writeFacesLocaleConfig(writer, localeConfigItem, context);
                     writer.writeEndElement();
@@ -695,8 +676,8 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: resourceBundle
-        FacesApplicationResourceBundle resourceBundle = facesApplication.resourceBundle;
-        if (resourceBundle!= null) {
+        final FacesApplicationResourceBundle resourceBundle = facesApplication.resourceBundle;
+        if (resourceBundle != null) {
             writer.writeStartElement(prefix, "resource-bundle", "http://java.sun.com/xml/ns/javaee");
             writeFacesApplicationResourceBundle(writer, resourceBundle, context);
             writer.writeEndElement();
@@ -705,10 +686,10 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: applicationExtension
-        List<FacesApplicationExtension> applicationExtension = facesApplication.applicationExtension;
-        if (applicationExtension!= null) {
-            for (FacesApplicationExtension applicationExtensionItem: applicationExtension) {
-                if (applicationExtensionItem!= null) {
+        final List<FacesApplicationExtension> applicationExtension = facesApplication.applicationExtension;
+        if (applicationExtension != null) {
+            for (final FacesApplicationExtension applicationExtensionItem : applicationExtension) {
+                if (applicationExtensionItem != null) {
                     writer.writeStartElement(prefix, "application-extension", "http://java.sun.com/xml/ns/javaee");
                     writeFacesApplicationExtension(writer, applicationExtensionItem, context);
                     writer.writeEndElement();
@@ -717,22 +698,14 @@ public class FacesApplication$JAXB
         }
 
         // ELEMENT: defaultValidators
-        List<FacesValidator> defaultValidators = facesApplication.defaultValidators;
-        if (defaultValidators!= null) {
-            for (FacesValidator defaultValidatorsItem: defaultValidators) {
-                if (defaultValidatorsItem!= null) {
+        final List<FacesValidator> defaultValidators = facesApplication.defaultValidators;
+        if (defaultValidators != null) {
+            for (final FacesValidator defaultValidatorsItem : defaultValidators) {
+                if (defaultValidatorsItem != null) {
                     writer.writeStartElement(prefix, "default-validators", "http://java.sun.com/xml/ns/javaee");
                     writeFacesValidator(writer, defaultValidatorsItem, context);
                     writer.writeEndElement();
                 }
-            }
-        }
-
-        // ELEMENT_REF: others
-        List<Object> others = facesApplication.others;
-        if (others!= null) {
-            for (Object othersItem: others) {
-                context.writeXmlAny(writer, facesApplication, "others", othersItem);
             }
         }
 

@@ -1,27 +1,21 @@
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+    * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.openejb.jee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import org.metatype.sxc.jaxb.JAXBObject;
 import org.metatype.sxc.jaxb.LifecycleCallback;
 import org.metatype.sxc.jaxb.RuntimeContext;
@@ -29,6 +23,11 @@ import org.metatype.sxc.util.Attribute;
 import org.metatype.sxc.util.XoXMLStreamReader;
 import org.metatype.sxc.util.XoXMLStreamWriter;
 
+import javax.xml.XMLConstants;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.apache.openejb.jee.FacesAbsoluteOrdering$JAXB.readFacesAbsoluteOrdering;
 import static org.apache.openejb.jee.FacesAbsoluteOrdering$JAXB.writeFacesAbsoluteOrdering;
@@ -38,10 +37,6 @@ import static org.apache.openejb.jee.FacesBehavior$JAXB.readFacesBehavior;
 import static org.apache.openejb.jee.FacesBehavior$JAXB.writeFacesBehavior;
 import static org.apache.openejb.jee.FacesComponent$JAXB.readFacesComponent;
 import static org.apache.openejb.jee.FacesComponent$JAXB.writeFacesComponent;
-import static org.apache.openejb.jee.FacesConfigFlowDefinition$JAXB.readFacesConfigFlowDefinition;
-import static org.apache.openejb.jee.FacesConfigFlowDefinition$JAXB.writeFacesConfigFlowDefinition;
-import static org.apache.openejb.jee.FacesConfigProtectedViews$JAXB.readFacesConfigProtectedViews;
-import static org.apache.openejb.jee.FacesConfigProtectedViews$JAXB.writeFacesConfigProtectedViews;
 import static org.apache.openejb.jee.FacesConverter$JAXB.readFacesConverter;
 import static org.apache.openejb.jee.FacesConverter$JAXB.writeFacesConverter;
 import static org.apache.openejb.jee.FacesExtension$JAXB.readFacesExtension;
@@ -67,35 +62,30 @@ import static org.apache.openejb.jee.FacesValidator$JAXB.writeFacesValidator;
     "StringEquality"
 })
 public class FacesConfig$JAXB
-    extends JAXBObject<FacesConfig>
-{
+    extends JAXBObject<FacesConfig> {
 
 
     public FacesConfig$JAXB() {
-        super(FacesConfig.class, new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-config".intern()), new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-configType".intern()), FacesApplication$JAXB.class, FacesOrdering$JAXB.class, FacesAbsoluteOrdering$JAXB.class, FacesFactory$JAXB.class, FacesComponent$JAXB.class, FacesConverter$JAXB.class, FacesManagedBean$JAXB.class, FacesNavigationRule$JAXB.class, FacesReferencedBean$JAXB.class, FacesRenderKit$JAXB.class, FacesLifecycle$JAXB.class, FacesValidator$JAXB.class, FacesBehavior$JAXB.class, FacesExtension$JAXB.class, FacesConfigFlowDefinition$JAXB.class, FacesConfigProtectedViews$JAXB.class);
+        super(FacesConfig.class, new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-config".intern()), new QName("http://java.sun.com/xml/ns/javaee".intern(), "faces-configType".intern()), FacesApplication$JAXB.class, FacesOrdering$JAXB.class, FacesAbsoluteOrdering$JAXB.class, FacesFactory$JAXB.class, FacesComponent$JAXB.class, FacesConverter$JAXB.class, FacesManagedBean$JAXB.class, FacesNavigationRule$JAXB.class, FacesReferencedBean$JAXB.class, FacesRenderKit$JAXB.class, FacesLifecycle$JAXB.class, FacesValidator$JAXB.class, FacesBehavior$JAXB.class, FacesExtension$JAXB.class);
     }
 
-    public static FacesConfig readFacesConfig(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public static FacesConfig readFacesConfig(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static void writeFacesConfig(XoXMLStreamWriter writer, FacesConfig facesConfig, RuntimeContext context)
-        throws Exception
-    {
+    public static void writeFacesConfig(final XoXMLStreamWriter writer, final FacesConfig facesConfig, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesConfig, context);
     }
 
-    public void write(XoXMLStreamWriter writer, FacesConfig facesConfig, RuntimeContext context)
-        throws Exception
-    {
+    public void write(final XoXMLStreamWriter writer, final FacesConfig facesConfig, final RuntimeContext context)
+        throws Exception {
         _write(writer, facesConfig, context);
     }
 
-    public static final FacesConfig _read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final static FacesConfig _read(final XoXMLStreamReader reader, RuntimeContext context)
+        throws Exception {
 
         // Check for xsi:nil
         if (reader.isXsiNil()) {
@@ -106,7 +96,7 @@ public class FacesConfig$JAXB
             context = new RuntimeContext();
         }
 
-        FacesConfig facesConfig = new FacesConfig();
+        final FacesConfig facesConfig = new FacesConfig();
         context.beforeUnmarshal(facesConfig, LifecycleCallback.NONE);
 
         List<FacesApplication> application = null;
@@ -124,321 +114,279 @@ public class FacesConfig$JAXB
         List<FacesValidator> validator = null;
         List<FacesBehavior> behavior = null;
         List<FacesExtension> facesConfigExtension = null;
-        List<FacesConfigFlowDefinition> flowDefinitions = null;
-        List<FacesConfigProtectedViews> protectedViews = null;
-        List<Object> others = null;
 
         // Check xsi:type
-        QName xsiType = reader.getXsiType();
-        if (xsiType!= null) {
-            if (("faces-configType"!= xsiType.getLocalPart())||("http://java.sun.com/xml/ns/javaee"!= xsiType.getNamespaceURI())) {
+        final QName xsiType = reader.getXsiType();
+        if (xsiType != null) {
+            if (("faces-configType" != xsiType.getLocalPart()) || ("http://java.sun.com/xml/ns/javaee" != xsiType.getNamespaceURI())) {
                 return context.unexpectedXsiType(reader, FacesConfig.class);
             }
         }
 
         // Read attributes
-        for (Attribute attribute: reader.getAttributes()) {
-            if (("id" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+        for (final Attribute attribute : reader.getAttributes()) {
+            if (("id" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: id
-                String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
+                final String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
                 context.addXmlId(reader, id, facesConfig);
                 facesConfig.id = id;
-            } else if (("version" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+            } else if (("version" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: version
                 facesConfig.version = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
-            } else if (("metadata-complete" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+            } else if (("metadata-complete" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: metadataComplete
-                Boolean metadataComplete = ("1".equals(attribute.getValue())||"true".equals(attribute.getValue()));
+                final Boolean metadataComplete = ("1".equals(attribute.getValue()) || "true".equals(attribute.getValue()));
                 facesConfig.metadataComplete = metadataComplete;
-            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI!= attribute.getNamespace()) {
+            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI != attribute.getNamespace()) {
                 context.unexpectedAttribute(attribute, new QName("", "id"), new QName("", "version"), new QName("", "metadata-complete"));
             }
         }
 
         // Read elements
-        for (XoXMLStreamReader elementReader: reader.getChildElements()) {
-            if (("application" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+        for (final XoXMLStreamReader elementReader : reader.getChildElements()) {
+            if (("application" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: application
-                FacesApplication applicationItem = readFacesApplication(elementReader, context);
+                final FacesApplication applicationItem = readFacesApplication(elementReader, context);
                 if (application == null) {
                     application = facesConfig.application;
-                    if (application!= null) {
+                    if (application != null) {
                         application.clear();
                     } else {
-                        application = new ArrayList<>();
+                        application = new ArrayList<FacesApplication>();
                     }
                 }
                 application.add(applicationItem);
-            } else if (("ordering" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("ordering" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: ordering
-                FacesOrdering orderingItem = readFacesOrdering(elementReader, context);
+                final FacesOrdering orderingItem = readFacesOrdering(elementReader, context);
                 if (ordering == null) {
                     ordering = facesConfig.ordering;
-                    if (ordering!= null) {
+                    if (ordering != null) {
                         ordering.clear();
                     } else {
-                        ordering = new ArrayList<>();
+                        ordering = new ArrayList<FacesOrdering>();
                     }
                 }
                 ordering.add(orderingItem);
-            } else if (("absolute-ordering" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("absolute-ordering" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: absoluteOrdering
-                FacesAbsoluteOrdering absoluteOrderingItem = readFacesAbsoluteOrdering(elementReader, context);
+                final FacesAbsoluteOrdering absoluteOrderingItem = readFacesAbsoluteOrdering(elementReader, context);
                 if (absoluteOrdering == null) {
                     absoluteOrdering = facesConfig.absoluteOrdering;
-                    if (absoluteOrdering!= null) {
+                    if (absoluteOrdering != null) {
                         absoluteOrdering.clear();
                     } else {
-                        absoluteOrdering = new ArrayList<>();
+                        absoluteOrdering = new ArrayList<FacesAbsoluteOrdering>();
                     }
                 }
                 absoluteOrdering.add(absoluteOrderingItem);
-            } else if (("factory" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("factory" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: factory
-                FacesFactory factoryItem = readFacesFactory(elementReader, context);
+                final FacesFactory factoryItem = readFacesFactory(elementReader, context);
                 if (factory == null) {
                     factory = facesConfig.factory;
-                    if (factory!= null) {
+                    if (factory != null) {
                         factory.clear();
                     } else {
-                        factory = new ArrayList<>();
+                        factory = new ArrayList<FacesFactory>();
                     }
                 }
                 factory.add(factoryItem);
-            } else if (("component" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("component" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: component
-                FacesComponent componentItem = readFacesComponent(elementReader, context);
+                final FacesComponent componentItem = readFacesComponent(elementReader, context);
                 if (component == null) {
                     component = facesConfig.component;
-                    if (component!= null) {
+                    if (component != null) {
                         component.clear();
                     } else {
-                        component = new ArrayList<>();
+                        component = new ArrayList<FacesComponent>();
                     }
                 }
                 component.add(componentItem);
-            } else if (("converter" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("converter" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: converter
-                FacesConverter converterItem = readFacesConverter(elementReader, context);
+                final FacesConverter converterItem = readFacesConverter(elementReader, context);
                 if (converter == null) {
                     converter = facesConfig.converter;
-                    if (converter!= null) {
+                    if (converter != null) {
                         converter.clear();
                     } else {
-                        converter = new ArrayList<>();
+                        converter = new ArrayList<FacesConverter>();
                     }
                 }
                 converter.add(converterItem);
-            } else if (("managed-bean" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("managed-bean" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: managedBean
-                FacesManagedBean managedBeanItem = readFacesManagedBean(elementReader, context);
+                final FacesManagedBean managedBeanItem = readFacesManagedBean(elementReader, context);
                 if (managedBean == null) {
                     managedBean = facesConfig.managedBean;
-                    if (managedBean!= null) {
+                    if (managedBean != null) {
                         managedBean.clear();
                     } else {
-                        managedBean = new ArrayList<>();
+                        managedBean = new ArrayList<FacesManagedBean>();
                     }
                 }
                 managedBean.add(managedBeanItem);
-            } else if (("name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: name
                 String nameItemRaw = null;
                 if (!elementReader.isXsiNil()) {
-                    nameItemRaw = elementReader.getElementText();
+                    nameItemRaw = elementReader.getElementAsString();
                 }
 
-                String nameItem;
+                final String nameItem;
                 try {
                     nameItem = Adapters.collapsedStringAdapterAdapter.unmarshal(nameItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (name == null) {
                     name = facesConfig.name;
-                    if (name!= null) {
+                    if (name != null) {
                         name.clear();
                     } else {
-                        name = new ArrayList<>();
+                        name = new ArrayList<String>();
                     }
                 }
                 name.add(nameItem);
-            } else if (("navigation-rule" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("navigation-rule" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: navigationRule
-                FacesNavigationRule navigationRuleItem = readFacesNavigationRule(elementReader, context);
+                final FacesNavigationRule navigationRuleItem = readFacesNavigationRule(elementReader, context);
                 if (navigationRule == null) {
                     navigationRule = facesConfig.navigationRule;
-                    if (navigationRule!= null) {
+                    if (navigationRule != null) {
                         navigationRule.clear();
                     } else {
-                        navigationRule = new ArrayList<>();
+                        navigationRule = new ArrayList<FacesNavigationRule>();
                     }
                 }
                 navigationRule.add(navigationRuleItem);
-            } else if (("referenced-bean" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("referenced-bean" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: referencedBean
-                FacesReferencedBean referencedBeanItem = readFacesReferencedBean(elementReader, context);
+                final FacesReferencedBean referencedBeanItem = readFacesReferencedBean(elementReader, context);
                 if (referencedBean == null) {
                     referencedBean = facesConfig.referencedBean;
-                    if (referencedBean!= null) {
+                    if (referencedBean != null) {
                         referencedBean.clear();
                     } else {
-                        referencedBean = new ArrayList<>();
+                        referencedBean = new ArrayList<FacesReferencedBean>();
                     }
                 }
                 referencedBean.add(referencedBeanItem);
-            } else if (("render-kit" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("render-kit" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: renderKit
-                FacesRenderKit renderKitItem = readFacesRenderKit(elementReader, context);
+                final FacesRenderKit renderKitItem = readFacesRenderKit(elementReader, context);
                 if (renderKit == null) {
                     renderKit = facesConfig.renderKit;
-                    if (renderKit!= null) {
+                    if (renderKit != null) {
                         renderKit.clear();
                     } else {
-                        renderKit = new ArrayList<>();
+                        renderKit = new ArrayList<FacesRenderKit>();
                     }
                 }
                 renderKit.add(renderKitItem);
-            } else if (("lifecycle" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("lifecycle" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: lifecycle
-                FacesLifecycle lifecycleItem = readFacesLifecycle(elementReader, context);
+                final FacesLifecycle lifecycleItem = readFacesLifecycle(elementReader, context);
                 if (lifecycle == null) {
                     lifecycle = facesConfig.lifecycle;
-                    if (lifecycle!= null) {
+                    if (lifecycle != null) {
                         lifecycle.clear();
                     } else {
-                        lifecycle = new ArrayList<>();
+                        lifecycle = new ArrayList<FacesLifecycle>();
                     }
                 }
                 lifecycle.add(lifecycleItem);
-            } else if (("validator" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("validator" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: validator
-                FacesValidator validatorItem = readFacesValidator(elementReader, context);
+                final FacesValidator validatorItem = readFacesValidator(elementReader, context);
                 if (validator == null) {
                     validator = facesConfig.validator;
-                    if (validator!= null) {
+                    if (validator != null) {
                         validator.clear();
                     } else {
-                        validator = new ArrayList<>();
+                        validator = new ArrayList<FacesValidator>();
                     }
                 }
                 validator.add(validatorItem);
-            } else if (("behavior" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("behavior" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: behavior
-                FacesBehavior behaviorItem = readFacesBehavior(elementReader, context);
+                final FacesBehavior behaviorItem = readFacesBehavior(elementReader, context);
                 if (behavior == null) {
                     behavior = facesConfig.behavior;
-                    if (behavior!= null) {
+                    if (behavior != null) {
                         behavior.clear();
                     } else {
-                        behavior = new ArrayList<>();
+                        behavior = new ArrayList<FacesBehavior>();
                     }
                 }
                 behavior.add(behaviorItem);
-            } else if (("faces-config-extension" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("faces-config-extension" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: facesConfigExtension
-                FacesExtension facesConfigExtensionItem = readFacesExtension(elementReader, context);
+                final FacesExtension facesConfigExtensionItem = readFacesExtension(elementReader, context);
                 if (facesConfigExtension == null) {
                     facesConfigExtension = facesConfig.facesConfigExtension;
-                    if (facesConfigExtension!= null) {
+                    if (facesConfigExtension != null) {
                         facesConfigExtension.clear();
                     } else {
-                        facesConfigExtension = new ArrayList<>();
+                        facesConfigExtension = new ArrayList<FacesExtension>();
                     }
                 }
                 facesConfigExtension.add(facesConfigExtensionItem);
-            } else if (("flow-definition" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: flowDefinitions
-                FacesConfigFlowDefinition flowDefinitionsItem = readFacesConfigFlowDefinition(elementReader, context);
-                if (flowDefinitions == null) {
-                    flowDefinitions = facesConfig.flowDefinitions;
-                    if (flowDefinitions!= null) {
-                        flowDefinitions.clear();
-                    } else {
-                        flowDefinitions = new ArrayList<>();
-                    }
-                }
-                flowDefinitions.add(flowDefinitionsItem);
-            } else if (("protected-views" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: protectedViews
-                FacesConfigProtectedViews protectedViewsItem = readFacesConfigProtectedViews(elementReader, context);
-                if (protectedViews == null) {
-                    protectedViews = facesConfig.protectedViews;
-                    if (protectedViews!= null) {
-                        protectedViews.clear();
-                    } else {
-                        protectedViews = new ArrayList<>();
-                    }
-                }
-                protectedViews.add(protectedViewsItem);
+            } else if ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI()) {
+                // just here ATM to not prevent users to get JSF 2.2 feature because we can't read it
+                // TODO:  read it if we need it (= classes to add to injectable classes, other file to parse to find them etc...)
             } else {
-                // ELEMENT_REF: others
-                if (others == null) {
-                    others = facesConfig.others;
-                    if (others!= null) {
-                        others.clear();
-                    } else {
-                        others = new ArrayList<>();
-                    }
-                }
-                others.add(context.readXmlAny(elementReader, Object.class, false));
+                context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "application"), new QName("http://java.sun.com/xml/ns/javaee", "ordering"), new QName("http://java.sun.com/xml/ns/javaee", "absolute-ordering"), new QName("http://java.sun.com/xml/ns/javaee", "factory"), new QName("http://java.sun.com/xml/ns/javaee", "component"), new QName("http://java.sun.com/xml/ns/javaee", "converter"), new QName("http://java.sun.com/xml/ns/javaee", "managed-bean"), new QName("http://java.sun.com/xml/ns/javaee", "name"), new QName("http://java.sun.com/xml/ns/javaee", "navigation-rule"), new QName("http://java.sun.com/xml/ns/javaee", "referenced-bean"), new QName("http://java.sun.com/xml/ns/javaee", "render-kit"), new QName("http://java.sun.com/xml/ns/javaee", "lifecycle"), new QName("http://java.sun.com/xml/ns/javaee", "validator"), new QName("http://java.sun.com/xml/ns/javaee", "behavior"), new QName("http://java.sun.com/xml/ns/javaee", "faces-config-extension"));
             }
         }
-        if (application!= null) {
+        if (application != null) {
             facesConfig.application = application;
         }
-        if (ordering!= null) {
+        if (ordering != null) {
             facesConfig.ordering = ordering;
         }
-        if (absoluteOrdering!= null) {
+        if (absoluteOrdering != null) {
             facesConfig.absoluteOrdering = absoluteOrdering;
         }
-        if (factory!= null) {
+        if (factory != null) {
             facesConfig.factory = factory;
         }
-        if (component!= null) {
+        if (component != null) {
             facesConfig.component = component;
         }
-        if (converter!= null) {
+        if (converter != null) {
             facesConfig.converter = converter;
         }
-        if (managedBean!= null) {
+        if (managedBean != null) {
             facesConfig.managedBean = managedBean;
         }
-        if (name!= null) {
+        if (name != null) {
             facesConfig.name = name;
         }
-        if (navigationRule!= null) {
+        if (navigationRule != null) {
             facesConfig.navigationRule = navigationRule;
         }
-        if (referencedBean!= null) {
+        if (referencedBean != null) {
             facesConfig.referencedBean = referencedBean;
         }
-        if (renderKit!= null) {
+        if (renderKit != null) {
             facesConfig.renderKit = renderKit;
         }
-        if (lifecycle!= null) {
+        if (lifecycle != null) {
             facesConfig.lifecycle = lifecycle;
         }
-        if (validator!= null) {
+        if (validator != null) {
             facesConfig.validator = validator;
         }
-        if (behavior!= null) {
+        if (behavior != null) {
             facesConfig.behavior = behavior;
         }
-        if (facesConfigExtension!= null) {
+        if (facesConfigExtension != null) {
             facesConfig.facesConfigExtension = facesConfigExtension;
-        }
-        if (flowDefinitions!= null) {
-            facesConfig.flowDefinitions = flowDefinitions;
-        }
-        if (protectedViews!= null) {
-            facesConfig.protectedViews = protectedViews;
-        }
-        if (others!= null) {
-            facesConfig.others = others;
         }
 
         context.afterUnmarshal(facesConfig, LifecycleCallback.NONE);
@@ -446,69 +394,67 @@ public class FacesConfig$JAXB
         return facesConfig;
     }
 
-    public final FacesConfig read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final FacesConfig read(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static final void _write(XoXMLStreamWriter writer, FacesConfig facesConfig, RuntimeContext context)
-        throws Exception
-    {
+    public final static void _write(final XoXMLStreamWriter writer, final FacesConfig facesConfig, RuntimeContext context)
+        throws Exception {
         if (facesConfig == null) {
             writer.writeXsiNil();
-            return ;
+            return;
         }
 
         if (context == null) {
             context = new RuntimeContext();
         }
 
-        String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
-        if (FacesConfig.class!= facesConfig.getClass()) {
+        final String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
+        if (FacesConfig.class != facesConfig.getClass()) {
             context.unexpectedSubclass(writer, facesConfig, FacesConfig.class);
-            return ;
+            return;
         }
 
         context.beforeMarshal(facesConfig, LifecycleCallback.NONE);
 
 
         // ATTRIBUTE: id
-        String idRaw = facesConfig.id;
-        if (idRaw!= null) {
+        final String idRaw = facesConfig.id;
+        if (idRaw != null) {
             String id = null;
             try {
                 id = Adapters.collapsedStringAdapterAdapter.marshal(idRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(facesConfig, "id", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "id", id);
         }
 
         // ATTRIBUTE: version
-        String versionRaw = facesConfig.version;
-        if (versionRaw!= null) {
+        final String versionRaw = facesConfig.version;
+        if (versionRaw != null) {
             String version = null;
             try {
                 version = Adapters.collapsedStringAdapterAdapter.marshal(versionRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(facesConfig, "version", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "version", version);
         }
 
         // ATTRIBUTE: metadataComplete
-        Boolean metadataComplete = facesConfig.metadataComplete;
-        if (metadataComplete!= null) {
+        final Boolean metadataComplete = facesConfig.metadataComplete;
+        if (metadataComplete != null) {
             writer.writeAttribute("", "", "metadata-complete", Boolean.toString(metadataComplete));
         }
 
         // ELEMENT: application
-        List<FacesApplication> application = facesConfig.application;
-        if (application!= null) {
-            for (FacesApplication applicationItem: application) {
+        final List<FacesApplication> application = facesConfig.application;
+        if (application != null) {
+            for (final FacesApplication applicationItem : application) {
                 writer.writeStartElement(prefix, "application", "http://java.sun.com/xml/ns/javaee");
-                if (applicationItem!= null) {
+                if (applicationItem != null) {
                     writeFacesApplication(writer, applicationItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -518,11 +464,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: ordering
-        List<FacesOrdering> ordering = facesConfig.ordering;
-        if (ordering!= null) {
-            for (FacesOrdering orderingItem: ordering) {
+        final List<FacesOrdering> ordering = facesConfig.ordering;
+        if (ordering != null) {
+            for (final FacesOrdering orderingItem : ordering) {
                 writer.writeStartElement(prefix, "ordering", "http://java.sun.com/xml/ns/javaee");
-                if (orderingItem!= null) {
+                if (orderingItem != null) {
                     writeFacesOrdering(writer, orderingItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -532,10 +478,10 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: absoluteOrdering
-        List<FacesAbsoluteOrdering> absoluteOrdering = facesConfig.absoluteOrdering;
-        if (absoluteOrdering!= null) {
-            for (FacesAbsoluteOrdering absoluteOrderingItem: absoluteOrdering) {
-                if (absoluteOrderingItem!= null) {
+        final List<FacesAbsoluteOrdering> absoluteOrdering = facesConfig.absoluteOrdering;
+        if (absoluteOrdering != null) {
+            for (final FacesAbsoluteOrdering absoluteOrderingItem : absoluteOrdering) {
+                if (absoluteOrderingItem != null) {
                     writer.writeStartElement(prefix, "absolute-ordering", "http://java.sun.com/xml/ns/javaee");
                     writeFacesAbsoluteOrdering(writer, absoluteOrderingItem, context);
                     writer.writeEndElement();
@@ -544,11 +490,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: factory
-        List<FacesFactory> factory = facesConfig.factory;
-        if (factory!= null) {
-            for (FacesFactory factoryItem: factory) {
+        final List<FacesFactory> factory = facesConfig.factory;
+        if (factory != null) {
+            for (final FacesFactory factoryItem : factory) {
                 writer.writeStartElement(prefix, "factory", "http://java.sun.com/xml/ns/javaee");
-                if (factoryItem!= null) {
+                if (factoryItem != null) {
                     writeFacesFactory(writer, factoryItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -558,11 +504,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: component
-        List<FacesComponent> component = facesConfig.component;
-        if (component!= null) {
-            for (FacesComponent componentItem: component) {
+        final List<FacesComponent> component = facesConfig.component;
+        if (component != null) {
+            for (final FacesComponent componentItem : component) {
                 writer.writeStartElement(prefix, "component", "http://java.sun.com/xml/ns/javaee");
-                if (componentItem!= null) {
+                if (componentItem != null) {
                     writeFacesComponent(writer, componentItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -572,11 +518,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: converter
-        List<FacesConverter> converter = facesConfig.converter;
-        if (converter!= null) {
-            for (FacesConverter converterItem: converter) {
+        final List<FacesConverter> converter = facesConfig.converter;
+        if (converter != null) {
+            for (final FacesConverter converterItem : converter) {
                 writer.writeStartElement(prefix, "converter", "http://java.sun.com/xml/ns/javaee");
-                if (converterItem!= null) {
+                if (converterItem != null) {
                     writeFacesConverter(writer, converterItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -586,10 +532,10 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: managedBean
-        List<FacesManagedBean> managedBean = facesConfig.managedBean;
-        if (managedBean!= null) {
-            for (FacesManagedBean managedBeanItem: managedBean) {
-                if (managedBeanItem!= null) {
+        final List<FacesManagedBean> managedBean = facesConfig.managedBean;
+        if (managedBean != null) {
+            for (final FacesManagedBean managedBeanItem : managedBean) {
+                if (managedBeanItem != null) {
                     writer.writeStartElement(prefix, "managed-bean", "http://java.sun.com/xml/ns/javaee");
                     writeFacesManagedBean(writer, managedBeanItem, context);
                     writer.writeEndElement();
@@ -598,17 +544,17 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: name
-        List<String> nameRaw = facesConfig.name;
-        if (nameRaw!= null) {
-            for (String nameItem: nameRaw) {
+        final List<String> nameRaw = facesConfig.name;
+        if (nameRaw != null) {
+            for (final String nameItem : nameRaw) {
                 String name = null;
                 try {
                     name = Adapters.collapsedStringAdapterAdapter.marshal(nameItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(facesConfig, "name", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
                 writer.writeStartElement(prefix, "name", "http://java.sun.com/xml/ns/javaee");
-                if (name!= null) {
+                if (name != null) {
                     writer.writeCharacters(name);
                 } else {
                     writer.writeXsiNil();
@@ -618,10 +564,10 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: navigationRule
-        List<FacesNavigationRule> navigationRule = facesConfig.navigationRule;
-        if (navigationRule!= null) {
-            for (FacesNavigationRule navigationRuleItem: navigationRule) {
-                if (navigationRuleItem!= null) {
+        final List<FacesNavigationRule> navigationRule = facesConfig.navigationRule;
+        if (navigationRule != null) {
+            for (final FacesNavigationRule navigationRuleItem : navigationRule) {
+                if (navigationRuleItem != null) {
                     writer.writeStartElement(prefix, "navigation-rule", "http://java.sun.com/xml/ns/javaee");
                     writeFacesNavigationRule(writer, navigationRuleItem, context);
                     writer.writeEndElement();
@@ -630,10 +576,10 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: referencedBean
-        List<FacesReferencedBean> referencedBean = facesConfig.referencedBean;
-        if (referencedBean!= null) {
-            for (FacesReferencedBean referencedBeanItem: referencedBean) {
-                if (referencedBeanItem!= null) {
+        final List<FacesReferencedBean> referencedBean = facesConfig.referencedBean;
+        if (referencedBean != null) {
+            for (final FacesReferencedBean referencedBeanItem : referencedBean) {
+                if (referencedBeanItem != null) {
                     writer.writeStartElement(prefix, "referenced-bean", "http://java.sun.com/xml/ns/javaee");
                     writeFacesReferencedBean(writer, referencedBeanItem, context);
                     writer.writeEndElement();
@@ -642,10 +588,10 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: renderKit
-        List<FacesRenderKit> renderKit = facesConfig.renderKit;
-        if (renderKit!= null) {
-            for (FacesRenderKit renderKitItem: renderKit) {
-                if (renderKitItem!= null) {
+        final List<FacesRenderKit> renderKit = facesConfig.renderKit;
+        if (renderKit != null) {
+            for (final FacesRenderKit renderKitItem : renderKit) {
+                if (renderKitItem != null) {
                     writer.writeStartElement(prefix, "render-kit", "http://java.sun.com/xml/ns/javaee");
                     writeFacesRenderKit(writer, renderKitItem, context);
                     writer.writeEndElement();
@@ -654,11 +600,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: lifecycle
-        List<FacesLifecycle> lifecycle = facesConfig.lifecycle;
-        if (lifecycle!= null) {
-            for (FacesLifecycle lifecycleItem: lifecycle) {
+        final List<FacesLifecycle> lifecycle = facesConfig.lifecycle;
+        if (lifecycle != null) {
+            for (final FacesLifecycle lifecycleItem : lifecycle) {
                 writer.writeStartElement(prefix, "lifecycle", "http://java.sun.com/xml/ns/javaee");
-                if (lifecycleItem!= null) {
+                if (lifecycleItem != null) {
                     writeFacesLifecycle(writer, lifecycleItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -668,11 +614,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: validator
-        List<FacesValidator> validator = facesConfig.validator;
-        if (validator!= null) {
-            for (FacesValidator validatorItem: validator) {
+        final List<FacesValidator> validator = facesConfig.validator;
+        if (validator != null) {
+            for (final FacesValidator validatorItem : validator) {
                 writer.writeStartElement(prefix, "validator", "http://java.sun.com/xml/ns/javaee");
-                if (validatorItem!= null) {
+                if (validatorItem != null) {
                     writeFacesValidator(writer, validatorItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -682,11 +628,11 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: behavior
-        List<FacesBehavior> behavior = facesConfig.behavior;
-        if (behavior!= null) {
-            for (FacesBehavior behaviorItem: behavior) {
+        final List<FacesBehavior> behavior = facesConfig.behavior;
+        if (behavior != null) {
+            for (final FacesBehavior behaviorItem : behavior) {
                 writer.writeStartElement(prefix, "behavior", "http://java.sun.com/xml/ns/javaee");
-                if (behaviorItem!= null) {
+                if (behaviorItem != null) {
                     writeFacesBehavior(writer, behaviorItem, context);
                 } else {
                     writer.writeXsiNil();
@@ -696,46 +642,14 @@ public class FacesConfig$JAXB
         }
 
         // ELEMENT: facesConfigExtension
-        List<FacesExtension> facesConfigExtension = facesConfig.facesConfigExtension;
-        if (facesConfigExtension!= null) {
-            for (FacesExtension facesConfigExtensionItem: facesConfigExtension) {
-                if (facesConfigExtensionItem!= null) {
+        final List<FacesExtension> facesConfigExtension = facesConfig.facesConfigExtension;
+        if (facesConfigExtension != null) {
+            for (final FacesExtension facesConfigExtensionItem : facesConfigExtension) {
+                if (facesConfigExtensionItem != null) {
                     writer.writeStartElement(prefix, "faces-config-extension", "http://java.sun.com/xml/ns/javaee");
                     writeFacesExtension(writer, facesConfigExtensionItem, context);
                     writer.writeEndElement();
                 }
-            }
-        }
-
-        // ELEMENT: flowDefinitions
-        List<FacesConfigFlowDefinition> flowDefinitions = facesConfig.flowDefinitions;
-        if (flowDefinitions!= null) {
-            for (FacesConfigFlowDefinition flowDefinitionsItem: flowDefinitions) {
-                if (flowDefinitionsItem!= null) {
-                    writer.writeStartElement(prefix, "flow-definition", "http://java.sun.com/xml/ns/javaee");
-                    writeFacesConfigFlowDefinition(writer, flowDefinitionsItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
-        // ELEMENT: protectedViews
-        List<FacesConfigProtectedViews> protectedViews = facesConfig.protectedViews;
-        if (protectedViews!= null) {
-            for (FacesConfigProtectedViews protectedViewsItem: protectedViews) {
-                if (protectedViewsItem!= null) {
-                    writer.writeStartElement(prefix, "protected-views", "http://java.sun.com/xml/ns/javaee");
-                    writeFacesConfigProtectedViews(writer, protectedViewsItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
-        // ELEMENT_REF: others
-        List<Object> others = facesConfig.others;
-        if (others!= null) {
-            for (Object othersItem: others) {
-                context.writeXmlAny(writer, facesConfig, "others", othersItem);
             }
         }
 

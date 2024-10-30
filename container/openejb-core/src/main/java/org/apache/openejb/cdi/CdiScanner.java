@@ -22,7 +22,6 @@ import org.apache.openejb.BeanContext;
 import org.apache.openejb.assembler.classic.AppInfo;
 import org.apache.openejb.assembler.classic.BeansInfo;
 import org.apache.openejb.assembler.classic.EjbJarInfo;
-import org.apache.openejb.cdi.concurrency.AsynchronousInterceptor;
 import org.apache.openejb.cdi.transactional.MandatoryInterceptor;
 import org.apache.openejb.cdi.transactional.NeverInterceptor;
 import org.apache.openejb.cdi.transactional.NotSupportedInterceptor;
@@ -65,13 +64,9 @@ public class CdiScanner implements BdaScannerService {
     private static final Logger logger = Logger.getInstance(LogCategory.OPENEJB_CDI, OpenEJBLifecycle.class);
     public static final String OPENEJB_CDI_FILTER_CLASSLOADER = "openejb.cdi.filter.classloader";
 
-    private static final Class<?>[] INTERNAL_INTERCEPTORS = new Class<?>[]{
-        // @Transactional
+    private static final Class<?>[] TRANSACTIONAL_INTERCEPTORS = new Class<?>[]{
         MandatoryInterceptor.class, NeverInterceptor.class, NotSupportedInterceptor.class,
-        RequiredInterceptor.class, RequiredNewInterceptor.class, SupportsInterceptor.class,
-
-        // @Asynchronous
-        AsynchronousInterceptor.class
+        RequiredInterceptor.class, RequiredNewInterceptor.class, SupportsInterceptor.class
     };
 
     private final Set<Class<?>> startupClasses = new HashSet<>();
@@ -145,8 +140,8 @@ public class CdiScanner implements BdaScannerService {
 
             if (appInfo.webAppAlone || !ejbJar.webapp) {
                 // "manual" extension to avoid to add it through SPI mecanism
-                classes.addAll(asList(INTERNAL_INTERCEPTORS));
-                for (final Class<?> interceptor : INTERNAL_INTERCEPTORS) {
+                classes.addAll(asList(TRANSACTIONAL_INTERCEPTORS));
+                for (final Class<?> interceptor : TRANSACTIONAL_INTERCEPTORS) {
                     interceptorsManager.addEnabledInterceptorClass(interceptor);
                 }
             }

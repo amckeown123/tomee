@@ -95,10 +95,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "dataSource",
     "jmsConnectionFactories",
     "jmsDestinations",
-    "contextService",
-    "managedExecutor",
-    "managedScheduledExecutor",
-    "managedThreadFactory"
+    "contextService"
 })
 public class Application implements JndiConsumer, NamedModule {
 
@@ -144,12 +141,6 @@ public class Application implements JndiConsumer, NamedModule {
     protected KeyedCollection<String, DataSource> dataSource;
     @XmlElement(name = "context-service")
     protected KeyedCollection<String, ContextService> contextService;
-    @XmlElement(name = "managed-executor")
-    protected KeyedCollection<String, ManagedExecutor> managedExecutor;
-    @XmlElement(name = "managed-scheduled-executor")
-    protected KeyedCollection<String, ManagedScheduledExecutor> managedScheduledExecutor;
-    @XmlElement(name = "managed-thread-factory")
-    protected KeyedCollection<String, ManagedThreadFactory> managedThreadFactory;
     @XmlElement(name = "jms-connection-factory", required = true)
     protected KeyedCollection<String, JMSConnectionFactory> jmsConnectionFactories;
     @XmlElement(name = "jms-destination")
@@ -460,32 +451,5 @@ public class Application implements JndiConsumer, NamedModule {
             contextService = new KeyedCollection<String, ContextService>();
         }
         return this.contextService.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedExecutor> getManagedExecutorMap() {
-        if (managedExecutor == null) {
-            managedExecutor = new KeyedCollection<>();
-        }
-
-        return this.managedExecutor.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedScheduledExecutor> getManagedScheduledExecutorMap() {
-        if (managedScheduledExecutor == null) {
-            managedScheduledExecutor = new KeyedCollection<>();
-        }
-
-        return this.managedScheduledExecutor.toMap();
-    }
-
-    @Override
-    public Map<String, ManagedThreadFactory> getManagedThreadFactoryMap() {
-        if (managedThreadFactory == null) {
-            managedThreadFactory = new KeyedCollection<>();
-        }
-
-        return this.managedThreadFactory.toMap();
     }
 }

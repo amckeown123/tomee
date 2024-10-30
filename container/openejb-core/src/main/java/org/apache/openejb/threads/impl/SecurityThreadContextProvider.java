@@ -28,11 +28,9 @@ import org.apache.openejb.loader.SystemInstance;
 import org.apache.openejb.spi.SecurityService;
 
 import javax.security.auth.login.LoginException;
-import java.io.Serializable;
 import java.util.Map;
 
-public class SecurityThreadContextProvider implements ThreadContextProvider, Serializable {
-    public static final SecurityThreadContextProvider INSTANCE = new SecurityThreadContextProvider();
+public class SecurityThreadContextProvider implements ThreadContextProvider {
 
     private static final SecurityService SECURITY_SERVICE = SystemInstance.get().getComponent(SecurityService.class);
 
@@ -82,7 +80,7 @@ public class SecurityThreadContextProvider implements ThreadContextProvider, Ser
         return ContextServiceDefinition.SECURITY;
     }
 
-    public static class SecurityThreadContextSnapshot implements ThreadContextSnapshot, Serializable {
+    public class SecurityThreadContextSnapshot implements ThreadContextSnapshot {
 
         private final boolean associate;
         private final Object securityServiceState;
@@ -126,7 +124,7 @@ public class SecurityThreadContextProvider implements ThreadContextProvider, Ser
         }
     }
 
-    public static class SecurityThreadContextRestorer implements ThreadContextRestorer {
+    public class SecurityThreadContextRestorer implements ThreadContextRestorer {
 
         private final boolean associate;
         private final ThreadContext oldCtx;

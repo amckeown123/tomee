@@ -1,40 +1,37 @@
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+    * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.openejb.jee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import org.metatype.sxc.jaxb.JAXBObject;
 import org.metatype.sxc.jaxb.RuntimeContext;
 import org.metatype.sxc.util.Attribute;
 import org.metatype.sxc.util.XoXMLStreamReader;
 import org.metatype.sxc.util.XoXMLStreamWriter;
 
+import javax.xml.XMLConstants;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.apache.openejb.jee.CmpField$JAXB.readCmpField;
 import static org.apache.openejb.jee.CmpField$JAXB.writeCmpField;
 import static org.apache.openejb.jee.CmpVersion$JAXB.parseCmpVersion;
 import static org.apache.openejb.jee.CmpVersion$JAXB.toStringCmpVersion;
-import static org.apache.openejb.jee.ContextService$JAXB.readContextService;
-import static org.apache.openejb.jee.ContextService$JAXB.writeContextService;
 import static org.apache.openejb.jee.DataSource$JAXB.readDataSource;
 import static org.apache.openejb.jee.DataSource$JAXB.writeDataSource;
 import static org.apache.openejb.jee.EjbLocalRef$JAXB.readEjbLocalRef;
@@ -45,18 +42,8 @@ import static org.apache.openejb.jee.EnvEntry$JAXB.readEnvEntry;
 import static org.apache.openejb.jee.EnvEntry$JAXB.writeEnvEntry;
 import static org.apache.openejb.jee.Icon$JAXB.readIcon;
 import static org.apache.openejb.jee.Icon$JAXB.writeIcon;
-import static org.apache.openejb.jee.JMSConnectionFactory$JAXB.readJMSConnectionFactory;
-import static org.apache.openejb.jee.JMSConnectionFactory$JAXB.writeJMSConnectionFactory;
-import static org.apache.openejb.jee.JMSDestination$JAXB.readJMSDestination;
-import static org.apache.openejb.jee.JMSDestination$JAXB.writeJMSDestination;
 import static org.apache.openejb.jee.LifecycleCallback$JAXB.readLifecycleCallback;
 import static org.apache.openejb.jee.LifecycleCallback$JAXB.writeLifecycleCallback;
-import static org.apache.openejb.jee.ManagedExecutor$JAXB.readManagedExecutor;
-import static org.apache.openejb.jee.ManagedExecutor$JAXB.writeManagedExecutor;
-import static org.apache.openejb.jee.ManagedScheduledExecutor$JAXB.readManagedScheduledExecutor;
-import static org.apache.openejb.jee.ManagedScheduledExecutor$JAXB.writeManagedScheduledExecutor;
-import static org.apache.openejb.jee.ManagedThreadFactory$JAXB.readManagedThreadFactory;
-import static org.apache.openejb.jee.ManagedThreadFactory$JAXB.writeManagedThreadFactory;
 import static org.apache.openejb.jee.MessageDestinationRef$JAXB.readMessageDestinationRef;
 import static org.apache.openejb.jee.MessageDestinationRef$JAXB.writeMessageDestinationRef;
 import static org.apache.openejb.jee.PersistenceContextRef$JAXB.readPersistenceContextRef;
@@ -84,35 +71,30 @@ import static org.apache.openejb.jee.Text$JAXB.writeText;
     "StringEquality"
 })
 public class EntityBean$JAXB
-    extends JAXBObject<EntityBean>
-{
+    extends JAXBObject<EntityBean> {
 
 
     public EntityBean$JAXB() {
-        super(EntityBean.class, null, new QName("http://java.sun.com/xml/ns/javaee".intern(), "entity-beanType".intern()), Text$JAXB.class, Icon$JAXB.class, PersistenceType$JAXB.class, CmpVersion$JAXB.class, CmpField$JAXB.class, EnvEntry$JAXB.class, EjbRef$JAXB.class, EjbLocalRef$JAXB.class, ServiceRef$JAXB.class, ResourceRef$JAXB.class, ResourceEnvRef$JAXB.class, MessageDestinationRef$JAXB.class, PersistenceContextRef$JAXB.class, PersistenceUnitRef$JAXB.class, LifecycleCallback$JAXB.class, DataSource$JAXB.class, JMSConnectionFactory$JAXB.class, JMSDestination$JAXB.class, SecurityRoleRef$JAXB.class, SecurityIdentity$JAXB.class, Query$JAXB.class, ContextService$JAXB.class, ManagedExecutor$JAXB.class, ManagedScheduledExecutor$JAXB.class, ManagedThreadFactory$JAXB.class);
+        super(EntityBean.class, null, new QName("http://java.sun.com/xml/ns/javaee".intern(), "entity-beanType".intern()), Text$JAXB.class, Icon$JAXB.class, PersistenceType$JAXB.class, CmpVersion$JAXB.class, CmpField$JAXB.class, EnvEntry$JAXB.class, EjbRef$JAXB.class, EjbLocalRef$JAXB.class, ServiceRef$JAXB.class, ResourceRef$JAXB.class, ResourceEnvRef$JAXB.class, MessageDestinationRef$JAXB.class, PersistenceContextRef$JAXB.class, PersistenceUnitRef$JAXB.class, LifecycleCallback$JAXB.class, DataSource$JAXB.class, SecurityRoleRef$JAXB.class, SecurityIdentity$JAXB.class, Query$JAXB.class);
     }
 
-    public static EntityBean readEntityBean(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public static EntityBean readEntityBean(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static void writeEntityBean(XoXMLStreamWriter writer, EntityBean entityBean, RuntimeContext context)
-        throws Exception
-    {
+    public static void writeEntityBean(final XoXMLStreamWriter writer, final EntityBean entityBean, final RuntimeContext context)
+        throws Exception {
         _write(writer, entityBean, context);
     }
 
-    public void write(XoXMLStreamWriter writer, EntityBean entityBean, RuntimeContext context)
-        throws Exception
-    {
+    public void write(final XoXMLStreamWriter writer, final EntityBean entityBean, final RuntimeContext context)
+        throws Exception {
         _write(writer, entityBean, context);
     }
 
-    public static final EntityBean _read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final static EntityBean _read(final XoXMLStreamReader reader, RuntimeContext context)
+        throws Exception {
 
         // Check for xsi:nil
         if (reader.isXsiNil()) {
@@ -123,7 +105,7 @@ public class EntityBean$JAXB
             context = new RuntimeContext();
         }
 
-        EntityBean entityBean = new EntityBean();
+        final EntityBean entityBean = new EntityBean();
         context.beforeUnmarshal(entityBean, org.metatype.sxc.jaxb.LifecycleCallback.NONE);
 
         ArrayList<Text> descriptions = null;
@@ -142,557 +124,461 @@ public class EntityBean$JAXB
         List<org.apache.openejb.jee.LifecycleCallback> postConstruct = null;
         List<org.apache.openejb.jee.LifecycleCallback> preDestroy = null;
         KeyedCollection<String, DataSource> dataSource = null;
-        KeyedCollection<String, JMSConnectionFactory> jmsConnectionFactories = null;
-        KeyedCollection<String, JMSDestination> jmsDestinations = null;
         List<SecurityRoleRef> securityRoleRef = null;
         List<Query> query = null;
-        KeyedCollection<String, ContextService> contextService = null;
-        KeyedCollection<String, ManagedExecutor> managedExecutor = null;
-        KeyedCollection<String, ManagedScheduledExecutor> managedScheduledExecutor = null;
-        KeyedCollection<String, ManagedThreadFactory> managedThreadFactory = null;
 
         // Check xsi:type
-        QName xsiType = reader.getXsiType();
-        if (xsiType!= null) {
-            if (("entity-beanType"!= xsiType.getLocalPart())||("http://java.sun.com/xml/ns/javaee"!= xsiType.getNamespaceURI())) {
+        final QName xsiType = reader.getXsiType();
+        if (xsiType != null) {
+            if (("entity-beanType" != xsiType.getLocalPart()) || ("http://java.sun.com/xml/ns/javaee" != xsiType.getNamespaceURI())) {
                 return context.unexpectedXsiType(reader, EntityBean.class);
             }
         }
 
         // Read attributes
-        for (Attribute attribute: reader.getAttributes()) {
-            if (("id" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+        for (final Attribute attribute : reader.getAttributes()) {
+            if (("id" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: id
-                String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
+                final String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
                 context.addXmlId(reader, id, entityBean);
                 entityBean.id = id;
-            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI!= attribute.getNamespace()) {
+            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI != attribute.getNamespace()) {
                 context.unexpectedAttribute(attribute, new QName("", "id"));
             }
         }
 
         // Read elements
-        for (XoXMLStreamReader elementReader: reader.getChildElements()) {
-            if (("description" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+        for (final XoXMLStreamReader elementReader : reader.getChildElements()) {
+            if (("description" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: descriptions
-                Text descriptionsItem = readText(elementReader, context);
+                final Text descriptionsItem = readText(elementReader, context);
                 if (descriptions == null) {
-                    descriptions = new ArrayList<>();
+                    descriptions = new ArrayList<Text>();
                 }
                 descriptions.add(descriptionsItem);
-            } else if (("display-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("display-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: displayNames
-                Text displayNamesItem = readText(elementReader, context);
+                final Text displayNamesItem = readText(elementReader, context);
                 if (displayNames == null) {
-                    displayNames = new ArrayList<>();
+                    displayNames = new ArrayList<Text>();
                 }
                 displayNames.add(displayNamesItem);
-            } else if (("icon" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("icon" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: icon
-                Icon iconItem = readIcon(elementReader, context);
+                final Icon iconItem = readIcon(elementReader, context);
                 if (icon == null) {
                     icon = entityBean.icon;
-                    if (icon!= null) {
+                    if (icon != null) {
                         icon.clear();
                     } else {
-                        icon = new LocalCollection<>();
+                        icon = new LocalCollection<Icon>();
                     }
                 }
                 icon.add(iconItem);
-            } else if (("ejb-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("ejb-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: ejbName
-                String ejbNameRaw = elementReader.getElementText();
+                final String ejbNameRaw = elementReader.getElementAsString();
 
-                String ejbName;
+                final String ejbName;
                 try {
                     ejbName = Adapters.collapsedStringAdapterAdapter.unmarshal(ejbNameRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.ejbName = ejbName;
-            } else if (("mapped-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("mapped-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: mappedName
-                String mappedNameRaw = elementReader.getElementText();
+                final String mappedNameRaw = elementReader.getElementAsString();
 
-                String mappedName;
+                final String mappedName;
                 try {
                     mappedName = Adapters.collapsedStringAdapterAdapter.unmarshal(mappedNameRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.mappedName = mappedName;
-            } else if (("home" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("home" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: home
-                String homeRaw = elementReader.getElementText();
+                final String homeRaw = elementReader.getElementAsString();
 
-                String home;
+                final String home;
                 try {
                     home = Adapters.collapsedStringAdapterAdapter.unmarshal(homeRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.home = home;
-            } else if (("remote" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("remote" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: remote
-                String remoteRaw = elementReader.getElementText();
+                final String remoteRaw = elementReader.getElementAsString();
 
-                String remote;
+                final String remote;
                 try {
                     remote = Adapters.collapsedStringAdapterAdapter.unmarshal(remoteRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.remote = remote;
-            } else if (("local-home" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("local-home" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: localHome
-                String localHomeRaw = elementReader.getElementText();
+                final String localHomeRaw = elementReader.getElementAsString();
 
-                String localHome;
+                final String localHome;
                 try {
                     localHome = Adapters.collapsedStringAdapterAdapter.unmarshal(localHomeRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.localHome = localHome;
-            } else if (("local" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("local" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: local
-                String localRaw = elementReader.getElementText();
+                final String localRaw = elementReader.getElementAsString();
 
-                String local;
+                final String local;
                 try {
                     local = Adapters.collapsedStringAdapterAdapter.unmarshal(localRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.local = local;
-            } else if (("ejb-class" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("ejb-class" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: ejbClass
-                String ejbClassRaw = elementReader.getElementText();
+                final String ejbClassRaw = elementReader.getElementAsString();
 
-                String ejbClass;
+                final String ejbClass;
                 try {
                     ejbClass = Adapters.collapsedStringAdapterAdapter.unmarshal(ejbClassRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.ejbClass = ejbClass;
-            } else if (("persistence-type" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("persistence-type" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: persistenceType
-                PersistenceType persistenceType = parsePersistenceType(elementReader, context, elementReader.getElementText());
-                if (persistenceType!= null) {
+                final PersistenceType persistenceType = parsePersistenceType(elementReader, context, elementReader.getElementAsString());
+                if (persistenceType != null) {
                     entityBean.persistenceType = persistenceType;
                 }
-            } else if (("prim-key-class" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("prim-key-class" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: primKeyClass
-                String primKeyClassRaw = elementReader.getElementText();
+                final String primKeyClassRaw = elementReader.getElementAsString();
 
-                String primKeyClass;
+                final String primKeyClass;
                 try {
                     primKeyClass = Adapters.collapsedStringAdapterAdapter.unmarshal(primKeyClassRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.primKeyClass = primKeyClass;
-            } else if (("reentrant" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("reentrant" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: reentrant
-                String reentrantRaw = elementReader.getElementText();
+                final String reentrantRaw = elementReader.getElementAsString();
 
-                Boolean reentrant;
+                final Boolean reentrant;
                 try {
                     reentrant = Adapters.booleanAdapterAdapter.unmarshal(reentrantRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, BooleanAdapter.class, Boolean.class, Boolean.class, e);
                     continue;
                 }
 
                 entityBean.reentrant = reentrant;
-            } else if (("cmp-version" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("cmp-version" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: cmpVersion
-                CmpVersion cmpVersion = parseCmpVersion(elementReader, context, elementReader.getElementText());
-                if (cmpVersion!= null) {
+                final CmpVersion cmpVersion = parseCmpVersion(elementReader, context, elementReader.getElementAsString());
+                if (cmpVersion != null) {
                     entityBean.cmpVersion = cmpVersion;
                 }
-            } else if (("abstract-schema-name" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("abstract-schema-name" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: abstractSchemaName
-                String abstractSchemaNameRaw = elementReader.getElementText();
+                final String abstractSchemaNameRaw = elementReader.getElementAsString();
 
-                String abstractSchemaName;
+                final String abstractSchemaName;
                 try {
                     abstractSchemaName = Adapters.collapsedStringAdapterAdapter.unmarshal(abstractSchemaNameRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.abstractSchemaName = abstractSchemaName;
-            } else if (("cmp-field" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("cmp-field" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: cmpField
-                CmpField cmpFieldItem = readCmpField(elementReader, context);
+                final CmpField cmpFieldItem = readCmpField(elementReader, context);
                 if (cmpField == null) {
                     cmpField = entityBean.cmpField;
-                    if (cmpField!= null) {
+                    if (cmpField != null) {
                         cmpField.clear();
                     } else {
-                        cmpField = new ArrayList<>();
+                        cmpField = new ArrayList<CmpField>();
                     }
                 }
                 cmpField.add(cmpFieldItem);
-            } else if (("primkey-field" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("primkey-field" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: primkeyField
-                String primkeyFieldRaw = elementReader.getElementText();
+                final String primkeyFieldRaw = elementReader.getElementAsString();
 
-                String primkeyField;
+                final String primkeyField;
                 try {
                     primkeyField = Adapters.collapsedStringAdapterAdapter.unmarshal(primkeyFieldRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 entityBean.primkeyField = primkeyField;
-            } else if (("env-entry" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("env-entry" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: envEntry
-                EnvEntry envEntryItem = readEnvEntry(elementReader, context);
+                final EnvEntry envEntryItem = readEnvEntry(elementReader, context);
                 if (envEntry == null) {
                     envEntry = entityBean.envEntry;
-                    if (envEntry!= null) {
+                    if (envEntry != null) {
                         envEntry.clear();
                     } else {
-                        envEntry = new KeyedCollection<>();
+                        envEntry = new KeyedCollection<String, EnvEntry>();
                     }
                 }
                 envEntry.add(envEntryItem);
-            } else if (("ejb-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("ejb-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: ejbRef
-                EjbRef ejbRefItem = readEjbRef(elementReader, context);
+                final EjbRef ejbRefItem = readEjbRef(elementReader, context);
                 if (ejbRef == null) {
                     ejbRef = entityBean.ejbRef;
-                    if (ejbRef!= null) {
+                    if (ejbRef != null) {
                         ejbRef.clear();
                     } else {
-                        ejbRef = new KeyedCollection<>();
+                        ejbRef = new KeyedCollection<String, EjbRef>();
                     }
                 }
                 ejbRef.add(ejbRefItem);
-            } else if (("ejb-local-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("ejb-local-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: ejbLocalRef
-                EjbLocalRef ejbLocalRefItem = readEjbLocalRef(elementReader, context);
+                final EjbLocalRef ejbLocalRefItem = readEjbLocalRef(elementReader, context);
                 if (ejbLocalRef == null) {
                     ejbLocalRef = entityBean.ejbLocalRef;
-                    if (ejbLocalRef!= null) {
+                    if (ejbLocalRef != null) {
                         ejbLocalRef.clear();
                     } else {
-                        ejbLocalRef = new KeyedCollection<>();
+                        ejbLocalRef = new KeyedCollection<String, EjbLocalRef>();
                     }
                 }
                 ejbLocalRef.add(ejbLocalRefItem);
-            } else if (("service-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("service-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: serviceRef
-                ServiceRef serviceRefItem = readServiceRef(elementReader, context);
+                final ServiceRef serviceRefItem = readServiceRef(elementReader, context);
                 if (serviceRef == null) {
                     serviceRef = entityBean.serviceRef;
-                    if (serviceRef!= null) {
+                    if (serviceRef != null) {
                         serviceRef.clear();
                     } else {
-                        serviceRef = new KeyedCollection<>();
+                        serviceRef = new KeyedCollection<String, ServiceRef>();
                     }
                 }
                 serviceRef.add(serviceRefItem);
-            } else if (("resource-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("resource-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: resourceRef
-                ResourceRef resourceRefItem = readResourceRef(elementReader, context);
+                final ResourceRef resourceRefItem = readResourceRef(elementReader, context);
                 if (resourceRef == null) {
                     resourceRef = entityBean.resourceRef;
-                    if (resourceRef!= null) {
+                    if (resourceRef != null) {
                         resourceRef.clear();
                     } else {
-                        resourceRef = new KeyedCollection<>();
+                        resourceRef = new KeyedCollection<String, ResourceRef>();
                     }
                 }
                 resourceRef.add(resourceRefItem);
-            } else if (("resource-env-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("resource-env-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: resourceEnvRef
-                ResourceEnvRef resourceEnvRefItem = readResourceEnvRef(elementReader, context);
+                final ResourceEnvRef resourceEnvRefItem = readResourceEnvRef(elementReader, context);
                 if (resourceEnvRef == null) {
                     resourceEnvRef = entityBean.resourceEnvRef;
-                    if (resourceEnvRef!= null) {
+                    if (resourceEnvRef != null) {
                         resourceEnvRef.clear();
                     } else {
-                        resourceEnvRef = new KeyedCollection<>();
+                        resourceEnvRef = new KeyedCollection<String, ResourceEnvRef>();
                     }
                 }
                 resourceEnvRef.add(resourceEnvRefItem);
-            } else if (("message-destination-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("message-destination-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: messageDestinationRef
-                MessageDestinationRef messageDestinationRefItem = readMessageDestinationRef(elementReader, context);
+                final MessageDestinationRef messageDestinationRefItem = readMessageDestinationRef(elementReader, context);
                 if (messageDestinationRef == null) {
                     messageDestinationRef = entityBean.messageDestinationRef;
-                    if (messageDestinationRef!= null) {
+                    if (messageDestinationRef != null) {
                         messageDestinationRef.clear();
                     } else {
-                        messageDestinationRef = new KeyedCollection<>();
+                        messageDestinationRef = new KeyedCollection<String, MessageDestinationRef>();
                     }
                 }
                 messageDestinationRef.add(messageDestinationRefItem);
-            } else if (("persistence-context-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("persistence-context-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: persistenceContextRef
-                PersistenceContextRef persistenceContextRefItem = readPersistenceContextRef(elementReader, context);
+                final PersistenceContextRef persistenceContextRefItem = readPersistenceContextRef(elementReader, context);
                 if (persistenceContextRef == null) {
                     persistenceContextRef = entityBean.persistenceContextRef;
-                    if (persistenceContextRef!= null) {
+                    if (persistenceContextRef != null) {
                         persistenceContextRef.clear();
                     } else {
-                        persistenceContextRef = new KeyedCollection<>();
+                        persistenceContextRef = new KeyedCollection<String, PersistenceContextRef>();
                     }
                 }
                 persistenceContextRef.add(persistenceContextRefItem);
-            } else if (("persistence-unit-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("persistence-unit-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: persistenceUnitRef
-                PersistenceUnitRef persistenceUnitRefItem = readPersistenceUnitRef(elementReader, context);
+                final PersistenceUnitRef persistenceUnitRefItem = readPersistenceUnitRef(elementReader, context);
                 if (persistenceUnitRef == null) {
                     persistenceUnitRef = entityBean.persistenceUnitRef;
-                    if (persistenceUnitRef!= null) {
+                    if (persistenceUnitRef != null) {
                         persistenceUnitRef.clear();
                     } else {
-                        persistenceUnitRef = new KeyedCollection<>();
+                        persistenceUnitRef = new KeyedCollection<String, PersistenceUnitRef>();
                     }
                 }
                 persistenceUnitRef.add(persistenceUnitRefItem);
-            } else if (("post-construct" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("post-construct" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: postConstruct
-                org.apache.openejb.jee.LifecycleCallback postConstructItem = readLifecycleCallback(elementReader, context);
+                final org.apache.openejb.jee.LifecycleCallback postConstructItem = readLifecycleCallback(elementReader, context);
                 if (postConstruct == null) {
                     postConstruct = entityBean.postConstruct;
-                    if (postConstruct!= null) {
+                    if (postConstruct != null) {
                         postConstruct.clear();
                     } else {
-                        postConstruct = new ArrayList<>();
+                        postConstruct = new ArrayList<org.apache.openejb.jee.LifecycleCallback>();
                     }
                 }
                 postConstruct.add(postConstructItem);
-            } else if (("pre-destroy" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("pre-destroy" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: preDestroy
-                org.apache.openejb.jee.LifecycleCallback preDestroyItem = readLifecycleCallback(elementReader, context);
+                final org.apache.openejb.jee.LifecycleCallback preDestroyItem = readLifecycleCallback(elementReader, context);
                 if (preDestroy == null) {
                     preDestroy = entityBean.preDestroy;
-                    if (preDestroy!= null) {
+                    if (preDestroy != null) {
                         preDestroy.clear();
                     } else {
-                        preDestroy = new ArrayList<>();
+                        preDestroy = new ArrayList<org.apache.openejb.jee.LifecycleCallback>();
                     }
                 }
                 preDestroy.add(preDestroyItem);
-            } else if (("data-source" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("data-source" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: dataSource
-                DataSource dataSourceItem = readDataSource(elementReader, context);
+                final DataSource dataSourceItem = readDataSource(elementReader, context);
                 if (dataSource == null) {
                     dataSource = entityBean.dataSource;
-                    if (dataSource!= null) {
+                    if (dataSource != null) {
                         dataSource.clear();
                     } else {
-                        dataSource = new KeyedCollection<>();
+                        dataSource = new KeyedCollection<String, DataSource>();
                     }
                 }
                 dataSource.add(dataSourceItem);
-            } else if (("jms-connection-factory" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: jmsConnectionFactories
-                JMSConnectionFactory jmsConnectionFactoriesItem = readJMSConnectionFactory(elementReader, context);
-                if (jmsConnectionFactories == null) {
-                    jmsConnectionFactories = entityBean.jmsConnectionFactories;
-                    if (jmsConnectionFactories!= null) {
-                        jmsConnectionFactories.clear();
-                    } else {
-                        jmsConnectionFactories = new KeyedCollection<>();
-                    }
-                }
-                jmsConnectionFactories.add(jmsConnectionFactoriesItem);
-            } else if (("jms-destination" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: jmsDestinations
-                JMSDestination jmsDestinationsItem = readJMSDestination(elementReader, context);
-                if (jmsDestinations == null) {
-                    jmsDestinations = entityBean.jmsDestinations;
-                    if (jmsDestinations!= null) {
-                        jmsDestinations.clear();
-                    } else {
-                        jmsDestinations = new KeyedCollection<>();
-                    }
-                }
-                jmsDestinations.add(jmsDestinationsItem);
-            } else if (("security-role-ref" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("security-role-ref" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: securityRoleRef
-                SecurityRoleRef securityRoleRefItem = readSecurityRoleRef(elementReader, context);
+                final SecurityRoleRef securityRoleRefItem = readSecurityRoleRef(elementReader, context);
                 if (securityRoleRef == null) {
                     securityRoleRef = entityBean.securityRoleRef;
-                    if (securityRoleRef!= null) {
+                    if (securityRoleRef != null) {
                         securityRoleRef.clear();
                     } else {
-                        securityRoleRef = new ArrayList<>();
+                        securityRoleRef = new ArrayList<SecurityRoleRef>();
                     }
                 }
                 securityRoleRef.add(securityRoleRefItem);
-            } else if (("security-identity" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("security-identity" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: securityIdentity
-                SecurityIdentity securityIdentity = readSecurityIdentity(elementReader, context);
+                final SecurityIdentity securityIdentity = readSecurityIdentity(elementReader, context);
                 entityBean.securityIdentity = securityIdentity;
-            } else if (("query" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+            } else if (("query" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: query
-                Query queryItem = readQuery(elementReader, context);
+                final Query queryItem = readQuery(elementReader, context);
                 if (query == null) {
                     query = entityBean.query;
-                    if (query!= null) {
+                    if (query != null) {
                         query.clear();
                     } else {
-                        query = new ArrayList<>();
+                        query = new ArrayList<Query>();
                     }
                 }
                 query.add(queryItem);
-            } else if (("context-service" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: contextService
-                ContextService contextServiceItem = readContextService(elementReader, context);
-                if (contextService == null) {
-                    contextService = entityBean.contextService;
-                    if (contextService!= null) {
-                        contextService.clear();
-                    } else {
-                        contextService = new KeyedCollection<>();
-                    }
-                }
-                contextService.add(contextServiceItem);
-            } else if (("managed-executor" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: managedExecutor
-                ManagedExecutor managedExecutorItem = readManagedExecutor(elementReader, context);
-                if (managedExecutor == null) {
-                    managedExecutor = entityBean.managedExecutor;
-                    if (managedExecutor!= null) {
-                        managedExecutor.clear();
-                    } else {
-                        managedExecutor = new KeyedCollection<>();
-                    }
-                }
-                managedExecutor.add(managedExecutorItem);
-            } else if (("managed-scheduled-executor" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: managedScheduledExecutor
-                ManagedScheduledExecutor managedScheduledExecutorItem = readManagedScheduledExecutor(elementReader, context);
-                if (managedScheduledExecutor == null) {
-                    managedScheduledExecutor = entityBean.managedScheduledExecutor;
-                    if (managedScheduledExecutor!= null) {
-                        managedScheduledExecutor.clear();
-                    } else {
-                        managedScheduledExecutor = new KeyedCollection<>();
-                    }
-                }
-                managedScheduledExecutor.add(managedScheduledExecutorItem);
-            } else if (("managed-thread-factory" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
-                // ELEMENT: managedThreadFactory
-                ManagedThreadFactory managedThreadFactoryItem = readManagedThreadFactory(elementReader, context);
-                if (managedThreadFactory == null) {
-                    managedThreadFactory = entityBean.managedThreadFactory;
-                    if (managedThreadFactory!= null) {
-                        managedThreadFactory.clear();
-                    } else {
-                        managedThreadFactory = new KeyedCollection<>();
-                    }
-                }
-                managedThreadFactory.add(managedThreadFactoryItem);
             } else {
-                context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "description"), new QName("http://java.sun.com/xml/ns/javaee", "display-name"), new QName("http://java.sun.com/xml/ns/javaee", "icon"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-name"), new QName("http://java.sun.com/xml/ns/javaee", "mapped-name"), new QName("http://java.sun.com/xml/ns/javaee", "home"), new QName("http://java.sun.com/xml/ns/javaee", "remote"), new QName("http://java.sun.com/xml/ns/javaee", "local-home"), new QName("http://java.sun.com/xml/ns/javaee", "local"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-class"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-type"), new QName("http://java.sun.com/xml/ns/javaee", "prim-key-class"), new QName("http://java.sun.com/xml/ns/javaee", "reentrant"), new QName("http://java.sun.com/xml/ns/javaee", "cmp-version"), new QName("http://java.sun.com/xml/ns/javaee", "abstract-schema-name"), new QName("http://java.sun.com/xml/ns/javaee", "cmp-field"), new QName("http://java.sun.com/xml/ns/javaee", "primkey-field"), new QName("http://java.sun.com/xml/ns/javaee", "env-entry"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-ref"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-local-ref"), new QName("http://java.sun.com/xml/ns/javaee", "service-ref"), new QName("http://java.sun.com/xml/ns/javaee", "resource-ref"), new QName("http://java.sun.com/xml/ns/javaee", "resource-env-ref"), new QName("http://java.sun.com/xml/ns/javaee", "message-destination-ref"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-context-ref"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-unit-ref"), new QName("http://java.sun.com/xml/ns/javaee", "post-construct"), new QName("http://java.sun.com/xml/ns/javaee", "pre-destroy"), new QName("http://java.sun.com/xml/ns/javaee", "data-source"), new QName("http://java.sun.com/xml/ns/javaee", "jms-connection-factory"), new QName("http://java.sun.com/xml/ns/javaee", "jms-destination"), new QName("http://java.sun.com/xml/ns/javaee", "security-role-ref"), new QName("http://java.sun.com/xml/ns/javaee", "security-identity"), new QName("http://java.sun.com/xml/ns/javaee", "query"), new QName("http://java.sun.com/xml/ns/javaee", "context-service"), new QName("http://java.sun.com/xml/ns/javaee", "managed-executor"), new QName("http://java.sun.com/xml/ns/javaee", "managed-scheduled-executor"), new QName("http://java.sun.com/xml/ns/javaee", "managed-thread-factory"));
+                context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "description"), new QName("http://java.sun.com/xml/ns/javaee", "display-name"), new QName("http://java.sun.com/xml/ns/javaee", "icon"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-name"), new QName("http://java.sun.com/xml/ns/javaee", "mapped-name"), new QName("http://java.sun.com/xml/ns/javaee", "home"), new QName("http://java.sun.com/xml/ns/javaee", "remote"), new QName("http://java.sun.com/xml/ns/javaee", "local-home"), new QName("http://java.sun.com/xml/ns/javaee", "local"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-class"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-type"), new QName("http://java.sun.com/xml/ns/javaee", "prim-key-class"), new QName("http://java.sun.com/xml/ns/javaee", "reentrant"), new QName("http://java.sun.com/xml/ns/javaee", "cmp-version"), new QName("http://java.sun.com/xml/ns/javaee", "abstract-schema-name"), new QName("http://java.sun.com/xml/ns/javaee", "cmp-field"), new QName("http://java.sun.com/xml/ns/javaee", "primkey-field"), new QName("http://java.sun.com/xml/ns/javaee", "env-entry"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-ref"), new QName("http://java.sun.com/xml/ns/javaee", "ejb-local-ref"), new QName("http://java.sun.com/xml/ns/javaee", "service-ref"), new QName("http://java.sun.com/xml/ns/javaee", "resource-ref"), new QName("http://java.sun.com/xml/ns/javaee", "resource-env-ref"), new QName("http://java.sun.com/xml/ns/javaee", "message-destination-ref"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-context-ref"), new QName("http://java.sun.com/xml/ns/javaee", "persistence-unit-ref"), new QName("http://java.sun.com/xml/ns/javaee", "post-construct"), new QName("http://java.sun.com/xml/ns/javaee", "pre-destroy"), new QName("http://java.sun.com/xml/ns/javaee", "data-source"), new QName("http://java.sun.com/xml/ns/javaee", "security-role-ref"), new QName("http://java.sun.com/xml/ns/javaee", "security-identity"), new QName("http://java.sun.com/xml/ns/javaee", "query"));
             }
         }
-        if (descriptions!= null) {
+        if (descriptions != null) {
             try {
-                entityBean.setDescriptions(descriptions.toArray(new Text[descriptions.size()] ));
-            } catch (Exception e) {
+                entityBean.setDescriptions(descriptions.toArray(new Text[descriptions.size()]));
+            } catch (final Exception e) {
                 context.setterError(reader, EntityBean.class, "setDescriptions", Text[].class, e);
             }
         }
-        if (displayNames!= null) {
+        if (displayNames != null) {
             try {
-                entityBean.setDisplayNames(displayNames.toArray(new Text[displayNames.size()] ));
-            } catch (Exception e) {
+                entityBean.setDisplayNames(displayNames.toArray(new Text[displayNames.size()]));
+            } catch (final Exception e) {
                 context.setterError(reader, EntityBean.class, "setDisplayNames", Text[].class, e);
             }
         }
-        if (icon!= null) {
+        if (icon != null) {
             entityBean.icon = icon;
         }
-        if (cmpField!= null) {
+        if (cmpField != null) {
             entityBean.cmpField = cmpField;
         }
-        if (envEntry!= null) {
+        if (envEntry != null) {
             entityBean.envEntry = envEntry;
         }
-        if (ejbRef!= null) {
+        if (ejbRef != null) {
             entityBean.ejbRef = ejbRef;
         }
-        if (ejbLocalRef!= null) {
+        if (ejbLocalRef != null) {
             entityBean.ejbLocalRef = ejbLocalRef;
         }
-        if (serviceRef!= null) {
+        if (serviceRef != null) {
             entityBean.serviceRef = serviceRef;
         }
-        if (resourceRef!= null) {
+        if (resourceRef != null) {
             entityBean.resourceRef = resourceRef;
         }
-        if (resourceEnvRef!= null) {
+        if (resourceEnvRef != null) {
             entityBean.resourceEnvRef = resourceEnvRef;
         }
-        if (messageDestinationRef!= null) {
+        if (messageDestinationRef != null) {
             entityBean.messageDestinationRef = messageDestinationRef;
         }
-        if (persistenceContextRef!= null) {
+        if (persistenceContextRef != null) {
             entityBean.persistenceContextRef = persistenceContextRef;
         }
-        if (persistenceUnitRef!= null) {
+        if (persistenceUnitRef != null) {
             entityBean.persistenceUnitRef = persistenceUnitRef;
         }
-        if (postConstruct!= null) {
+        if (postConstruct != null) {
             entityBean.postConstruct = postConstruct;
         }
-        if (preDestroy!= null) {
+        if (preDestroy != null) {
             entityBean.preDestroy = preDestroy;
         }
-        if (dataSource!= null) {
+        if (dataSource != null) {
             entityBean.dataSource = dataSource;
         }
-        if (jmsConnectionFactories!= null) {
-            entityBean.jmsConnectionFactories = jmsConnectionFactories;
-        }
-        if (jmsDestinations!= null) {
-            entityBean.jmsDestinations = jmsDestinations;
-        }
-        if (securityRoleRef!= null) {
+        if (securityRoleRef != null) {
             entityBean.securityRoleRef = securityRoleRef;
         }
-        if (query!= null) {
+        if (query != null) {
             entityBean.query = query;
-        }
-        if (contextService!= null) {
-            entityBean.contextService = contextService;
-        }
-        if (managedExecutor!= null) {
-            entityBean.managedExecutor = managedExecutor;
-        }
-        if (managedScheduledExecutor!= null) {
-            entityBean.managedScheduledExecutor = managedScheduledExecutor;
-        }
-        if (managedThreadFactory!= null) {
-            entityBean.managedThreadFactory = managedThreadFactory;
         }
 
         context.afterUnmarshal(entityBean, org.metatype.sxc.jaxb.LifecycleCallback.NONE);
@@ -700,40 +586,38 @@ public class EntityBean$JAXB
         return entityBean;
     }
 
-    public final EntityBean read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final EntityBean read(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static final void _write(XoXMLStreamWriter writer, EntityBean entityBean, RuntimeContext context)
-        throws Exception
-    {
+    public final static void _write(final XoXMLStreamWriter writer, final EntityBean entityBean, RuntimeContext context)
+        throws Exception {
         if (entityBean == null) {
             writer.writeXsiNil();
-            return ;
+            return;
         }
 
         if (context == null) {
             context = new RuntimeContext();
         }
 
-        String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
-        if (EntityBean.class!= entityBean.getClass()) {
+        final String prefix = writer.getUniquePrefix("http://java.sun.com/xml/ns/javaee");
+        if (EntityBean.class != entityBean.getClass()) {
             context.unexpectedSubclass(writer, entityBean, EntityBean.class);
-            return ;
+            return;
         }
 
         context.beforeMarshal(entityBean, org.metatype.sxc.jaxb.LifecycleCallback.NONE);
 
 
         // ATTRIBUTE: id
-        String idRaw = entityBean.id;
-        if (idRaw!= null) {
+        final String idRaw = entityBean.id;
+        if (idRaw != null) {
             String id = null;
             try {
                 id = Adapters.collapsedStringAdapterAdapter.marshal(idRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(entityBean, "id", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "id", id);
@@ -743,12 +627,12 @@ public class EntityBean$JAXB
         Text[] descriptions = null;
         try {
             descriptions = entityBean.getDescriptions();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.getterError(entityBean, "descriptions", EntityBean.class, "getDescriptions", e);
         }
-        if (descriptions!= null) {
-            for (Text descriptionsItem: descriptions) {
-                if (descriptionsItem!= null) {
+        if (descriptions != null) {
+            for (final Text descriptionsItem : descriptions) {
+                if (descriptionsItem != null) {
                     writer.writeStartElement(prefix, "description", "http://java.sun.com/xml/ns/javaee");
                     writeText(writer, descriptionsItem, context);
                     writer.writeEndElement();
@@ -762,12 +646,12 @@ public class EntityBean$JAXB
         Text[] displayNames = null;
         try {
             displayNames = entityBean.getDisplayNames();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.getterError(entityBean, "displayNames", EntityBean.class, "getDisplayNames", e);
         }
-        if (displayNames!= null) {
-            for (Text displayNamesItem: displayNames) {
-                if (displayNamesItem!= null) {
+        if (displayNames != null) {
+            for (final Text displayNamesItem : displayNames) {
+                if (displayNamesItem != null) {
                     writer.writeStartElement(prefix, "display-name", "http://java.sun.com/xml/ns/javaee");
                     writeText(writer, displayNamesItem, context);
                     writer.writeEndElement();
@@ -778,10 +662,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: icon
-        LocalCollection<Icon> icon = entityBean.icon;
-        if (icon!= null) {
-            for (Icon iconItem: icon) {
-                if (iconItem!= null) {
+        final LocalCollection<Icon> icon = entityBean.icon;
+        if (icon != null) {
+            for (final Icon iconItem : icon) {
+                if (iconItem != null) {
                     writer.writeStartElement(prefix, "icon", "http://java.sun.com/xml/ns/javaee");
                     writeIcon(writer, iconItem, context);
                     writer.writeEndElement();
@@ -792,14 +676,14 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: ejbName
-        String ejbNameRaw = entityBean.ejbName;
+        final String ejbNameRaw = entityBean.ejbName;
         String ejbName = null;
         try {
             ejbName = Adapters.collapsedStringAdapterAdapter.marshal(ejbNameRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "ejbName", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (ejbName!= null) {
+        if (ejbName != null) {
             writer.writeStartElement(prefix, "ejb-name", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(ejbName);
             writer.writeEndElement();
@@ -808,84 +692,84 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: mappedName
-        String mappedNameRaw = entityBean.mappedName;
+        final String mappedNameRaw = entityBean.mappedName;
         String mappedName = null;
         try {
             mappedName = Adapters.collapsedStringAdapterAdapter.marshal(mappedNameRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "mappedName", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (mappedName!= null) {
+        if (mappedName != null) {
             writer.writeStartElement(prefix, "mapped-name", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(mappedName);
             writer.writeEndElement();
         }
 
         // ELEMENT: home
-        String homeRaw = entityBean.home;
+        final String homeRaw = entityBean.home;
         String home = null;
         try {
             home = Adapters.collapsedStringAdapterAdapter.marshal(homeRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "home", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (home!= null) {
+        if (home != null) {
             writer.writeStartElement(prefix, "home", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(home);
             writer.writeEndElement();
         }
 
         // ELEMENT: remote
-        String remoteRaw = entityBean.remote;
+        final String remoteRaw = entityBean.remote;
         String remote = null;
         try {
             remote = Adapters.collapsedStringAdapterAdapter.marshal(remoteRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "remote", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (remote!= null) {
+        if (remote != null) {
             writer.writeStartElement(prefix, "remote", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(remote);
             writer.writeEndElement();
         }
 
         // ELEMENT: localHome
-        String localHomeRaw = entityBean.localHome;
+        final String localHomeRaw = entityBean.localHome;
         String localHome = null;
         try {
             localHome = Adapters.collapsedStringAdapterAdapter.marshal(localHomeRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "localHome", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (localHome!= null) {
+        if (localHome != null) {
             writer.writeStartElement(prefix, "local-home", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(localHome);
             writer.writeEndElement();
         }
 
         // ELEMENT: local
-        String localRaw = entityBean.local;
+        final String localRaw = entityBean.local;
         String local = null;
         try {
             local = Adapters.collapsedStringAdapterAdapter.marshal(localRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "local", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (local!= null) {
+        if (local != null) {
             writer.writeStartElement(prefix, "local", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(local);
             writer.writeEndElement();
         }
 
         // ELEMENT: ejbClass
-        String ejbClassRaw = entityBean.ejbClass;
+        final String ejbClassRaw = entityBean.ejbClass;
         String ejbClass = null;
         try {
             ejbClass = Adapters.collapsedStringAdapterAdapter.marshal(ejbClassRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "ejbClass", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (ejbClass!= null) {
+        if (ejbClass != null) {
             writer.writeStartElement(prefix, "ejb-class", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(ejbClass);
             writer.writeEndElement();
@@ -894,8 +778,8 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: persistenceType
-        PersistenceType persistenceType = entityBean.persistenceType;
-        if (persistenceType!= null) {
+        final PersistenceType persistenceType = entityBean.persistenceType;
+        if (persistenceType != null) {
             writer.writeStartElement(prefix, "persistence-type", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(toStringPersistenceType(entityBean, null, context, persistenceType));
             writer.writeEndElement();
@@ -904,14 +788,14 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: primKeyClass
-        String primKeyClassRaw = entityBean.primKeyClass;
+        final String primKeyClassRaw = entityBean.primKeyClass;
         String primKeyClass = null;
         try {
             primKeyClass = Adapters.collapsedStringAdapterAdapter.marshal(primKeyClassRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "primKeyClass", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (primKeyClass!= null) {
+        if (primKeyClass != null) {
             writer.writeStartElement(prefix, "prim-key-class", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(primKeyClass);
             writer.writeEndElement();
@@ -920,14 +804,14 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: reentrant
-        Boolean reentrantRaw = entityBean.reentrant;
+        final Boolean reentrantRaw = entityBean.reentrant;
         String reentrant = null;
         try {
             reentrant = Adapters.booleanAdapterAdapter.marshal(reentrantRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "reentrant", BooleanAdapter.class, Boolean.TYPE, Boolean.TYPE, e);
         }
-        if (reentrant!= null) {
+        if (reentrant != null) {
             writer.writeStartElement(prefix, "reentrant", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(reentrant);
             writer.writeEndElement();
@@ -936,32 +820,32 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: cmpVersion
-        CmpVersion cmpVersion = entityBean.cmpVersion;
-        if (cmpVersion!= null) {
+        final CmpVersion cmpVersion = entityBean.cmpVersion;
+        if (cmpVersion != null) {
             writer.writeStartElement(prefix, "cmp-version", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(toStringCmpVersion(entityBean, null, context, cmpVersion));
             writer.writeEndElement();
         }
 
         // ELEMENT: abstractSchemaName
-        String abstractSchemaNameRaw = entityBean.abstractSchemaName;
+        final String abstractSchemaNameRaw = entityBean.abstractSchemaName;
         String abstractSchemaName = null;
         try {
             abstractSchemaName = Adapters.collapsedStringAdapterAdapter.marshal(abstractSchemaNameRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "abstractSchemaName", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (abstractSchemaName!= null) {
+        if (abstractSchemaName != null) {
             writer.writeStartElement(prefix, "abstract-schema-name", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(abstractSchemaName);
             writer.writeEndElement();
         }
 
         // ELEMENT: cmpField
-        List<CmpField> cmpField = entityBean.cmpField;
-        if (cmpField!= null) {
-            for (CmpField cmpFieldItem: cmpField) {
-                if (cmpFieldItem!= null) {
+        final List<CmpField> cmpField = entityBean.cmpField;
+        if (cmpField != null) {
+            for (final CmpField cmpFieldItem : cmpField) {
+                if (cmpFieldItem != null) {
                     writer.writeStartElement(prefix, "cmp-field", "http://java.sun.com/xml/ns/javaee");
                     writeCmpField(writer, cmpFieldItem, context);
                     writer.writeEndElement();
@@ -972,24 +856,24 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: primkeyField
-        String primkeyFieldRaw = entityBean.primkeyField;
+        final String primkeyFieldRaw = entityBean.primkeyField;
         String primkeyField = null;
         try {
             primkeyField = Adapters.collapsedStringAdapterAdapter.marshal(primkeyFieldRaw);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             context.xmlAdapterError(entityBean, "primkeyField", CollapsedStringAdapter.class, String.class, String.class, e);
         }
-        if (primkeyField!= null) {
+        if (primkeyField != null) {
             writer.writeStartElement(prefix, "primkey-field", "http://java.sun.com/xml/ns/javaee");
             writer.writeCharacters(primkeyField);
             writer.writeEndElement();
         }
 
         // ELEMENT: envEntry
-        KeyedCollection<String, EnvEntry> envEntry = entityBean.envEntry;
-        if (envEntry!= null) {
-            for (EnvEntry envEntryItem: envEntry) {
-                if (envEntryItem!= null) {
+        final KeyedCollection<String, EnvEntry> envEntry = entityBean.envEntry;
+        if (envEntry != null) {
+            for (final EnvEntry envEntryItem : envEntry) {
+                if (envEntryItem != null) {
                     writer.writeStartElement(prefix, "env-entry", "http://java.sun.com/xml/ns/javaee");
                     writeEnvEntry(writer, envEntryItem, context);
                     writer.writeEndElement();
@@ -1000,10 +884,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: ejbRef
-        KeyedCollection<String, EjbRef> ejbRef = entityBean.ejbRef;
-        if (ejbRef!= null) {
-            for (EjbRef ejbRefItem: ejbRef) {
-                if (ejbRefItem!= null) {
+        final KeyedCollection<String, EjbRef> ejbRef = entityBean.ejbRef;
+        if (ejbRef != null) {
+            for (final EjbRef ejbRefItem : ejbRef) {
+                if (ejbRefItem != null) {
                     writer.writeStartElement(prefix, "ejb-ref", "http://java.sun.com/xml/ns/javaee");
                     writeEjbRef(writer, ejbRefItem, context);
                     writer.writeEndElement();
@@ -1014,10 +898,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: ejbLocalRef
-        KeyedCollection<String, EjbLocalRef> ejbLocalRef = entityBean.ejbLocalRef;
-        if (ejbLocalRef!= null) {
-            for (EjbLocalRef ejbLocalRefItem: ejbLocalRef) {
-                if (ejbLocalRefItem!= null) {
+        final KeyedCollection<String, EjbLocalRef> ejbLocalRef = entityBean.ejbLocalRef;
+        if (ejbLocalRef != null) {
+            for (final EjbLocalRef ejbLocalRefItem : ejbLocalRef) {
+                if (ejbLocalRefItem != null) {
                     writer.writeStartElement(prefix, "ejb-local-ref", "http://java.sun.com/xml/ns/javaee");
                     writeEjbLocalRef(writer, ejbLocalRefItem, context);
                     writer.writeEndElement();
@@ -1028,10 +912,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: serviceRef
-        KeyedCollection<String, ServiceRef> serviceRef = entityBean.serviceRef;
-        if (serviceRef!= null) {
-            for (ServiceRef serviceRefItem: serviceRef) {
-                if (serviceRefItem!= null) {
+        final KeyedCollection<String, ServiceRef> serviceRef = entityBean.serviceRef;
+        if (serviceRef != null) {
+            for (final ServiceRef serviceRefItem : serviceRef) {
+                if (serviceRefItem != null) {
                     writer.writeStartElement(prefix, "service-ref", "http://java.sun.com/xml/ns/javaee");
                     writeServiceRef(writer, serviceRefItem, context);
                     writer.writeEndElement();
@@ -1042,10 +926,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: resourceRef
-        KeyedCollection<String, ResourceRef> resourceRef = entityBean.resourceRef;
-        if (resourceRef!= null) {
-            for (ResourceRef resourceRefItem: resourceRef) {
-                if (resourceRefItem!= null) {
+        final KeyedCollection<String, ResourceRef> resourceRef = entityBean.resourceRef;
+        if (resourceRef != null) {
+            for (final ResourceRef resourceRefItem : resourceRef) {
+                if (resourceRefItem != null) {
                     writer.writeStartElement(prefix, "resource-ref", "http://java.sun.com/xml/ns/javaee");
                     writeResourceRef(writer, resourceRefItem, context);
                     writer.writeEndElement();
@@ -1056,10 +940,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: resourceEnvRef
-        KeyedCollection<String, ResourceEnvRef> resourceEnvRef = entityBean.resourceEnvRef;
-        if (resourceEnvRef!= null) {
-            for (ResourceEnvRef resourceEnvRefItem: resourceEnvRef) {
-                if (resourceEnvRefItem!= null) {
+        final KeyedCollection<String, ResourceEnvRef> resourceEnvRef = entityBean.resourceEnvRef;
+        if (resourceEnvRef != null) {
+            for (final ResourceEnvRef resourceEnvRefItem : resourceEnvRef) {
+                if (resourceEnvRefItem != null) {
                     writer.writeStartElement(prefix, "resource-env-ref", "http://java.sun.com/xml/ns/javaee");
                     writeResourceEnvRef(writer, resourceEnvRefItem, context);
                     writer.writeEndElement();
@@ -1070,10 +954,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: messageDestinationRef
-        KeyedCollection<String, MessageDestinationRef> messageDestinationRef = entityBean.messageDestinationRef;
-        if (messageDestinationRef!= null) {
-            for (MessageDestinationRef messageDestinationRefItem: messageDestinationRef) {
-                if (messageDestinationRefItem!= null) {
+        final KeyedCollection<String, MessageDestinationRef> messageDestinationRef = entityBean.messageDestinationRef;
+        if (messageDestinationRef != null) {
+            for (final MessageDestinationRef messageDestinationRefItem : messageDestinationRef) {
+                if (messageDestinationRefItem != null) {
                     writer.writeStartElement(prefix, "message-destination-ref", "http://java.sun.com/xml/ns/javaee");
                     writeMessageDestinationRef(writer, messageDestinationRefItem, context);
                     writer.writeEndElement();
@@ -1084,10 +968,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: persistenceContextRef
-        KeyedCollection<String, PersistenceContextRef> persistenceContextRef = entityBean.persistenceContextRef;
-        if (persistenceContextRef!= null) {
-            for (PersistenceContextRef persistenceContextRefItem: persistenceContextRef) {
-                if (persistenceContextRefItem!= null) {
+        final KeyedCollection<String, PersistenceContextRef> persistenceContextRef = entityBean.persistenceContextRef;
+        if (persistenceContextRef != null) {
+            for (final PersistenceContextRef persistenceContextRefItem : persistenceContextRef) {
+                if (persistenceContextRefItem != null) {
                     writer.writeStartElement(prefix, "persistence-context-ref", "http://java.sun.com/xml/ns/javaee");
                     writePersistenceContextRef(writer, persistenceContextRefItem, context);
                     writer.writeEndElement();
@@ -1098,10 +982,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: persistenceUnitRef
-        KeyedCollection<String, PersistenceUnitRef> persistenceUnitRef = entityBean.persistenceUnitRef;
-        if (persistenceUnitRef!= null) {
-            for (PersistenceUnitRef persistenceUnitRefItem: persistenceUnitRef) {
-                if (persistenceUnitRefItem!= null) {
+        final KeyedCollection<String, PersistenceUnitRef> persistenceUnitRef = entityBean.persistenceUnitRef;
+        if (persistenceUnitRef != null) {
+            for (final PersistenceUnitRef persistenceUnitRefItem : persistenceUnitRef) {
+                if (persistenceUnitRefItem != null) {
                     writer.writeStartElement(prefix, "persistence-unit-ref", "http://java.sun.com/xml/ns/javaee");
                     writePersistenceUnitRef(writer, persistenceUnitRefItem, context);
                     writer.writeEndElement();
@@ -1112,10 +996,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: postConstruct
-        List<org.apache.openejb.jee.LifecycleCallback> postConstruct = entityBean.postConstruct;
-        if (postConstruct!= null) {
-            for (org.apache.openejb.jee.LifecycleCallback postConstructItem: postConstruct) {
-                if (postConstructItem!= null) {
+        final List<org.apache.openejb.jee.LifecycleCallback> postConstruct = entityBean.postConstruct;
+        if (postConstruct != null) {
+            for (final org.apache.openejb.jee.LifecycleCallback postConstructItem : postConstruct) {
+                if (postConstructItem != null) {
                     writer.writeStartElement(prefix, "post-construct", "http://java.sun.com/xml/ns/javaee");
                     writeLifecycleCallback(writer, postConstructItem, context);
                     writer.writeEndElement();
@@ -1126,10 +1010,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: preDestroy
-        List<org.apache.openejb.jee.LifecycleCallback> preDestroy = entityBean.preDestroy;
-        if (preDestroy!= null) {
-            for (org.apache.openejb.jee.LifecycleCallback preDestroyItem: preDestroy) {
-                if (preDestroyItem!= null) {
+        final List<org.apache.openejb.jee.LifecycleCallback> preDestroy = entityBean.preDestroy;
+        if (preDestroy != null) {
+            for (final org.apache.openejb.jee.LifecycleCallback preDestroyItem : preDestroy) {
+                if (preDestroyItem != null) {
                     writer.writeStartElement(prefix, "pre-destroy", "http://java.sun.com/xml/ns/javaee");
                     writeLifecycleCallback(writer, preDestroyItem, context);
                     writer.writeEndElement();
@@ -1140,10 +1024,10 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: dataSource
-        KeyedCollection<String, DataSource> dataSource = entityBean.dataSource;
-        if (dataSource!= null) {
-            for (DataSource dataSourceItem: dataSource) {
-                if (dataSourceItem!= null) {
+        final KeyedCollection<String, DataSource> dataSource = entityBean.dataSource;
+        if (dataSource != null) {
+            for (final DataSource dataSourceItem : dataSource) {
+                if (dataSourceItem != null) {
                     writer.writeStartElement(prefix, "data-source", "http://java.sun.com/xml/ns/javaee");
                     writeDataSource(writer, dataSourceItem, context);
                     writer.writeEndElement();
@@ -1151,37 +1035,11 @@ public class EntityBean$JAXB
             }
         }
 
-        // ELEMENT: jmsConnectionFactories
-        KeyedCollection<String, JMSConnectionFactory> jmsConnectionFactories = entityBean.jmsConnectionFactories;
-        if (jmsConnectionFactories!= null) {
-            for (JMSConnectionFactory jmsConnectionFactoriesItem: jmsConnectionFactories) {
-                if (jmsConnectionFactoriesItem!= null) {
-                    writer.writeStartElement(prefix, "jms-connection-factory", "http://java.sun.com/xml/ns/javaee");
-                    writeJMSConnectionFactory(writer, jmsConnectionFactoriesItem, context);
-                    writer.writeEndElement();
-                } else {
-                    context.unexpectedNullValue(entityBean, "jmsConnectionFactories");
-                }
-            }
-        }
-
-        // ELEMENT: jmsDestinations
-        KeyedCollection<String, JMSDestination> jmsDestinations = entityBean.jmsDestinations;
-        if (jmsDestinations!= null) {
-            for (JMSDestination jmsDestinationsItem: jmsDestinations) {
-                if (jmsDestinationsItem!= null) {
-                    writer.writeStartElement(prefix, "jms-destination", "http://java.sun.com/xml/ns/javaee");
-                    writeJMSDestination(writer, jmsDestinationsItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
         // ELEMENT: securityRoleRef
-        List<SecurityRoleRef> securityRoleRef = entityBean.securityRoleRef;
-        if (securityRoleRef!= null) {
-            for (SecurityRoleRef securityRoleRefItem: securityRoleRef) {
-                if (securityRoleRefItem!= null) {
+        final List<SecurityRoleRef> securityRoleRef = entityBean.securityRoleRef;
+        if (securityRoleRef != null) {
+            for (final SecurityRoleRef securityRoleRefItem : securityRoleRef) {
+                if (securityRoleRefItem != null) {
                     writer.writeStartElement(prefix, "security-role-ref", "http://java.sun.com/xml/ns/javaee");
                     writeSecurityRoleRef(writer, securityRoleRefItem, context);
                     writer.writeEndElement();
@@ -1192,71 +1050,23 @@ public class EntityBean$JAXB
         }
 
         // ELEMENT: securityIdentity
-        SecurityIdentity securityIdentity = entityBean.securityIdentity;
-        if (securityIdentity!= null) {
+        final SecurityIdentity securityIdentity = entityBean.securityIdentity;
+        if (securityIdentity != null) {
             writer.writeStartElement(prefix, "security-identity", "http://java.sun.com/xml/ns/javaee");
             writeSecurityIdentity(writer, securityIdentity, context);
             writer.writeEndElement();
         }
 
         // ELEMENT: query
-        List<Query> query = entityBean.query;
-        if (query!= null) {
-            for (Query queryItem: query) {
-                if (queryItem!= null) {
+        final List<Query> query = entityBean.query;
+        if (query != null) {
+            for (final Query queryItem : query) {
+                if (queryItem != null) {
                     writer.writeStartElement(prefix, "query", "http://java.sun.com/xml/ns/javaee");
                     writeQuery(writer, queryItem, context);
                     writer.writeEndElement();
                 } else {
                     context.unexpectedNullValue(entityBean, "query");
-                }
-            }
-        }
-
-        // ELEMENT: contextService
-        KeyedCollection<String, ContextService> contextService = entityBean.contextService;
-        if (contextService!= null) {
-            for (ContextService contextServiceItem: contextService) {
-                if (contextServiceItem!= null) {
-                    writer.writeStartElement(prefix, "context-service", "http://java.sun.com/xml/ns/javaee");
-                    writeContextService(writer, contextServiceItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
-        // ELEMENT: managedExecutor
-        KeyedCollection<String, ManagedExecutor> managedExecutor = entityBean.managedExecutor;
-        if (managedExecutor!= null) {
-            for (ManagedExecutor managedExecutorItem: managedExecutor) {
-                if (managedExecutorItem!= null) {
-                    writer.writeStartElement(prefix, "managed-executor", "http://java.sun.com/xml/ns/javaee");
-                    writeManagedExecutor(writer, managedExecutorItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
-        // ELEMENT: managedScheduledExecutor
-        KeyedCollection<String, ManagedScheduledExecutor> managedScheduledExecutor = entityBean.managedScheduledExecutor;
-        if (managedScheduledExecutor!= null) {
-            for (ManagedScheduledExecutor managedScheduledExecutorItem: managedScheduledExecutor) {
-                if (managedScheduledExecutorItem!= null) {
-                    writer.writeStartElement(prefix, "managed-scheduled-executor", "http://java.sun.com/xml/ns/javaee");
-                    writeManagedScheduledExecutor(writer, managedScheduledExecutorItem, context);
-                    writer.writeEndElement();
-                }
-            }
-        }
-
-        // ELEMENT: managedThreadFactory
-        KeyedCollection<String, ManagedThreadFactory> managedThreadFactory = entityBean.managedThreadFactory;
-        if (managedThreadFactory!= null) {
-            for (ManagedThreadFactory managedThreadFactoryItem: managedThreadFactory) {
-                if (managedThreadFactoryItem!= null) {
-                    writer.writeStartElement(prefix, "managed-thread-factory", "http://java.sun.com/xml/ns/javaee");
-                    writeManagedThreadFactory(writer, managedThreadFactoryItem, context);
-                    writer.writeEndElement();
                 }
             }
         }

@@ -1,27 +1,21 @@
-/**
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+    * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.openejb.jee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import org.metatype.sxc.jaxb.JAXBObject;
 import org.metatype.sxc.jaxb.LifecycleCallback;
 import org.metatype.sxc.jaxb.RuntimeContext;
@@ -29,39 +23,40 @@ import org.metatype.sxc.util.Attribute;
 import org.metatype.sxc.util.XoXMLStreamReader;
 import org.metatype.sxc.util.XoXMLStreamWriter;
 
+import javax.xml.XMLConstants;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
+
 @SuppressWarnings({
     "StringEquality"
 })
 public class MethodParams$JAXB
-    extends JAXBObject<MethodParams>
-{
+    extends JAXBObject<MethodParams> {
 
 
     public MethodParams$JAXB() {
         super(MethodParams.class, null, new QName("http://java.sun.com/xml/ns/javaee".intern(), "method-paramsType".intern()));
     }
 
-    public static MethodParams readMethodParams(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public static MethodParams readMethodParams(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static void writeMethodParams(XoXMLStreamWriter writer, MethodParams methodParams, RuntimeContext context)
-        throws Exception
-    {
+    public static void writeMethodParams(final XoXMLStreamWriter writer, final MethodParams methodParams, final RuntimeContext context)
+        throws Exception {
         _write(writer, methodParams, context);
     }
 
-    public void write(XoXMLStreamWriter writer, MethodParams methodParams, RuntimeContext context)
-        throws Exception
-    {
+    public void write(final XoXMLStreamWriter writer, final MethodParams methodParams, final RuntimeContext context)
+        throws Exception {
         _write(writer, methodParams, context);
     }
 
-    public static final MethodParams _read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final static MethodParams _read(final XoXMLStreamReader reader, RuntimeContext context)
+        throws Exception {
 
         // Check for xsi:nil
         if (reader.isXsiNil()) {
@@ -72,51 +67,51 @@ public class MethodParams$JAXB
             context = new RuntimeContext();
         }
 
-        MethodParams methodParams = new MethodParams();
+        final MethodParams methodParams = new MethodParams();
         context.beforeUnmarshal(methodParams, LifecycleCallback.NONE);
 
         List<String> methodParam = null;
 
         // Check xsi:type
-        QName xsiType = reader.getXsiType();
-        if (xsiType!= null) {
-            if (("method-paramsType"!= xsiType.getLocalPart())||("http://java.sun.com/xml/ns/javaee"!= xsiType.getNamespaceURI())) {
+        final QName xsiType = reader.getXsiType();
+        if (xsiType != null) {
+            if (("method-paramsType" != xsiType.getLocalPart()) || ("http://java.sun.com/xml/ns/javaee" != xsiType.getNamespaceURI())) {
                 return context.unexpectedXsiType(reader, MethodParams.class);
             }
         }
 
         // Read attributes
-        for (Attribute attribute: reader.getAttributes()) {
-            if (("id" == attribute.getLocalName())&&(("" == attribute.getNamespace())||(attribute.getNamespace() == null))) {
+        for (final Attribute attribute : reader.getAttributes()) {
+            if (("id" == attribute.getLocalName()) && (("" == attribute.getNamespace()) || (attribute.getNamespace() == null))) {
                 // ATTRIBUTE: id
-                String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
+                final String id = Adapters.collapsedStringAdapterAdapter.unmarshal(attribute.getValue());
                 context.addXmlId(reader, id, methodParams);
                 methodParams.id = id;
-            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI!= attribute.getNamespace()) {
+            } else if (XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI != attribute.getNamespace()) {
                 context.unexpectedAttribute(attribute, new QName("", "id"));
             }
         }
 
         // Read elements
-        for (XoXMLStreamReader elementReader: reader.getChildElements()) {
-            if (("method-param" == elementReader.getLocalName())&&("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
+        for (final XoXMLStreamReader elementReader : reader.getChildElements()) {
+            if (("method-param" == elementReader.getLocalName()) && ("http://java.sun.com/xml/ns/javaee" == elementReader.getNamespaceURI())) {
                 // ELEMENT: methodParam
-                String methodParamItemRaw = elementReader.getElementText();
+                final String methodParamItemRaw = elementReader.getElementAsString();
 
-                String methodParamItem;
+                final String methodParamItem;
                 try {
                     methodParamItem = Adapters.collapsedStringAdapterAdapter.unmarshal(methodParamItemRaw);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(elementReader, CollapsedStringAdapter.class, String.class, String.class, e);
                     continue;
                 }
 
                 if (methodParam == null) {
                     methodParam = methodParams.methodParam;
-                    if (methodParam!= null) {
+                    if (methodParam != null) {
                         methodParam.clear();
                     } else {
-                        methodParam = new ArrayList<>();
+                        methodParam = new ArrayList<String>();
                     }
                 }
                 methodParam.add(methodParamItem);
@@ -124,7 +119,7 @@ public class MethodParams$JAXB
                 context.unexpectedElement(elementReader, new QName("http://java.sun.com/xml/ns/javaee", "method-param"));
             }
         }
-        if (methodParam!= null) {
+        if (methodParam != null) {
             methodParams.methodParam = methodParam;
         }
 
@@ -133,55 +128,53 @@ public class MethodParams$JAXB
         return methodParams;
     }
 
-    public final MethodParams read(XoXMLStreamReader reader, RuntimeContext context)
-        throws Exception
-    {
+    public final MethodParams read(final XoXMLStreamReader reader, final RuntimeContext context)
+        throws Exception {
         return _read(reader, context);
     }
 
-    public static final void _write(XoXMLStreamWriter writer, MethodParams methodParams, RuntimeContext context)
-        throws Exception
-    {
+    public final static void _write(final XoXMLStreamWriter writer, final MethodParams methodParams, RuntimeContext context)
+        throws Exception {
         if (methodParams == null) {
             writer.writeXsiNil();
-            return ;
+            return;
         }
 
         if (context == null) {
             context = new RuntimeContext();
         }
 
-        if (MethodParams.class!= methodParams.getClass()) {
+        if (MethodParams.class != methodParams.getClass()) {
             context.unexpectedSubclass(writer, methodParams, MethodParams.class);
-            return ;
+            return;
         }
 
         context.beforeMarshal(methodParams, LifecycleCallback.NONE);
 
 
         // ATTRIBUTE: id
-        String idRaw = methodParams.id;
-        if (idRaw!= null) {
+        final String idRaw = methodParams.id;
+        if (idRaw != null) {
             String id = null;
             try {
                 id = Adapters.collapsedStringAdapterAdapter.marshal(idRaw);
-            } catch (Exception e) {
+            } catch (final Exception e) {
                 context.xmlAdapterError(methodParams, "id", CollapsedStringAdapter.class, String.class, String.class, e);
             }
             writer.writeAttribute("", "", "id", id);
         }
 
         // ELEMENT: methodParam
-        List<String> methodParamRaw = methodParams.methodParam;
-        if (methodParamRaw!= null) {
-            for (String methodParamItem: methodParamRaw) {
+        final List<String> methodParamRaw = methodParams.methodParam;
+        if (methodParamRaw != null) {
+            for (final String methodParamItem : methodParamRaw) {
                 String methodParam = null;
                 try {
                     methodParam = Adapters.collapsedStringAdapterAdapter.marshal(methodParamItem);
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     context.xmlAdapterError(methodParams, "methodParam", CollapsedStringAdapter.class, List.class, List.class, e);
                 }
-                if (methodParam!= null) {
+                if (methodParam != null) {
                     writer.writeStartElementWithAutoPrefix("http://java.sun.com/xml/ns/javaee", "method-param");
                     writer.writeCharacters(methodParam);
                     writer.writeEndElement();

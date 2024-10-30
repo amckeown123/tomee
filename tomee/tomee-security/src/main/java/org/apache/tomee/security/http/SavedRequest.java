@@ -97,25 +97,17 @@ public class SavedRequest implements Serializable {
 
             @Override
             public Enumeration<String> getHeaderNames() {
-                return headers != null ? Collections.enumeration(headers.keySet()) : Collections.emptyEnumeration();
+                return Collections.enumeration(headers.keySet());
             }
 
             @Override
             public Enumeration<String> getHeaders(String name) {
-                List<String> header = headers != null ? headers.get(name) : null;
-                if (header == null) {
-                    header = Collections.emptyList();
-                }
-                return Collections.enumeration(header);
+                return Collections.enumeration(headers.get(name));
             }
 
             @Override
             public String getHeader(String name) {
-                List<String> header = headers != null ? headers.get(name) : null;
-                if (header == null || header.isEmpty()) {
-                    return null;
-                }
-                return header.get(0);
+                return headers.get(name).get(0);
             }
 
             @Override

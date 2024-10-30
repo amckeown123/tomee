@@ -20,31 +20,20 @@ import jakarta.enterprise.concurrent.ContextServiceDefinition;
 import jakarta.enterprise.concurrent.spi.ThreadContextProvider;
 import jakarta.enterprise.concurrent.spi.ThreadContextRestorer;
 import jakarta.enterprise.concurrent.spi.ThreadContextSnapshot;
-import org.apache.openejb.AppContext;
 import org.apache.openejb.core.ThreadContext;
-import org.apache.openejb.loader.SystemInstance;
-import org.apache.openejb.spi.ContainerSystem;
-import org.apache.openejb.util.AppFinder;
 
-import java.io.Serializable;
 import java.util.Map;
 
-public class ApplicationThreadContextProvider implements ThreadContextProvider, Serializable {
-    public static final ApplicationThreadContextProvider INSTANCE = new ApplicationThreadContextProvider();
-
+public class ApplicationThreadContextProvider implements ThreadContextProvider {
     @Override
     public ThreadContextSnapshot currentContext(final Map<String, String> props) {
-        AppContext appContext = AppFinder.findAppContextOrWeb(Thread.currentThread().getContextClassLoader(), AppFinder.AppContextTransformer.INSTANCE);
-        if (appContext == null) {
-            return clearedContext(props);
-        }
-
-        return new ApplicationThreadContextSnapshot(appContext.getId(), ThreadContext.getThreadContext());
+        // TODO: is there anything we need to mess around with here? ClassLoader?
+        return new ApplicationThreadContextSnapshot(ThreadContext.getThreadContext());
     }
 
     @Override
     public ThreadContextSnapshot clearedContext(final Map<String, String> props) {
-        return ThreadContextProviderUtil.NOOP_SNAPSHOT;
+        return new ApplicationThreadContextSnapshot(null);
     }
 
     @Override
@@ -52,51 +41,36 @@ public class ApplicationThreadContextProvider implements ThreadContextProvider, 
         return ContextServiceDefinition.APPLICATION;
     }
 
-    public static class ApplicationThreadContextSnapshot implements ThreadContextSnapshot, Serializable {
-        private final Object appId;
+    public class ApplicationThreadContextSnapshot implements ThreadContextSnapshot {
+
         private final ThreadContext threadContext;
 
-        public ApplicationThreadContextSnapshot(final Object appId, final ThreadContext threadContext) {
-            this.appId = appId;
+        public ApplicationThreadContextSnapshot(final ThreadContext threadContext) {
             this.threadContext = threadContext;
         }
 
         @Override
         public ThreadContextRestorer begin() {
-            if (appId == null) {
-                return ThreadContextProviderUtil.NOOP_RESTORER;
-            }
+            final ThreadContext restoreContext = (threadContext == null) ?
+                    ThreadContext.clear() :
+                    ThreadContext.enter(threadContext);
 
-            final AppContext appContext = SystemInstance.get().getComponent(ContainerSystem.class).getAppContext(appId);
-            final ClassLoader oldCl = Thread.currentThread().getContextClassLoader();
-            Thread.currentThread().setContextClassLoader(appContext.getClassLoader());
-
-            // Don't touch ThreadContext if it is already correct or none was captured
-            boolean changeThreadContext = threadContext != null && threadContext != ThreadContext.getThreadContext();
-            ThreadContext oldThreadContext = changeThreadContext ? ThreadContext.enter(threadContext) : null;
-            return new ApplicationThreadContextRestorer(oldCl, oldThreadContext, changeThreadContext);
+            return new ApplicationThreadContextRestorer(restoreContext);
         }
     }
 
-    public static class ApplicationThreadContextRestorer implements ThreadContextRestorer {
-        private final ClassLoader oldClassLoader;
-        private final ThreadContext oldThreadContext;
-        private final boolean exitThreadContext;
+    public class ApplicationThreadContextRestorer implements ThreadContextRestorer {
 
-        public ApplicationThreadContextRestorer(final ClassLoader oldClassLoader, final ThreadContext oldThreadContext, boolean exitThreadContext) {
-            this.oldClassLoader = oldClassLoader;
-            this.oldThreadContext = oldThreadContext;
-            this.exitThreadContext = exitThreadContext;
+        private final ThreadContext restoreContext;
+
+        public ApplicationThreadContextRestorer(final ThreadContext restoreContext) {
+            this.restoreContext = restoreContext;
         }
 
         @Override
         public void endContext() throws IllegalStateException {
-            if (oldClassLoader != null) {
-                Thread.currentThread().setContextClassLoader(oldClassLoader);
-            }
-
-            if (exitThreadContext) {
-                ThreadContext.exit(oldThreadContext);
+            if (restoreContext != null) {
+                ThreadContext.exit(restoreContext);
             }
         }
     }
