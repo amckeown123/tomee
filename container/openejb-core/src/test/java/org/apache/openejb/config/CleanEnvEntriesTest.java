@@ -17,7 +17,7 @@
 package org.apache.openejb.config;
 
 import junit.framework.TestCase;
-import org.apache.openejb.assembler.classic.Assembler;
+//import org.apache.openejb.assembler.classic.Assembler;
 import org.apache.openejb.assembler.classic.EjbJarInfo;
 import org.apache.openejb.assembler.classic.EnvEntryInfo;
 import org.apache.openejb.jee.EjbJar;
@@ -37,7 +37,7 @@ public class CleanEnvEntriesTest extends TestCase {
     @Test
     public void test() throws Exception {
 
-        final Assembler assembler = new Assembler();
+   //     final Assembler assembler = new Assembler();
         final ConfigurationFactory factory = new ConfigurationFactory();
 
         final SingletonBean singletonBean = new SingletonBean(Blue.class);
@@ -97,8 +97,8 @@ public class CleanEnvEntriesTest extends TestCase {
 
 
     public static class Blue {
-        private Character letter;
-        private Short vague;
+   //     private Character letter;
+   //     private Short vague;
 
         public void setNumber(final int number) {
         }
@@ -109,8 +109,8 @@ public class CleanEnvEntriesTest extends TestCase {
     }
 
     public static class Orange {
-        private Object letter;
-        private Character vague;
+     //   private Object letter;
+     //   private Character vague;
 
     }
 }

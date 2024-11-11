@@ -152,9 +152,7 @@
     <!-- needed to compile in intellij for tomcat patches -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
-      <scope>provided</scope>
+      <artifactId>tomcat-catalina</artifactId>      <scope>provided</scope>
     </dependency>
 
     <!-- needed for BOM generation -->
@@ -331,9 +329,7 @@
 
           <plugin>
             <groupId>org.codehaus.gmaven</groupId>
-            <artifactId>groovy-maven-plugin</artifactId>
-            <version>2.1.1</version>
-            <dependencies>
+            <artifactId>groovy-maven-plugin</artifactId>            <dependencies>
               <dependency>
                 <groupId>org.apache.tomee</groupId>
                 <artifactId>jakartaee-api</artifactId>
@@ -599,7 +595,6 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.0.0</version>
             <executions>
               <execution>
                 <phase>package</phase>

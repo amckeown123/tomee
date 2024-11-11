@@ -32,7 +32,6 @@
     <plugins>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.5.1</version>
         <configuration>
           <dependenciesToScan>
             <dependency>org.eclipse.microprofile.health:microprofile-health-tck</dependency>

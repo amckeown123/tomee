@@ -281,7 +281,6 @@
     <dependency>
       <groupId>org.apache.myfaces.core</groupId>
       <artifactId>myfaces-api</artifactId>
-      <version>${version.myfaces}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.geronimo.specs</groupId>
@@ -292,7 +291,6 @@
     <dependency>
       <groupId>org.apache.myfaces.core</groupId>
       <artifactId>myfaces-impl</artifactId>
-      <version>${version.myfaces}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.myfaces.core</groupId>
@@ -307,7 +305,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-spi</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -318,7 +315,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-impl</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -329,7 +325,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-web</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -340,7 +335,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-el22</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -351,7 +345,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-jsf</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -362,25 +355,21 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-coyote</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-juli</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>taglibs-shade</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.taglibs</groupId>

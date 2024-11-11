@@ -35,11 +35,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>mbean-annotation-api</artifactId>
-      <version>${project.version}</version>
-    </dependency>
+
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>jakartaee-api</artifactId>

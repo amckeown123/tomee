@@ -76,7 +76,6 @@
     <dependency>
       <groupId>org.apache.santuario</groupId>
       <artifactId>xmlsec</artifactId>
-      <version>${version.xmlsec}</version>
       <exclusions>
         <exclusion>
           <groupId>com.fasterxml.woodstox</groupId>

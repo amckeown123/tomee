@@ -87,7 +87,6 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -157,7 +156,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-impl</artifactId>
-      <version>${version.openwebbeans}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -210,7 +208,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.8.0</version>
         <executions>
           <execution>
             <id>copy-test-libs</id>
@@ -237,7 +234,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>${surefire.version}</version>
         <configuration>
           <reuseForks>true</reuseForks>
           <forkCount>1</forkCount>

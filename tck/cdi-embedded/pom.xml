@@ -25,7 +25,6 @@
   <artifactId>cdi-embedded</artifactId>
   <packaging>jar</packaging>
   <name>TomEE :: TCK :: CDI Embedded</name>
-  <version>10.0.0-M4-SNAPSHOT</version>
 
   <properties>
     <testngSuiteXml>src/test/resources/passing.xml</testngSuiteXml>
@@ -64,13 +63,11 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>taglibs-shade</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -213,7 +210,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-jsf</artifactId>
-      <version>${version.openwebbeans}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

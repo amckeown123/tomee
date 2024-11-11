@@ -145,7 +145,6 @@
     <dependency>
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>${version.hibernate.orm}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

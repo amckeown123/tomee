@@ -17,11 +17,8 @@
 
     <!-- $Rev$ $Date$ -->
 
-<!DOCTYPE web-app
-    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-    "http://java.sun.com/dtd/web-app_2_3.dtd">
 
-<web-app id="ID001">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" id="ID001">
     <icon id="ID967">
         <small-icon>small-icon8</small-icon>
         <large-icon>large-icon8</large-icon>

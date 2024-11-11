@@ -16,10 +16,10 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<faces-config version="2.3" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
   <factory>
     <flash-factory>com.foo.Bar</flash-factory>
     <flow-handler-factory>com.foo.Dummy</flow-handler-factory>
