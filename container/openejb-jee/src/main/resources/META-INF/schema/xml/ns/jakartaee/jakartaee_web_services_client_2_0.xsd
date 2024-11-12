@@ -39,7 +39,7 @@
 		</xsd:documentation>
 	</xsd:annotation>
 
-
+<xsd:include schemaLocation="jakartaee_10.xsd"/>
 	<!-- **************************************************** -->
 
 	<xsd:complexType name="service-refType">
