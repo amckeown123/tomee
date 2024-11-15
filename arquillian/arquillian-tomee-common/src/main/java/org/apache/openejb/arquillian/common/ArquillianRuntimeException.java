@@ -17,7 +17,9 @@
 package org.apache.openejb.arquillian.common;
 
 public class ArquillianRuntimeException extends RuntimeException {
-    public ArquillianRuntimeException(final String str) {
+    private static final long serialVersionUID = -8185323889259615380L;
+
+	public ArquillianRuntimeException(final String str) {
         super(str);
     }
 

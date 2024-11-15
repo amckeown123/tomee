@@ -19,7 +19,9 @@ package org.apache.openejb.arquillian.common;
 
 public class DownloadException extends Exception {
 
-    public DownloadException() {
+    private static final long serialVersionUID = -2678535488681671337L;
+
+	public DownloadException() {
     }
 
     public DownloadException(final String message) {

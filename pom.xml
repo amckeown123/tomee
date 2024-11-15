@@ -108,9 +108,9 @@
     <!-- Plugins and Build -->
     <maven.version>3.9.9</maven.version>
     <version.plugin.bundle>5.1.9</version.plugin.bundle>
-    <version.plugin.javadoc>3.10.1</version.plugin.javadoc>
-    <asciidoclet.version>1.5.0</asciidoclet.version>
-    <surefire.version>3.5.1</surefire.version>
+    <version.plugin.javadoc>3.11.1</version.plugin.javadoc>
+    <asciidoclet.version>2.0.0</asciidoclet.version>
+    <surefire.version>3.5.2</surefire.version>
 
     <!-- OSGi bundles properties -->
     <openejb.bundle.activator />

@@ -29,7 +29,7 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
-@SuppressWarnings("UnusedDeclaration")
+
 public class TomEEConfiguration implements ContainerConfiguration {
 
     protected boolean exportConfAsSystemProperty;

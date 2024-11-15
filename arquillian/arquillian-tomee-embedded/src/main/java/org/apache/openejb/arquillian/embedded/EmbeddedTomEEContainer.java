@@ -77,7 +77,8 @@ public class EmbeddedTomEEContainer extends TomEEContainer<EmbeddedTomEEConfigur
      * Not exactly as elegant as I'd like. Maybe we could have the EmbeddedServer configuration in openejb-core so all the adapters can use it.
      * Depending on tomee-embedded is fine in this adapter, but less desirable in the others, as we'd get loads of stuff in the classpath we don't need.
      */
-    private Configuration convertConfiguration(final EmbeddedTomEEConfiguration tomeeConfiguration) {
+    @SuppressWarnings("unchecked")
+	private Configuration convertConfiguration(final EmbeddedTomEEConfiguration tomeeConfiguration) {
         final Configuration configuration = new Configuration();
 
         configuration.setDir(tomeeConfiguration.getDir());
@@ -112,7 +113,7 @@ public class EmbeddedTomEEContainer extends TomEEContainer<EmbeddedTomEEConfigur
                 if (!trim.isEmpty()) {
                     try {
                         final Class<?> type = Thread.currentThread().getContextClassLoader().loadClass(trim);
-                        configuration.addCustomizer(Configuration.ConfigurationCustomizer.class.cast(type.newInstance()));
+                        configuration.addCustomizer(Configuration.ConfigurationCustomizer.class.cast(type));
                     } catch (final Exception e) {
                         throw new IllegalArgumentException(e);
                     }
@@ -121,7 +122,8 @@ public class EmbeddedTomEEContainer extends TomEEContainer<EmbeddedTomEEConfigur
         }
 
         if (tomeeConfiguration.getRoles() != null) {
-            configuration.setRoles(new HashMap<String, String>(Map.class.cast(tomeeConfiguration.getRolesAsProperties())));
+            Map<String, String> cast = Map.class.cast(tomeeConfiguration.getRolesAsProperties());
+			configuration.setRoles(new HashMap<String, String>(cast));
         }
         if (tomeeConfiguration.getUsers() != null) {
             configuration.setUsers(new HashMap<String, String>(Map.class.cast(tomeeConfiguration.getUsersAsProperties())));

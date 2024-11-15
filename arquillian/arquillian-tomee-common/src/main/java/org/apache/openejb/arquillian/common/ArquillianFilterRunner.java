@@ -49,7 +49,7 @@ public class ArquillianFilterRunner implements Filter {
     @Override
     public void init(final FilterConfig filterConfig) throws ServletException {
         try {
-            delegate = HttpServlet.class.cast(Thread.currentThread().getContextClassLoader().loadClass(ARQUILLIAN_SERVLET_RUNNER).newInstance());
+            delegate = HttpServlet.class.cast(Thread.currentThread().getContextClassLoader().loadClass(ARQUILLIAN_SERVLET_RUNNER));
             delegate.init(new ServletConfig() {
                 @Override
                 public String getServletName() {

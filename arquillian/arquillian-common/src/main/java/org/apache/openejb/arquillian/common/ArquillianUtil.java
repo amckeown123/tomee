@@ -118,8 +118,8 @@ public final class ArquillianUtil {
 
         final ClassLoader loader = Thread.currentThread().getContextClassLoader();
         final String[] split = classesToLoad.trim().split(",");
-        DaemonThreadFactory threadFactory = new DaemonThreadFactory(split);
-		final ExecutorService es = Executors.newCachedThreadPool(threadFactory);
+        DaemonThreadFactory daemonThreadFactory = new DaemonThreadFactory((Object[])split);
+		final ExecutorService es = Executors.newCachedThreadPool(daemonThreadFactory);
         for (final String clazz : split) {
             es.submit(new PreLoadClassTask(loader, clazz));
         }

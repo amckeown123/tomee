@@ -32,7 +32,8 @@ import org.jboss.arquillian.transaction.spi.provider.TransactionProvider;
 public class EmbeddedTomEEExtension implements LoadableExtension {
     public static final String ADAPTER = "tomee-embedded";
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void register(final ExtensionBuilder builder) {
         if (ArquillianUtil.isCurrentAdapter(ADAPTER)) {
             builder.service(DeployableContainer.class, EmbeddedTomEEContainer.class)
