@@ -93,7 +93,7 @@ public final class ServiceInfos {
                 try {
                     final Class<?> aClass = Thread.currentThread().getContextClassLoader().loadClass(id);
                     if (factory == null) {
-                        instance = aClass.newInstance();
+                        instance = aClass;
                     } else {
                         instance = factory.newInstance(aClass);
                     }

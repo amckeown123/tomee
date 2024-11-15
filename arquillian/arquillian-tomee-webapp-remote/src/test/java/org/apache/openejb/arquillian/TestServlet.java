@@ -26,7 +26,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class TestServlet extends HttpServlet {
 
-    @EJB
+    private static final long serialVersionUID = 9138903276315754626L;
+	@EJB
     private TestEjb myEjb;
 
     @Override

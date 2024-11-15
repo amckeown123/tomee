@@ -28,7 +28,7 @@ public class Join {
 
     public static final ClassCallback CLASS_CALLBACK = new ClassCallback();
 
-    public static String join(final String delimiter, final Collection collection) {
+    public static String join(final String delimiter, final Collection<?> collection) {
         if (collection.size() == 0) {
             return "";
         }
@@ -50,7 +50,8 @@ public class Join {
         return sb.substring(0, sb.length() - delimiter.length());
     }
 
-    public static <T> String join(final String delimiter, final NameCallback<T> nameCallback, final T... collection) {
+    @SuppressWarnings("unchecked")
+	public static <T> String join(final String delimiter, final NameCallback<T> nameCallback, final T... collection) {
         if (collection.length == 0) {
             return "";
         }

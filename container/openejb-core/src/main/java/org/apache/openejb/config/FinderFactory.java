@@ -494,7 +494,8 @@ public class FinderFactory {
             }
         }
 
-        private static class ConstructorPredicate extends Predicate<Constructor> {
+        @SuppressWarnings("rawtypes")
+		private static class ConstructorPredicate extends Predicate<Constructor> {
             public ConstructorPredicate(final List<String> list) {
                 super(list);
             }

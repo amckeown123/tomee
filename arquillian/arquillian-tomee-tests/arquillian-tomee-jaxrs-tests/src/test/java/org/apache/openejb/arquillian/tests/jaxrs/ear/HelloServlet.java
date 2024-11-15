@@ -26,7 +26,9 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/*")
 public class HelloServlet extends HttpServlet {
 
-    @Override
+    private static final long serialVersionUID = -2226048605540036361L;
+
+	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().print("Hello servlets!");
         resp.getWriter().flush();

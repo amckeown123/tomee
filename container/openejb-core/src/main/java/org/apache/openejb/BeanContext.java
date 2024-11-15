@@ -109,6 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static java.util.Collections.emptyList;
 
+
+
 @SuppressWarnings("unchecked")
 public class BeanContext extends DeploymentContext {
 
@@ -135,8 +137,9 @@ public class BeanContext extends DeploymentContext {
         return proxyClass != null;
     }
 
-    public void mergeOWBAndOpenEJBInfo() {
-        final CdiEjbBean cdiEjbBean = get(CdiEjbBean.class);
+    @SuppressWarnings("rawtypes")
+	public void mergeOWBAndOpenEJBInfo() {
+        final CdiEjbBean<?> cdiEjbBean = get(CdiEjbBean.class);
         if (cdiEjbBean == null) {
             return;
         }
@@ -317,10 +320,13 @@ public class BeanContext extends DeploymentContext {
     private Object containerData;
 
     private boolean destroyed;
-    private final Class beanClass;
-    private final List<Class> businessLocals = new ArrayList<>();
-    private final List<Class> businessRemotes = new ArrayList<>();
-    private Class serviceEndpointInterface;
+    private final Class<?> beanClass;
+    @SuppressWarnings("rawtypes")
+	private final List<Class> businessLocals = new ArrayList<>();
+    @SuppressWarnings("rawtypes")
+	private final List<Class> businessRemotes = new ArrayList<>();
+    @SuppressWarnings("rawtypes")
+	private Class serviceEndpointInterface;
 
     private Method ejbTimeout;
     private EjbTimerService ejbTimerService;
@@ -350,8 +356,10 @@ public class BeanContext extends DeploymentContext {
     private final List<InterceptorInstance> systemInterceptors = new ArrayList<>();
     private final List<InterceptorInstance> userInterceptors = new ArrayList<>();
     private final List<Injection> injections = new ArrayList<>();
-    private final Map<Class, InterfaceType> interfaces = new HashMap<>();
-    private final Map<Class, ExceptionType> exceptions = new ConcurrentHashMap<>();
+    @SuppressWarnings("rawtypes")
+	private final Map<Class, InterfaceType> interfaces = new HashMap<>();
+    @SuppressWarnings("rawtypes")
+	private final Map<Class, ExceptionType> exceptions = new ConcurrentHashMap<>();
 
     private final boolean localbean;
     private Duration accessTimeout;
@@ -373,7 +381,8 @@ public class BeanContext extends DeploymentContext {
      */
     private final Map<Method, Boolean> removeExceptionPolicy = new HashMap<>();
 
-    public Class getInterface(final InterfaceType interfaceType) {
+    @SuppressWarnings("rawtypes")
+	public Class getInterface(final InterfaceType interfaceType) {
         switch (interfaceType) {
             case EJB_HOME:
                 return getHomeInterface();
@@ -404,7 +413,8 @@ public class BeanContext extends DeploymentContext {
         }
     }
 
-    public List<Class> getInterfaces(final InterfaceType interfaceType) {
+    @SuppressWarnings("rawtypes")
+	public List<Class> getInterfaces(final InterfaceType interfaceType) {
         switch (interfaceType) {
             case BUSINESS_REMOTE:
                 return getBusinessRemoteInterfaces();
@@ -417,7 +427,8 @@ public class BeanContext extends DeploymentContext {
         }
     }
 
-    public InterfaceType getInterfaceType(final Class clazz) {
+    @SuppressWarnings("rawtypes")
+	public InterfaceType getInterfaceType(final Class clazz) {
         final InterfaceType type = interfaces.get(clazz);
         if (type != null) {
             return type;
@@ -449,7 +460,7 @@ public class BeanContext extends DeploymentContext {
      * load default interceptors configured in properties.
      */
     private BeanContext(final String id, final Context jndiContext, final ModuleContext moduleContext, final BeanType componentType,
-                        final boolean localBean, final Class beanClass, final boolean passivable) {
+                        final boolean localBean, final Class<?> beanClass, final boolean passivable) {
         super(id, moduleContext.getOptions());
 
         if (beanClass == null) {
@@ -472,7 +483,7 @@ public class BeanContext extends DeploymentContext {
                     final Object interceptorObject;
                     try {
                         final Class<?> clazz = classLoader.loadClass(interceptor);
-                        interceptorObject = clazz.newInstance();
+                        interceptorObject = clazz;
                     } catch (final Exception e) {
                         logger.warning("interceptor " + interceptor + " not found, are you sure the container can load it?");
                         continue;
@@ -483,7 +494,8 @@ public class BeanContext extends DeploymentContext {
         }
     }
 
-    public BeanContext(final String id, final Context jndiContext, final ModuleContext moduleContext,
+    @SuppressWarnings("rawtypes")
+	public BeanContext(final String id, final Context jndiContext, final ModuleContext moduleContext,
                        final Class beanClass, final Class homeInterface,
                        final Class remoteInterface,
                        final Class localHomeInterface,
@@ -613,18 +625,18 @@ public class BeanContext extends DeploymentContext {
      * @param interfce Class
      * @param type     InterfaceType
      */
-    private void addInterface(final Class interfce, final InterfaceType type) {
+    private void addInterface(final Class<?> interfce, final InterfaceType type) {
         if (interfce == null) {
             return;
         }
         interfaces.put(interfce, type);
 
-        for (final Class clazz : interfce.getInterfaces()) {
+        for (final Class<?> clazz : interfce.getInterfaces()) {
             addInterface(clazz, type);
         }
     }
 
-    public void addApplicationException(final Class exception, final boolean rollback, final boolean inherited) {
+    public void addApplicationException(final Class<?> exception, final boolean rollback, final boolean inherited) {
         if (inherited) {
             if (rollback) {
                 exceptions.put(exception, ExceptionType.APPLICATION_ROLLBACK);
@@ -681,7 +693,8 @@ public class BeanContext extends DeploymentContext {
         return ExceptionType.APPLICATION;
     }
 
-    public BeanContext(final String id, final Context jndiContext, final ModuleContext moduleContext, final Class beanClass, final Class mdbInterface, final Map<String, String> activationProperties) throws SystemException {
+    @SuppressWarnings("rawtypes")
+	public BeanContext(final String id, final Context jndiContext, final ModuleContext moduleContext, final Class beanClass, final Class mdbInterface, final Map<String, String> activationProperties) throws SystemException {
         this(id, jndiContext, moduleContext, BeanType.MESSAGE_DRIVEN, false, beanClass, false);
 
         this.getMdb().mdbInterface = mdbInterface;
@@ -700,7 +713,8 @@ public class BeanContext extends DeploymentContext {
         this.createMethodMap();
     }
 
-    private void initDefaultLock() {
+    @SuppressWarnings("rawtypes")
+	private void initDefaultLock() {
 
         if (!BeanType.SINGLETON.equals(this.componentType)) {
             return;
@@ -714,11 +728,11 @@ public class BeanContext extends DeploymentContext {
 
         classes.add(this.beanClass);
 
-        for (final Class c : classes) {
+        for (final Class<?> c : classes) {
             Lock lock = null;
             try {
 
-                lock = (Lock) c.getAnnotation(Lock.class);
+                lock = c.getAnnotation(Lock.class);
                 this.getSingleton().lockType = lock.value();
 
                 if (logger.isDebugEnabled()) {
@@ -877,34 +891,42 @@ public class BeanContext extends DeploymentContext {
         return isBeanManagedConcurrency;
     }
 
-    public Class getHomeInterface() {
+    @SuppressWarnings("rawtypes")
+	public Class getHomeInterface() {
         return legacyView == null ? null : getLegacyView().homeInterface;
     }
 
-    public Class getRemoteInterface() {
+    @SuppressWarnings("rawtypes")
+	public Class getRemoteInterface() {
         return legacyView == null ? null : getLegacyView().remoteInterface;
     }
 
-    public Class getLocalHomeInterface() {
+    @SuppressWarnings("rawtypes")
+	public Class getLocalHomeInterface() {
         return legacyView == null ? null : getLegacyView().localHomeInterface;
     }
 
-    public Class getLocalInterface() {
+    @SuppressWarnings("rawtypes")
+	public Class getLocalInterface() {
         return legacyView == null ? null : getLegacyView().localInterface;
     }
 
+    @SuppressWarnings("rawtypes")
     public Class getBeanClass() {
         return beanClass;
     }
 
+    @SuppressWarnings("rawtypes")
     public Class getBusinessLocalInterface() {
         return businessLocals.size() > 0 ? businessLocals.get(0) : null;
     }
 
+    @SuppressWarnings("rawtypes")
     public Class getBusinessRemoteInterface() {
         return businessRemotes.size() > 0 ? businessRemotes.get(0) : null;
     }
 
+    @SuppressWarnings("rawtypes")
     public List<Class> getBusinessLocalInterfaces() {
         return businessLocals;
     }
@@ -2048,10 +2070,10 @@ public class BeanContext extends DeploymentContext {
 
         private EJBHome ejbHomeRef;
         private EJBLocalHome ejbLocalHomeRef;
-        private Class homeInterface;
-        private Class remoteInterface;
-        private Class localHomeInterface;
-        private Class localInterface;
+        private Class<?> homeInterface;
+        private Class<?> remoteInterface;
+        private Class<?> localHomeInterface;
+        private Class<?> localInterface;
         private Method createMethod;
     }
 

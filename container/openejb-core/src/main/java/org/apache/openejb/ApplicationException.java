@@ -38,7 +38,9 @@ package org.apache.openejb;
  */
 public class ApplicationException extends OpenEJBException {
 
-    public ApplicationException() {
+    private static final long serialVersionUID = 8491360177060289371L;
+
+	public ApplicationException() {
         super();
     }
 

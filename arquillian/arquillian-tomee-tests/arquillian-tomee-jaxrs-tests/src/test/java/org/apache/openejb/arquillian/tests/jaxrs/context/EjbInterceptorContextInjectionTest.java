@@ -120,7 +120,7 @@ public class EjbInterceptorContextInjectionTest {
         private SecurityContext securityContext;
 
         @Context
-        private ContextResolver contextResolver;
+        private ContextResolver<?> contextResolver;
 
         @AroundInvoke
         private Object invoke(InvocationContext context) throws Exception {
@@ -163,6 +163,8 @@ public class EjbInterceptorContextInjectionTest {
     }
 
     public static class FooException extends RuntimeException {
+
+		private static final long serialVersionUID = 8240018427861642461L;
     }
 
 }

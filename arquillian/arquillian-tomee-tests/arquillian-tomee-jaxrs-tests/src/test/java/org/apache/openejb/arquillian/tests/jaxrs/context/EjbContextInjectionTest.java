@@ -104,7 +104,7 @@ public class EjbContextInjectionTest {
         private SecurityContext securityContext;
 
         @Context
-        private ContextResolver contextResolver;
+        private ContextResolver<?> contextResolver;
 
         @GET
         @Path("/check")
@@ -135,5 +135,7 @@ public class EjbContextInjectionTest {
     }
 
     public static class FooException extends RuntimeException {
+
+		private static final long serialVersionUID = -1817350246797580813L;
     }
 }

@@ -91,7 +91,8 @@ public class WebServiceContextTest {
         @Resource
         private WebServiceContext wsc;
 
-        @Inject
+        @SuppressWarnings("unused")
+		@Inject
         private SimpleRequestContext ctx;
 
         @Override

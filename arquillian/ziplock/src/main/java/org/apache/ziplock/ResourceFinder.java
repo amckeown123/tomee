@@ -135,7 +135,7 @@ public class ResourceFinder {
         final String fullUri = path + uri;
 
         final Enumeration<URL> resources = getResources(fullUri);
-        final List<URL> list = new ArrayList();
+        final List<URL> list = new ArrayList<URL>();
         while (resources.hasMoreElements()) {
             final URL url = resources.nextElement();
             list.add(url);
@@ -242,10 +242,11 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if any of the urls cannot be read
      */
-    public Map<String, String> mapAllStrings(final String uri) throws IOException {
+    @SuppressWarnings("rawtypes")
+	public Map<String, String> mapAllStrings(final String uri) throws IOException {
         final Map<String, String> strings = new HashMap<String, String>();
         final Map<String, URL> resourcesMap = getResourcesMap(uri);
-        for (final Iterator iterator = resourcesMap.entrySet().iterator(); iterator.hasNext(); ) {
+        for (final Iterator<?> iterator = resourcesMap.entrySet().iterator(); iterator.hasNext(); ) {
             final Map.Entry entry = (Map.Entry) iterator.next();
             final String name = (String) entry.getKey();
             final URL url = (URL) entry.getValue();
@@ -280,11 +281,12 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, String> mapAvailableStrings(final String uri) throws IOException {
+    @SuppressWarnings("rawtypes")
+	public Map<String, String> mapAvailableStrings(final String uri) throws IOException {
         resourcesNotLoaded.clear();
         final Map<String, String> strings = new HashMap<String, String>();
         final Map<String, URL> resourcesMap = getResourcesMap(uri);
-        for (final Iterator iterator = resourcesMap.entrySet().iterator(); iterator.hasNext(); ) {
+        for (final Iterator<?> iterator = resourcesMap.entrySet().iterator(); iterator.hasNext(); ) {
             final Map.Entry entry = (Map.Entry) iterator.next();
             final String name = (String) entry.getKey();
             final URL url = (URL) entry.getValue();
@@ -756,10 +758,11 @@ public class ResourceFinder {
      * @return
      * @throws IOException if the URL cannot be read or is not in properties file format
      */
-    public Map<String, Properties> mapAllProperties(final String uri) throws IOException {
+    @SuppressWarnings("rawtypes")
+	public Map<String, Properties> mapAllProperties(final String uri) throws IOException {
         final Map<String, Properties> propertiesMap = new HashMap<String, Properties>();
         final Map<String, URL> map = getResourcesMap(uri);
-        for (final Iterator iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
+        for (final Iterator<?> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
             final Map.Entry entry = (Map.Entry) iterator.next();
             final String string = (String) entry.getKey();
             final URL url = (URL) entry.getValue();
@@ -791,11 +794,12 @@ public class ResourceFinder {
      * @return
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, Properties> mapAvailableProperties(final String uri) throws IOException {
+    @SuppressWarnings("rawtypes")
+	public Map<String, Properties> mapAvailableProperties(final String uri) throws IOException {
         resourcesNotLoaded.clear();
         final Map<String, Properties> propertiesMap = new HashMap<String, Properties>();
         final Map<String, URL> map = getResourcesMap(uri);
-        for (final Iterator iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
+        for (final Iterator<?> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
             final Map.Entry entry = (Map.Entry) iterator.next();
             final String string = (String) entry.getKey();
             final URL url = (URL) entry.getValue();
@@ -942,7 +946,7 @@ public class ResourceFinder {
         if (urls == null) {
             return classLoader.getResources(fulluri);
         }
-        final Vector<URL> resources = new Vector();
+        final Vector<URL> resources = new Vector<URL>();
         for (final URL url : urls) {
             final URL resource = findResource(fulluri, url);
             if (resource != null) {

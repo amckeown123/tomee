@@ -47,7 +47,7 @@ public class Archive {
         return this;
     }
 
-    public Archive manifest(final String key, final Class value) {
+    public Archive manifest(final String key, final Class<?> value) {
         manifest.put(key, value.getName());
         return this;
     }

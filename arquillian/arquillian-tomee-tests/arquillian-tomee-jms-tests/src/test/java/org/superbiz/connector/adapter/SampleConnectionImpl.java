@@ -23,11 +23,13 @@ import org.superbiz.connector.api.SampleConnection;
 import java.util.logging.Logger;
 
 public class SampleConnectionImpl implements SampleConnection {
-    private static Logger log = Logger.getLogger(SampleConnectionImpl.class.getName());
+    @SuppressWarnings("unused")
+	private static Logger log = Logger.getLogger(SampleConnectionImpl.class.getName());
 
     private SampleManagedConnection mc;
 
-    private SampleManagedConnectionFactory mcf;
+    @SuppressWarnings("unused")
+	private SampleManagedConnectionFactory mcf;
 
     public SampleConnectionImpl(SampleManagedConnection mc, SampleManagedConnectionFactory mcf) {
         this.mc = mc;

@@ -33,7 +33,9 @@ import java.util.List;
 @WebServlet(name = "Sender", urlPatterns = { "/sender" })
 public class Sender extends HttpServlet{
 
-    @Resource
+    private static final long serialVersionUID = -2007727725643296934L;
+
+	@Resource
     private SampleConnectionFactory cf;
 
     @EJB
