@@ -38,7 +38,8 @@ public abstract class TestSetup {
     @ArquillianResource
     private URL url;
 
-    public WebArchive createDeployment(Class...archiveClasses) {
+    @SuppressWarnings("rawtypes")
+	public WebArchive createDeployment(Class...archiveClasses) {
         WebAppDescriptor descriptor = Descriptors.create(WebAppDescriptor.class)
                 .version("3.0");
         decorateDescriptor(descriptor);

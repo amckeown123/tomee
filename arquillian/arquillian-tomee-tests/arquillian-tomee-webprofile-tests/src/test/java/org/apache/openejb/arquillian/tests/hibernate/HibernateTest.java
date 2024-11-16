@@ -44,7 +44,8 @@ import static org.junit.Assert.assertTrue;
 @RunWith(Arquillian.class)
 public class HibernateTest {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
         final File[] files = Maven.resolver()
                 .loadPomFromFile("src/test/resources/hibernate-pom.xml")
                 .importCompileAndRuntimeDependencies().resolve().withTransitivity()
