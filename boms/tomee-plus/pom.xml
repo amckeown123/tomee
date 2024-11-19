@@ -196,7 +196,7 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-commons</artifactId>
-      <version>1.12.5</version>
+      <version>1.14.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -207,7 +207,7 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-core</artifactId>
-      <version>1.12.5</version>
+      <version>1.14.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -218,7 +218,7 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-observation</artifactId>
-      <version>1.12.5</version>
+      <version>1.14.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -229,7 +229,7 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>1.12.5</version>
+      <version>1.14.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>

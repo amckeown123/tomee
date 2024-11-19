@@ -145,7 +145,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.jboss.arquillian.extension</groupId>
+      <groupId>  	` ye5a</groupId>
       <artifactId>arquillian-drone-selenium</artifactId>
       <version>${version.drone}</version>
       <scope>test</scope>
@@ -193,7 +193,6 @@
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-drone-impl</artifactId>
-      <version>${version.drone}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -217,7 +216,6 @@
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-drone-selenium-server</artifactId>
-      <version>${version.drone}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

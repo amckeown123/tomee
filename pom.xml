@@ -181,7 +181,7 @@
     <version.microprofile.health>4.0.1</version.microprofile.health>
     <version.microprofile.jwt>2.1</version.microprofile.jwt>
     <version.microprofile.metrics>5.0.2</version.microprofile.metrics>
-    <version.microprofile.openapi>3.1.1</version.microprofile.openapi>
+    <version.microprofile.openapi>3.1.2</version.microprofile.openapi>
     <version.microprofile.opentracing>3.0</version.microprofile.opentracing>
     <version.microprofile.rest-client>3.0.1</version.microprofile.rest-client>
 
@@ -189,7 +189,7 @@
 
     <!-- Micro Profile Impl. -->
     <version.microprofile.impl.config>3.10.0</version.microprofile.impl.config>
-    <version.microprofile.impl.fault-tolerance>6.4.1</version.microprofile.impl.fault-tolerance>
+    <version.microprofile.impl.fault-tolerance>6.6.2</version.microprofile.impl.fault-tolerance>
     <version.microprofile.impl.health>4.0.1</version.microprofile.impl.health>
     <version.microprofile.impl.metrics>5.0.1</version.microprofile.impl.metrics>
     <version.microprofile.impl.openapi>3.13.0</version.microprofile.impl.openapi>
@@ -228,8 +228,8 @@
     <version.hibernate.validator>8.0.1.Final</version.hibernate.validator>
 
     <!-- Other API and Impl. not in Jakarta EE -->
-    <version.wss4j>3.0.3</version.wss4j>
-    <version.xmlsec>3.0.4</version.xmlsec>
+    <version.wss4j>3.0.4</version.wss4j>
+    <version.xmlsec>4.0.3</version.xmlsec>
     <version.krazo>2.0.2</version.krazo>
     <version.jose4j>0.9.6</version.jose4j>
     <version.sxc>0.9</version.sxc>
@@ -248,7 +248,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.4.0</version>
+          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -325,7 +325,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
-          <version>3.5.0</version>
+          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -355,7 +355,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.5.0</version>
+          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.gmaven</groupId>
@@ -705,7 +705,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
-            <version>3.5.0</version>
+            <version>3.6.0</version>
           </plugin>
         </plugins>
       </reporting>
@@ -969,7 +969,28 @@
 
   </pluginRepositories>
   <dependencyManagement>
-    <dependencies>
+    <dependencies><!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core -->
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-core</artifactId>
+    <version>1.14.1</version>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-annotations -->
+<dependency>
+    <groupId>org.apache.maven.plugin-tools</groupId>
+    <artifactId>maven-plugin-annotations</artifactId>
+    <version>3.15.1</version>
+    <scope>provided</scope>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jxr-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jxr-plugin</artifactId>
+    <version>3.6.0</version>
+</dependency>
+
       <!-- Micro Profile API -->
       <dependency>
         <groupId>org.eclipse.microprofile.config</groupId>

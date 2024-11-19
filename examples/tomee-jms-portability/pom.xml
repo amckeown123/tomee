@@ -69,7 +69,7 @@
     <dependency>
       <groupId>org.codehaus.janino</groupId>
       <artifactId>janino</artifactId>
-      <version>3.1.12</version>
+      <version>3.1.22</version>
     </dependency>
   </dependencies>
   <!--
