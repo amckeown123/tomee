@@ -42,6 +42,7 @@
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy-all</artifactId>
+      <version>4.0.24</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
