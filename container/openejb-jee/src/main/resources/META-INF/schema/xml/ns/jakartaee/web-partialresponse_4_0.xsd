@@ -5,7 +5,7 @@
             targetNamespace="https://jakarta.ee/xml/ns/jakartaee"
             version="4.0"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xsd:include schemaLocation="jakartaee_10.xsd"/>
+
 
   <xsd:annotation>
     <xsd:documentation>
@@ -67,7 +67,10 @@
         ]]>
       </xsd:documentation>
     </xsd:annotation>
+    
+      
   </xsd:element>
+
 
 
   <!-- **************************************************** -->

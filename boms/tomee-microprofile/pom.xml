@@ -211,7 +211,6 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-core</artifactId>
-      <version>1.14.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -529,7 +528,7 @@
     <dependency>
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-opentracing-contrib</artifactId>
-      <version>3.0.4</version>
+      <version>3.0.3</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -540,7 +539,7 @@
     <dependency>
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-opentracing</artifactId>
-      <version>3.0.4</version>
+      <version>3.0.3</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1776,7 +1775,7 @@
     <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcpkix-jdk15to18</artifactId>
-      <version>1.79.1</version>
+      <version>1.78.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1787,7 +1786,7 @@
     <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcprov-jdk15to18</artifactId>
-      <version>1.79.1</version>
+      <version>1.78.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1798,7 +1797,7 @@
     <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcutil-jdk15to18</artifactId>
-      <version>1.79.1</version>
+      <version>1.78.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>

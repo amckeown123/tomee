@@ -26,10 +26,7 @@
              version="10">
     <description>String</description>
     <display-name>token</display-name>
-    <icon xml:lang="en">
-        <small-icon>token</small-icon>
-        <large-icon>token</large-icon>
-    </icon>
+
     <module>
         <connector>token</connector>
     </module>
@@ -45,9 +42,7 @@
             <context-root>token</context-root>
         </web>
     </module>
-    <module>
-        <alt-dd>token</alt-dd>
-    </module>
+
     <security-role>
         <description>String</description>
         <role-name>token</role-name>

@@ -80,19 +80,10 @@
       <artifactId>tomee-common</artifactId>
       <version>${project.version}</version>
     </dependency>
-
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
-      <version>${version.log4j2}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
-
 </project>
-

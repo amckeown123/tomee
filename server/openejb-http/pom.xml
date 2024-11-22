@@ -142,7 +142,6 @@
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-servlet</artifactId>
-      <version>${version.jetty}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
