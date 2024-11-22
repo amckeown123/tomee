@@ -970,7 +970,15 @@
   <dependencyManagement>
 
 
-    <dependencies><!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core --><!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.13.0</version>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core --><!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
 <dependency>
     <groupId>org.apache.groovy</groupId>
     <artifactId>groovy-all</artifactId>

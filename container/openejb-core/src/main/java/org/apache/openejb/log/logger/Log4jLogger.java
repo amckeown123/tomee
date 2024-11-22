@@ -17,12 +17,12 @@
 
 package org.apache.openejb.log.logger;
 
-import org.apache.log4j.Appender;
-import org.apache.log4j.AppenderSkeleton;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.apache.log4j.Priority;
-import org.apache.log4j.spi.LoggingEvent;
+import org.apache.logging.log4j.core.Appender;
+import org.apache.logging.log4j.core.AppenderSkeleton;
+import org.apache.logging.log4j.coreLogManager;
+import org.apache.logging.log4j.coreLogger;
+import org.apache.logging.log4j.corePriority;
+import org.apache.logging.log4j.core.spi.LoggingEvent;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
