@@ -971,6 +971,12 @@
 
 
     <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>mbean-annotation-api</artifactId>
+    <version>4.7.5</version>
+</dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
@@ -993,12 +999,7 @@
     <version>2.24.1</version>
 </dependency>
 
-  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.13.0</version>
-</dependency>
+
 <dependency>
     <groupId>io.micrometer</groupId>
     <artifactId>micrometer-core</artifactId>
