@@ -190,10 +190,12 @@
       <version>${version.selenium}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.extension</groupId>
-      <artifactId>arquillian-drone-impl</artifactId>
-      <scope>test</scope>
+    <!-- https://mvnrepository.com/artifact/org.jboss.arquillian.extension/arquillian-drone-impl -->
+<dependency>
+    <groupId>org.jboss.arquillian.extension</groupId>
+    <artifactId>arquillian-drone-impl</artifactId>
+    <version>2.5.6</version>
+    <scope>test</scope>
       <exclusions>
         <exclusion>
           <groupId>org.jboss.shrinkwrap.descriptors</groupId>
@@ -213,10 +215,12 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.extension</groupId>
-      <artifactId>arquillian-drone-selenium-server</artifactId>
-      <scope>test</scope>
+    <!-- https://mvnrepository.com/artifact/org.jboss.arquillian.extension/arquillian-drone-selenium-server -->
+<dependency>
+    <groupId>org.jboss.arquillian.extension</groupId>
+    <artifactId>arquillian-drone-selenium-server</artifactId>
+    <version>2.0.1.Final</version>
+    <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.core</groupId>
@@ -240,10 +244,11 @@
       <artifactId>shrinkwrap-descriptors-api-base</artifactId>
       <version>${version.shrinkwrap.descriptor}</version>
     </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+</dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-embedded</artifactId>
