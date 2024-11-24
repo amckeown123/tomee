@@ -45,6 +45,19 @@
     <module>tomee-plus-api</module>
   </modules>
 
+  <dependencyManagement>
+
+
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>mbean-annotation-api</artifactId>
+    <version>4.7.5</version>
+</dependency>
+</dependencies>
+</dependencyManagement>
+
   <build>
     <plugins>
       <plugin>

@@ -1362,7 +1362,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
+      <groupId>org.apache.openejb</groupId>
       <artifactId>mbean-annotation-api</artifactId>
       <exclusions>
         <exclusion>
