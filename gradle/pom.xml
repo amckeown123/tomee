@@ -39,9 +39,10 @@
       <version>3.0</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-all</artifactId>
+    <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+<dependency>
+    <groupId>org.apache.groovy</groupId>
+    <artifactId>groovy-all</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>

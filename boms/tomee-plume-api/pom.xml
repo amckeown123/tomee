@@ -148,16 +148,17 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.openejb</groupId>
-      <artifactId>mbean-annotation-api</artifactId>
-      <exclusions>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>mbean-annotation-api</artifactId>
+          <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
           <groupId>*</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
+      </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-api</artifactId>

@@ -206,9 +206,11 @@
       <version>${jetty-tck.version}</version>
       <scope>test</scope>
     </dependency><!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-webapp -->
+<!-- https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-webapp -->
 <dependency>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-webapp</artifactId>
+    <groupId>org.eclipse.jetty.ee10</groupId>
+    <artifactId>jetty-ee10-webapp</artifactId>
+    <version>12.0.15</version>
 </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
@@ -265,5 +267,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
 </project>
