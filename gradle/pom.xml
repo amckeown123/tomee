@@ -43,8 +43,7 @@
 <dependency>
     <groupId>org.apache.groovy</groupId>
     <artifactId>groovy-all</artifactId>
-      <scope>provided</scope>
-    </dependency>
+</dependency>
   </dependencies>
 
   <repositories>
