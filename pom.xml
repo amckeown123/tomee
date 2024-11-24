@@ -92,7 +92,7 @@
   <properties>
     <!-- allows release plugin to be overridden -->
     <arguments />
-    <tomee.version>${project.version}</tomee.version>
+    <tomee.version>10.0.0-M4</tomee.version>
 
     <!-- for the default name of the module. Needs to be overridden -->
     <tomee.build.name>${project.groupId}.${project.artifactId}</tomee.build.name>
@@ -995,13 +995,6 @@
     <version>4.7.5</version>
 </dependency>
 
-   
-    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
-<dependency>
-    <groupId>org.apache.openejb</groupId>
-    <artifactId>mbean-annotation-api</artifactId>
-    <version>4.7.5</version>
-</dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>

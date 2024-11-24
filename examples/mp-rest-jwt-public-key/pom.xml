@@ -100,9 +100,11 @@
 
 
   <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>tomee-microprofile-api</artifactId>
+  <!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-microprofile -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-microprofile</artifactId>
+    <version>10.0.0-M4</version>
       <scope>provided</scope>
     </dependency>
 

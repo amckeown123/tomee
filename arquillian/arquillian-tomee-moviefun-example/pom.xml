@@ -13,10 +13,9 @@
 <!-- $Rev: 684173 $ $Date: 2008-08-08 20:13:24 -0700 (Fri, 08 Aug 2008) $ -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
   <parent>
-    <group></group>org.apache.tomee</groupId>
     <artifactId>arquillian</artifactId>
+    <groupId>org.apache.tomee</groupId>
     <version>10.0.0-M4</version>
   </parent>
   <artifactId>arquillian-tomee-moviefun-example</artifactId>
@@ -144,9 +143,10 @@
       <version>${version.arquillian}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>  	` ye5a</groupId>
-      <artifactId>arquillian-drone-selenium</artifactId>
+    <!-- https://mvnrepository.com/artifact/org.jboss.arquillian.extension/arquillian-drone-selenium -->
+<dependency>
+    <groupId>org.jboss.arquillian.extension</groupId>
+    <artifactId>arquillian-drone-selenium</artifactId>
       <version>${version.drone}</version>
       <scope>test</scope>
       <exclusions>
