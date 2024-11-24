@@ -44,12 +44,10 @@
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>org.eclipse.persistence.antlr</artifactId>
-      <version>${version.eclipselink}</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>org.eclipse.persistence.asm</artifactId>
-      <version>${version.eclipselink}</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
@@ -145,7 +143,7 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>10.0.0-M4</version>
+        <version>10.0.0-M4-SNAPSHOT</version>
         <configuration>
           <systemVariables>
             <com.sun.jersey.server.impl.cdi.lookupExtensionInBeanManager>true</com.sun.jersey.server.impl.cdi.lookupExtensionInBeanManager>
