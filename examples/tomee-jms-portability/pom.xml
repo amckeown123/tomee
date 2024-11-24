@@ -66,10 +66,12 @@
       <artifactId>logback-classic</artifactId>
       <version>1.5.10</version>
     </dependency>
-    <dependency>
-      <groupId>org.codehaus.janino</groupId>
-      <artifactId>janino</artifactId>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.codehaus.janino/janino -->
+<dependency>
+    <groupId>org.codehaus.janino</groupId>
+    <artifactId>janino</artifactId>
+    <version>3.1.12</version>
+</dependency>
   </dependencies>
   <!--
   This section allows you to configure where to publish libraries for sharing.

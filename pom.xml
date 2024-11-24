@@ -968,9 +968,26 @@
 
   </pluginRepositories>
   <dependencyManagement>
-
-
     <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.antlr -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.antlr</artifactId>
+    <version>2.7.15</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.asm -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.asm</artifactId>
+    <version>9.7.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.codehaus.janino/janino -->
+<dependency>
+    <groupId>org.codehaus.janino</groupId>
+    <artifactId>janino</artifactId>
+    <version>3.1.12</version>
+</dependency>
+
     <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
 <dependency>
     <groupId>org.apache.openejb</groupId>
