@@ -51,15 +51,10 @@
     <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
 <dependency>
-    <groupId>org.apache.openejb</groupId>
-    <artifactId>mbean-annotation-api</artifactId>
+    <artifactId>tomee-project</artifactId>
+    <groupId>container</groupId>
     <version>${tomee.version}</version>
 </dependency><!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
-<dependency>
-    <groupId>org.apache.openejb</groupId>
-    <artifactId>openejb-loader</artifactId>
-    <version>${tomee.version}</version>
-</dependency>
 </dependencies>
 </dependencyManagement>
 
