@@ -155,6 +155,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
       <type>zip</type>
       <classifier>microprofile</classifier>
       <scope>test</scope>
