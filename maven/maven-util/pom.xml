@@ -39,7 +39,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-juli</artifactId>
-      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

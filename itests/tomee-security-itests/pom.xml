@@ -67,7 +67,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>10.0.0-M4</version>
       <type>tar.gz</type>
       <classifier>microprofile</classifier>
       <exclusions>
@@ -85,14 +84,12 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-security</artifactId>
-      <version>10.0.0-M4</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

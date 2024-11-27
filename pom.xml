@@ -92,7 +92,7 @@
   <properties>
     <!-- allows release plugin to be overridden -->
     <arguments />
-    <tomee.version>10.0.0-M4</tomee.version>
+    <tomee.version>10.0.0-M4-SNAPSHOT</tomee.version>
 
     <!-- for the default name of the module. Needs to be overridden -->
     <tomee.build.name>${project.groupId}.${project.artifactId}</tomee.build.name>
@@ -968,7 +968,286 @@
 
   </pluginRepositories>
   <dependencyManagement>
-    <dependencies>
+    <dependencies><!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-jee -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+     <artifactId>mbean-annotation-api</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-core -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-core</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jee</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-api -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-api</artifactId>
+      <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-loader -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-loader</artifactId>
+  <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-javaagent -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-javaagent</artifactId>
+      <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jpa-integration -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jpa-integration</artifactId>
+      <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee-accessors -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jee-accessors</artifactId>
+      <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/apache-tomee -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>apache-tomee</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-activemq -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-activemq</artifactId>
+    <version>${tomee.version}</version>
+    </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-client -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-client</artifactId>
+<version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-common-cli -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-common-cli</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf-rs -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf-rs</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf-transport -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf-transport</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-daemon -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-daemon</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-derbynet -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-derbynet</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-ejbd -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-ejbd</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-hessian -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-hessian</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-hsql -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-hsql</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-http -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-http</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-multicast -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-multicast</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-rest -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-rest</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-server -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-server</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-ssh -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-ssh</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-microprofile -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-microprofile</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-bootstrap -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-bootstrap</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-catalina -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-catalina</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-common -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-common</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-config -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-config</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-deb</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-embedded -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-embedded</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-jaxrs -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-jaxrs</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-jdbc -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-jdbc</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-juli -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-juli</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-loader -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-loader</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-mojarra -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-mojarra</artifactId>
+    <version>${tomee.version}</version>
+    <scope>runtime</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-myfaces -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-myfaces</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-overlay-runner -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-overlay-runner</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-plume-webapp -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-plume-webapp</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-plus-webapp -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-plus-webapp</artifactId>
+    <version>10.0.0-M3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-security -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-security</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-util -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-util</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-webaccess -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-webaccess</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-webapp -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-webapp</artifactId>
+    <version>${tomee.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-webservices -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>tomee-webservices</artifactId>
+    <version>${tomee.version}</version>
+    <scope>test</scope>
+</dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.antlr -->
 <dependency>
     <groupId>org.eclipse.persistence</groupId>

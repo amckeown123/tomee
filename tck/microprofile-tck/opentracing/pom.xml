@@ -129,7 +129,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <type>zip</type>
       <classifier>microprofile</classifier>
       <scope>test</scope>

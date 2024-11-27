@@ -51,7 +51,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <type>zip</type>
       <classifier>plus</classifier>
       <scope>test</scope>
@@ -98,7 +98,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -189,19 +188,16 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-webservices</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-jaxrs</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -218,13 +214,11 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-cxf</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

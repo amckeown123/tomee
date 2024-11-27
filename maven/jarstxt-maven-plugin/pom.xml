@@ -44,7 +44,6 @@ Licensed to the Apache Software Foundation (ASF) under one or more
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>

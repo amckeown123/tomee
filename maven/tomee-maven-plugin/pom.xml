@@ -49,7 +49,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-util</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
@@ -76,7 +75,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
       <classifier>webprofile</classifier>
       <type>zip</type>

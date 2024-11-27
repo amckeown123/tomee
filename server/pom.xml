@@ -31,24 +31,7 @@
   <name>TomEE :: Server</name>
 
   <modules>
-    <module>openejb-ejbd</module>
-    <module>openejb-server</module>
-    <module>openejb-client</module>
-    <module>openejb-http</module>
-    <module>openejb-activemq</module>
-    <module>openejb-derbynet</module>
-    <module>openejb-hsql</module>
     <module>openejb-webservices</module>
-    <module>openejb-cxf</module>
-    <module>openejb-multicast</module>
-    <module>openejb-daemon</module>
-    <module>openejb-cxf-rs</module>
-    <module>openejb-cxf-transport</module>
-    <module>openejb-rest</module>
-    <module>openejb-ssh</module>
-    <module>openejb-common-cli</module>
-    <module>openejb-bonecp</module>
-    <module>openejb-hessian</module>
   </modules>
 
   <dependencies>
@@ -56,6 +39,92 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-activemq -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-activemq</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-core -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-core</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-client -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-client</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-common-cli -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-common-cli</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf-rs -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf-rs</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-cxf-transport -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-cxf-transport</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-daemon -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-daemon</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-derbynet -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-derbynet</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-ejbd -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-ejbd</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-hessian -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-hessian</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-hsql -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-hsql</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-http -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-http</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-multicast -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-multicast</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-rest -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-rest</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-server -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-server</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-ssh -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-ssh</artifactId>
+</dependency>
+
   </dependencies>
 </project>
 

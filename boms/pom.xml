@@ -54,6 +54,11 @@
     <groupId>org.apache.openejb</groupId>
     <artifactId>mbean-annotation-api</artifactId>
     <version>4.7.5</version>
+</dependency><!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>openejb-loader</artifactId>
+    <version>4.7.5</version>
 </dependency>
 </dependencies>
 </dependencyManagement>

@@ -42,7 +42,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -56,7 +55,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <type>zip</type>
       <classifier>microprofile</classifier>
       <scope>test</scope>

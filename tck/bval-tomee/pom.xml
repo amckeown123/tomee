@@ -47,14 +47,13 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
       <type>zip</type>
-      <version>${project.version}</version>
       <classifier>webprofile</classifier>
       <scope>test</scope>
     </dependency>

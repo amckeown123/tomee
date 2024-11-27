@@ -35,7 +35,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
     </dependency>
 
     <dependency>
@@ -153,14 +152,12 @@
     <dependency> <!-- shouldn't be a compile/runtime dependency -->
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-http</artifactId>
-      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

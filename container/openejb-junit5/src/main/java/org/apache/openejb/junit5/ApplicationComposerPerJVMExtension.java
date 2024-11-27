@@ -40,7 +40,8 @@ public class ApplicationComposerPerJVMExtension extends ApplicationComposerPerXY
 
     private static final SingleApplicationComposerBase BASE = new SingleApplicationComposerBase();
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     protected void validate(ExtensionContext context) {
         if (!isPerJvm(context) && BASE.isStarted()) {
             //XXX: Future work: We might get it to work via a JVM singleton/lock, see https://github.com/apache/tomee/pull/767#discussion_r595343572

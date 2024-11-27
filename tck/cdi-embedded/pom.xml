@@ -204,7 +204,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -215,13 +214,11 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-cxf</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <!-- ActiveMQ is optional in openejb-core (embedded needs openejb-core + all deps)-->

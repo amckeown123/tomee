@@ -38,5 +38,4 @@
     <skip.remote.webprofile>true</skip.remote.webprofile>
     <skip.webapp.webprofile>true</skip.webapp.webprofile>
   </properties>
-
 </project>

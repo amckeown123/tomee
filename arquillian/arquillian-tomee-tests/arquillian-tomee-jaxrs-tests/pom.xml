@@ -31,13 +31,12 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-jaxrs</artifactId>
-      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-webapp</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <type>war</type>
     </dependency>
   </dependencies>

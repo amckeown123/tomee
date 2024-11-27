@@ -111,12 +111,10 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-client</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -136,7 +134,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-common</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.tomitribe</groupId>

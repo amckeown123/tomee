@@ -117,7 +117,6 @@
     <dependency> <!-- tomee-embedded needs it + dependencies but tomee-*-remote doesn't need dependencies so to avoid conflicts bringing it back here -->
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
     </dependency>
 
     <!-- ActiveMQ is optional in openejb-core -->
@@ -178,9 +177,9 @@
     </dependency>
     <!-- just to get it in the correct order -->
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>org.apache.tomee</groupId>
       <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <classifier>webprofile</classifier>
       <type>zip</type>
     </dependency>

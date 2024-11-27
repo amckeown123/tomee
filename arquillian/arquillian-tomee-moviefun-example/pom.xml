@@ -252,7 +252,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-embedded</artifactId>
-      <version>${project.version}</version>
       <!--<classifier>uber</classifier>-->
       <scope>test</scope>
     </dependency>

@@ -36,7 +36,7 @@ import static jakarta.ejb.LockType.WRITE;
 public class BusyBee {
 
     @Asynchronous
-    public Future stayBusy(CountDownLatch ready) {
+    public Future<?> stayBusy(CountDownLatch ready) {
         ready.countDown();
 
         try {

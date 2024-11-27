@@ -43,7 +43,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-bootstrap</artifactId>
-      <version>10.0.0-M4</version>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.woodstox</groupId>
@@ -864,10 +864,10 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-api</artifactId>
-      <version>${project.version}</version>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>openejb-loader</artifactId>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -878,7 +878,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-client</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -889,7 +888,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -900,7 +898,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -911,7 +908,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-transport</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -922,7 +918,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -933,7 +928,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-ejbd</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -944,7 +938,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-hsql</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -955,7 +948,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-http</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -966,7 +958,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-javaagent</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -977,7 +968,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-jee-accessors</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -988,7 +978,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-jee</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -999,7 +988,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-jpa-integration</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1007,10 +995,10 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
+<dependency>
+    <groupId>org.apache.openejb</groupId>
+    <artifactId>openejb-loader</artifactId>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1021,7 +1009,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-rest</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1032,7 +1019,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1064,7 +1050,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1075,7 +1060,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-common</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1086,7 +1070,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-config</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1097,7 +1080,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-jaxrs</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1108,7 +1090,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-jdbc</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1119,7 +1100,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-juli</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1130,7 +1110,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-loader</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1141,7 +1120,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-mojarra</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1152,7 +1130,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-myfaces</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1163,7 +1140,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-security</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -1174,7 +1150,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-webapp</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>

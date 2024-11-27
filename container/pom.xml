@@ -29,16 +29,48 @@
   <name>TomEE :: Container</name>
 
   <modules>
-    
-    <module>openejb-api</module>
-    <module>openejb-core</module>
-    <module>openejb-loader</module>
-    <module>openejb-javaagent</module>
-    <module>openejb-jee</module>
-    <module>openejb-jee-accessors</module>
     <module>openejb-jpa-integration</module>
     <module>openejb-junit</module>
     <module>openejb-junit5</module>
     <module>openejb-junit5-backward</module>
   </modules>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-api -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-api</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-loader -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-loader</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jee</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-core -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-core</artifactId>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-javaagent -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-javaagent</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jpa-integration -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jpa-integration</artifactId>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee-accessors -->
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>openejb-jee-accessors</artifactId>
+</dependency>
+
+</dependencies>
+
 </project>

@@ -38,7 +38,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>openejb-core</artifactId>
-            <version>${project.version}</version>
+            <version>${tomee.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
