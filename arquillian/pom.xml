@@ -43,4 +43,18 @@
     <module>arquillian-tck</module>
     <module>functional-tests</module>
   </modules>
+    <dependencyManagement>
+  <dependencies>
+   <dependency>
+       <artifactId>tomee-project</artifactId>
+       <groupId>container</groupId>
+       <version>${project.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>tomee-project</artifactId>
+        <groupId>tomee</groupId>
+        <version>${project.version}</version>
+     </dependency>
+  </dependencies>
+  </dependencyManagement>
 </project>

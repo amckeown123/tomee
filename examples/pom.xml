@@ -211,6 +211,20 @@
     <module>security-openid</module>
 
   </modules>
+  <dependencyManagement>
+  <dependencies>
+   <dependency>
+       <artifactId>tomee-project</artifactId>
+       <groupId>container</groupId>
+       <version>${project.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>tomee-project</artifactId>
+        <groupId>tomee</groupId>
+        <version>${project.version}</version>
+     </dependency>
+  </dependencies>
+  </dependencyManagement>
   <profiles>
     <profile>
       <id>apache-release</id>
