@@ -48,14 +48,17 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-server</artifactId>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-http</artifactId>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee.bom</groupId>
