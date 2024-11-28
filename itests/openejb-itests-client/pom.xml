@@ -81,36 +81,46 @@
       </plugin>
     </plugins>
   </build>
+<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
+      <artifactId>tomee-server-composer</artifactId>
+      <version>${tomee.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
+      <type>tar.gz</type>
+      <classifier>microprofile</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-beans</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-servlets</artifactId>
-      <version>${project.version}</version>
-      <optional>true</optional>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>openejb-client</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-ra</artifactId>
+      <artifactId>activemq-broker</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.xbean</groupId>
-      <artifactId>xbean-finder-shaded</artifactId>
     </dependency>
   </dependencies>
+</dependencyManagement>
 </project>
-

@@ -47,26 +47,17 @@
       </plugin>
     </plugins>
   </build>
-
+<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-server-composer</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>itest-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>itest-util</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
       <type>tar.gz</type>
       <classifier>microprofile</classifier>
       <exclusions>
@@ -77,31 +68,25 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>tomee-security</artifactId>
+      <artifactId>openejb-client</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-cxf-rs</artifactId>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.htmlunit</groupId>
-      <artifactId>htmlunit</artifactId>
-      <version>4.4.0</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+</dependencyManagement>
 </project>
-

@@ -35,24 +35,48 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.web</tomee.build.name>
   </properties>
+<dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-beans</artifactId>
-      <version>${project.version}</version>
-      <type>ejb</type>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>tomee-server-composer</artifactId>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-servlets</artifactId>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
+      <type>tar.gz</type>
+      <classifier>microprofile</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
       <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>openejb-client</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <scope>runtime</scope>
     </dependency>
   </dependencies>
+</dependencyManagement>
 
   <build>
     <plugins>
@@ -63,4 +87,3 @@
     </plugins>
   </build>
 </project>
-

@@ -47,26 +47,17 @@
       </plugin>
     </plugins>
   </build>
-
+<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-server-composer</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>itest-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>itest-util</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>apache-tomee</artifactId>
+      <version>${tomee.version}</version>
       <type>tar.gz</type>
       <classifier>microprofile</classifier>
       <exclusions>
@@ -77,31 +68,19 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.microprofile.jwt</groupId>
-      <artifactId>microprofile-jwt-auth-api</artifactId>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.nimbusds</groupId>
-      <artifactId>nimbus-jose-jwt</artifactId>
-      <version>9.40</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-cxf-rs</artifactId>
-      <scope>test</scope>
+      <artifactId>openejb-client</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>io.churchkey</groupId>
-      <artifactId>churchkey</artifactId>
-      <version>1.22</version>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -109,5 +88,5 @@
       <artifactId>junit</artifactId>
     </dependency>
   </dependencies>
+</dependencyManagement>
 </project>
-
