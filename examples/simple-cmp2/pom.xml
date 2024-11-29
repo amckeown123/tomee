@@ -22,7 +22,7 @@
   <groupId>org.superbiz</groupId>
   <artifactId>simple-cmp2</artifactId>
   <packaging>jar</packaging>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <name>TomEE :: Examples :: Simple CMP2 Entity</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,7 +45,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.4.0</version>
         <configuration>
-          <argLine>-javaagent:${basedir}/target/openejb-javaagent-${tomee.version}.jar</argLine>
+          <argLine>-javaagent:${basedir}/target/openejb-javaagent-${project.version}.jar</argLine>
           <workingDirectory>${basedir}/target</workingDirectory>
         </configuration>
       </plugin>
@@ -66,7 +66,7 @@
                 <artifactItem>
                   <groupId>org.apache.tomee</groupId>
                   <artifactId>openejb-javaagent</artifactId>
-                  <version>${tomee.version}</version>
+                  <version>${project.version}</version>
                   <outputDirectory>${project.build.directory}</outputDirectory>
                 </artifactItem>
               </artifactItems>
@@ -102,7 +102,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

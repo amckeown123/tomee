@@ -21,7 +21,7 @@
 
   <groupId>jug</groupId>
   <artifactId>polling-parent</artifactId>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>TomEE :: Examples :: Polling</name>
 
@@ -78,7 +78,7 @@
       <dependency>
         <groupId>org.apache.tomee.bom</groupId>
         <artifactId>tomee-plus-api</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>provided</scope>
       </dependency>
 
@@ -86,7 +86,7 @@
       <dependency>
         <groupId>org.apache.tomee.bom</groupId>
         <artifactId>tomee-plus</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>test</scope>
       </dependency>
 
@@ -100,25 +100,25 @@
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>arquillian-tomee-embedded</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>arquillian-tomee-remote</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-webservices</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>ziplock</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>

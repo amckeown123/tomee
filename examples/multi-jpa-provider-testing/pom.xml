@@ -21,7 +21,7 @@
   <groupId>org.superbiz</groupId>
   <artifactId>multi-jpa-provider-testing</artifactId>
   <packaging>jar</packaging>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <name>TomEE :: Examples :: Multiple JPA providers</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,7 +68,7 @@
             </goals>
             <configuration>
               <skip>${maven.test.skip}</skip>
-              <argLine>"-javaagent:${settings.localRepository}/org/apache/tomee/openejb-javaagent/${tomee.version}/openejb-javaagent-${tomee.version}.jar"</argLine>
+              <argLine>"-javaagent:${settings.localRepository}/org/apache/tomee/openejb-javaagent/${project.version}/openejb-javaagent-${project.version}.jar"</argLine>
               <systemPropertyVariables>
                 <jakarta.persistence.provider>org.apache.openjpa.persistence.PersistenceProviderImpl</jakarta.persistence.provider>
               </systemPropertyVariables>
@@ -105,7 +105,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>arquillian-openejb-embedded</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -151,14 +151,14 @@
       <!-- just a facade pom which will bring hibernate for us -->
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core-hibernate</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee.bom</groupId>
       <artifactId>tomee-webprofile</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

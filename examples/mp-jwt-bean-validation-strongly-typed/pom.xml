@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.superbiz</groupId>
   <artifactId>mp-jwt-bean-validation-strongly-typed</artifactId>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>TomEE :: Examples :: MicroProfile JWT Bean Validation, Strongly-typed Annotations</name>
   <properties>
@@ -62,7 +62,7 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <configuration>
           <tomeeClassifier>microprofile</tomeeClassifier>
           <args>-Xmx512m -XX:PermSize=256m</args>
@@ -125,13 +125,13 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -161,13 +161,13 @@
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>arquillian-tomee-remote</artifactId>
-          <version>${tomee.version}</version>
+          <version>${project.version}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>apache-tomee</artifactId>
-          <version>${tomee.version}</version>
+          <version>${project.version}</version>
           <type>zip</type>
           <classifier>microprofile</classifier>
           <scope>test</scope>
@@ -175,7 +175,7 @@
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>mp-jwt</artifactId>
-          <version>${tomee.version}</version>
+          <version>${project.version}</version>
           <scope>provided</scope>
         </dependency>
       </dependencies>

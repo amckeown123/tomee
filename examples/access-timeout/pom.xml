@@ -19,10 +19,10 @@
 <!-- $Rev$ $Date$ -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-      <parent>
+   <parent>
     <artifactId>examples</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <groupId>org.superbiz</groupId>
@@ -54,40 +54,25 @@
       <url>https://repository.apache.org/content/groups/snapshots</url>
     </repository>
   </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>tomee-webprofile-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!--
-    The <scope>test</scope> guarantees that non of your runtime
-    code is dependent on any OpenEJB classes.
-    -->
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>tomee-webprofile</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <!--
-  This section allows you to configure where to publish libraries for sharing.
-  It is not required and may be deleted.  For more information see:
-  http://maven.apache.org/plugins/maven-deploy-plugin/
-  -->
-  <distributionManagement>
-    <repository>
-      <id>localhost</id>
-      <url>file://${basedir}/target/repo/</url>
-    </repository>
-    <snapshotRepository>
-      <id>localhost</id>
-      <url>file://${basedir}/target/snapshot-repo/</url>
-    </snapshotRepository>
-  </distributionManagement>
+  <dependencyManagement>
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>container</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>tomee</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>examples</artifactId>
+    <version>${project.version}</version>
+</dependency>
+</dependencies>
+</dependencyManagement>
+
 </project>

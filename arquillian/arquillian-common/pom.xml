@@ -22,7 +22,7 @@
   <parent>
     <artifactId>arquillian</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <artifactId>arquillian-common</artifactId>
@@ -33,31 +33,25 @@
   <properties>
     <tomee.build.name>${project.groupId}.arquillian.common</tomee.build.name>
   </properties>
+<dependencyManagement>
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>container</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>tomee</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>arquillian</artifactId>
+    <version>${project.version}</version>
+</dependency>
+</dependencies>
+</dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.test</groupId>
-      <artifactId>arquillian-test-spi</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.config</groupId>
-      <artifactId>arquillian-config-impl-base</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.container</groupId>
-      <artifactId>arquillian-container-spi</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.tomitribe</groupId>
-      <artifactId>swizzle</artifactId>
-    </dependency>
-  </dependencies>
 </project>

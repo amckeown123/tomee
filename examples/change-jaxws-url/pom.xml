@@ -21,7 +21,7 @@
   <parent>
     <artifactId>examples</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <groupId>org.superbiz</groupId>
@@ -68,21 +68,21 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <configuration>
-          <tomeeVersion>${tomee.version}</tomeeVersion>
+          <tomeeVersion>${project.version}</tomeeVersion>
           <tomeeClassifier>plus</tomeeClassifier>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-embedded-maven-plugin</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <dependencies>
           <dependency>
             <groupId>org.apache.tomee</groupId>
             <artifactId>apache-tomee</artifactId>
-            <version>${tomee.version}</version>
+            <version>${project.version}</version>
           </dependency>
         </dependencies>
       </plugin>
@@ -100,7 +100,7 @@
     <dependency>
       <groupId>org.apache.tomee.bom</groupId>
       <artifactId>tomee-plus-api</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -111,18 +111,18 @@
     <dependency>
       <groupId>org.apache.tomee.bom</groupId>
       <artifactId>tomee-plus</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>ziplock</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>arquillian-tomee-embedded</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.superbiz</groupId>
   <artifactId>tomee-jersey-eclipselink</artifactId>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>TomEE :: Examples :: TomEE, Jersey, Eclipselink</name>
   <properties>
@@ -76,7 +76,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>10.0.0-M4</version>
+      <version>10.0.0-M4-SNAPSHOT</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.commons</groupId>
@@ -102,7 +102,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

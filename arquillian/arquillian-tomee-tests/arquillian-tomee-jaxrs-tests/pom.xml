@@ -21,7 +21,7 @@
   <parent>
     <artifactId>arquillian-tomee-tests</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <artifactId>arquillian-tomee-jaxrs-tests</artifactId>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>tomee-webapp</artifactId>
-      <version>${tomee.version}</version>
+      <version>${project.version}</version>
       <type>war</type>
     </dependency>
   </dependencies>

@@ -31,7 +31,7 @@
   <parent>
     <groupId>org.apache.tomee.bom</groupId>
     <artifactId>boms</artifactId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -45,17 +45,17 @@
 <dependency>
     <artifactId>tomee-project</artifactId>
     <groupId>container</groupId>
-    <version>${tomee.version}</version>
+    <version>${project.version}</version>
 </dependency>
 <dependency>
     <artifactId>tomee-project</artifactId>
     <groupId>tomee</groupId>
-    <version>${tomee.version}</version>
+    <version>${project.version}</version>
 </dependency>
 <dependency>
     <groupId>org.apache.tomee.bom</groupId>
     <artifactId>boms</artifactId>
-    <version>${tomee.version}</version>
+    <version>${project.version}</version>
 </dependency>
 </dependencies>
 </dependencyManagement>

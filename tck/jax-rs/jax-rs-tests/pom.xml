@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.apache.tomee</groupId>
         <artifactId>jax-rs</artifactId>
-        <version>10.0.0-M4</version>
+        <version>10.0.0-M4-SNAPSHOT</version>
     </parent>
 
     <artifactId>jax-rs-tests</artifactId>
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>apache-tomee</artifactId>
-            <version>${tomee.version}</version>
+            <version>${project.version}</version>
             <type>zip</type>
             <classifier>plus</classifier>
             <scope>test</scope>

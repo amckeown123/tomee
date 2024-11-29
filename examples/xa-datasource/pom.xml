@@ -22,7 +22,7 @@
   <groupId>org.superbiz</groupId>
   <artifactId>xa-datasource</artifactId>
   <packaging>war</packaging>
-  <version>10.0.0-M4</version>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <name>TomEE :: Examples :: XA Datasource configuration and usage</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,9 +53,9 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${tomee.version}</version>
+        <version>${project.version}</version>
         <configuration>
-          <tomeeVersion>${tomee.version}</tomeeVersion>
+          <tomeeVersion>${project.version}</tomeeVersion>
           <tomeeClassifier>webprofile</tomeeClassifier>
           <tomeeHttpPort>9080</tomeeHttpPort>
           <tomeeShutdownPort>9005</tomeeShutdownPort>
@@ -96,7 +96,7 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>10.0.0-M4</version>
+      <version>10.0.0-M4-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>

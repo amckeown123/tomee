@@ -20,7 +20,7 @@
     <parent>
     <artifactId>examples</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <groupId>org.superbiz</groupId>
@@ -31,8 +31,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <tomee.test.version>10.0.0-M4</tomee.test.version>
-    <openejb.test.version>10.0.0-M4</openejb.test.version>
+    <tomee.test.version>10.0.0-M4-SNAPSHOT</tomee.test.version>
+    <openejb.test.version>10.0.0-M4-SNAPSHOT</openejb.test.version>
   </properties>
 
   <modules>
@@ -87,7 +87,7 @@
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>arquillian-tomee-remote</artifactId>
-        <version>10.0.0-M4</version>
+        <version>10.0.0-M4-SNAPSHOT</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -105,13 +105,13 @@
       <dependency>
         <groupId>org.apache.tomee.bom</groupId>
         <artifactId>tomee-webprofile</artifactId>
-        <version>10.0.0-M4</version>
+        <version>10.0.0-M4-SNAPSHOT</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.tomee.bom</groupId>
         <artifactId>tomee-webprofile-api</artifactId>
-        <version>10.0.0-M4</version>
+        <version>10.0.0-M4-SNAPSHOT</version>
         <scope>provided</scope>
       </dependency>
     </dependencies>

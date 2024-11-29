@@ -19,7 +19,7 @@
   <parent>
     <artifactId>tomee-project</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>tck</artifactId>
@@ -57,12 +57,12 @@
   <dependency>
     <artifactId>tomee-project</artifactId>
     <groupId>tomee</groupId>
-    <version>${tomee.version}</version>
+    <version>${project.version}</version>
 </dependency>
  <dependency>
     <artifactId>tomee-project</artifactId>
     <groupId>container</groupId>
-    <version>${tomee.version}</version>
+    <version>${project.version}</version>
 </dependency>
   </dependencies>
   </dependencyManagement>

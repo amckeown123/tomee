@@ -22,7 +22,8 @@
   <parent>
     <artifactId>tomee-project</artifactId>
     <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4</version>
+    <version>10.0.0-M4-SNAPSHOT</version>
+
   </parent>
 
   <artifactId>arquillian</artifactId>
@@ -43,18 +44,119 @@
     <module>arquillian-tck</module>
     <module>functional-tests</module>
   </modules>
-    <dependencyManagement>
+<dependencyManagement>
   <dependencies>
+     <dependency>
+     <artifactId>tomee</artifactId>
+    <groupId>org.apache.tomee</groupId>
+   </dependency>
    <dependency>
        <artifactId>tomee-project</artifactId>
        <groupId>container</groupId>
-       <version>${project.version}</version>
     </dependency>
     <dependency>
         <artifactId>tomee-project</artifactId>
         <groupId>tomee</groupId>
-        <version>${project.version}</version>
-     </dependency>
+     </dependency>    <dependency>
+      <groupId>org.jboss.arquillian.container</groupId>
+      <artifactId>arquillian-container-spi</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>shrinkwrap-descriptors-spi</artifactId>
+          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>shrinkwrap-descriptors-api-base</artifactId>
+          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-spi</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-api-base</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.arquillian.container</groupId>
+      <artifactId>arquillian-container-test-spi</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.arquillian.junit</groupId>
+      <artifactId>arquillian-junit-container</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>shrinkwrap-descriptors-spi</artifactId>
+          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-api-javaee</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap</groupId>
+      <artifactId>shrinkwrap-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap</groupId>
+      <artifactId>shrinkwrap-impl-base</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.resolver</groupId>
+      <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-openejb-transaction-provider</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency> <!-- shouldn't be a compile/runtime dependency -->
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-http</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-cxf-rs</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   </dependencyManagement>
 </project>
