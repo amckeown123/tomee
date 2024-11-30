@@ -39,7 +39,7 @@ public class ObjectMap extends AbstractMap<String, Object> {
         this(object.getClass(), object);
     }
 
-    public ObjectMap(final Class<?> clazz) {
+    public ObjectMap(final Class clazz) {
         this(clazz, null);
     }
 

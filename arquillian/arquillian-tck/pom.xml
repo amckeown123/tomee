@@ -34,16 +34,39 @@
     <tomee.build.name>${project.groupId}.arquillian.tck</tomee.build.name>
   </properties>
 
-<dependencyManagement>
-    <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
-<dependency>
- <artifactId>arquillian</artifactId>
-     <groupId>org.apache.tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
-</dependencies>
-</dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.jboss.arquillian.junit</groupId>
+      <artifactId>arquillian-junit-container</artifactId>
+      <version>${version.arquillian}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
+      <version>${version.shrinkwrap.descriptor}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.arquillian.tck.container</groupId>
+      <artifactId>arquillian-tck-container</artifactId>
+      <version>${tck.version}</version>
+      <classifier>tests</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.testenricher</groupId>
+      <artifactId>arquillian-testenricher-cdi</artifactId>
+      <version>${version.arquillian}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-tomee-remote</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -74,6 +97,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>${surefire.version}</version>
         <configuration>
           <threadCount>1</threadCount>
           <reuseForks>true</reuseForks>

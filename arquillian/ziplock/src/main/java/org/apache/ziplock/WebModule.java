@@ -57,13 +57,12 @@ public class WebModule {
         this(clazz, clazz.getSimpleName() + ".war", excluded);
     }
 
-    @SuppressWarnings("unchecked")
-	public WebModule(final Class<?> clazz, final String appName, final Class<?>... excluded) {
+    public WebModule(final Class<?> clazz, final String appName, final Class<?>... excluded) {
         this(appName);
 
         final URL archiveURL;
         try {
-            final File file = JarLocation.jarLocation((Class<JarLocation>) clazz);
+            final File file = JarLocation.jarLocation(clazz);
             archiveURL = file.toURI().toURL();
         } catch (final MalformedURLException e) {
             throw new IllegalStateException(e);

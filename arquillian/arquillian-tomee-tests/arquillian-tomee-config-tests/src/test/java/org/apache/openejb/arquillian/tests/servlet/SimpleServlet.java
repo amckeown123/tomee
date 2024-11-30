@@ -25,9 +25,7 @@ import jakarta.servlet.ServletException;
 
 @WebServlet(urlPatterns = "/simple")
 public class SimpleServlet extends HttpServlet {
-    private static final long serialVersionUID = 5653568257002205723L;
-
-	protected void service(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+    protected void service(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write("simple");
     }
 }

@@ -26,17 +26,46 @@
     <artifactId>jsonp-standalone</artifactId>
     <name>TomEE :: TCK :: JSON-P Standalone</name>
 
-<dependencyManagement>
-<dependencies>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
-<dependency>
-    <artifactId>tck</artifactId>
-    <groupId>org.apache.tomee</groupId>
-    <version>${parent.project.version}</version>
-</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomee</groupId>
+            <artifactId>jakartaee-api</artifactId>
+        </dependency>
 
-</dependencies>
-</dependencyManagement>
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-tck-tests</artifactId>
+            <version>${jsonp-tck.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-tck-tests-pluggability</artifactId>
+            <version>${jsonp-tck.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.johnzon</groupId>
+            <artifactId>johnzon-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.openwebbeans</groupId>
+            <artifactId>openwebbeans-se</artifactId>
+            <version>${version.openwebbeans}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.openwebbeans</groupId>
+            <artifactId>openwebbeans-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.openwebbeans</groupId>
+            <artifactId>openwebbeans-spi</artifactId>
+        </dependency>
+    </dependencies>
+
     <profiles>
         <profile>
             <id>tck-jsonp</id>

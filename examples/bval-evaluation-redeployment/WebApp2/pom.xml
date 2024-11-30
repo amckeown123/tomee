@@ -30,21 +30,19 @@
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
   </properties>
-   <dependencyManagement>
- <dependencies>
- <dependency>
-   <groupId>org.superbiz</groupId>
-   <artifactId>bval-evaluation-redeployment</artifactId>
-   <version>${project.version}</version>
-</dependency>
- </dependencies>
- </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
+    </dependency>
+  </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>

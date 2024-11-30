@@ -177,8 +177,7 @@ public class TestClassDiscoverer implements AdditionalBeanDiscoverer {
         return module;
     }
 
-    @SuppressWarnings("unchecked")
-	private Set<Class<? extends Annotation>> findClassMarkers(final ClassLoader contextClassLoader) {
+    private Set<Class<? extends Annotation>> findClassMarkers(final ClassLoader contextClassLoader) {
         final Set<Class<? extends Annotation>> testMarkers = new HashSet<>();
         for (final String s : asList("org.junit.runner.RunWith", Discover.class.getName())) {
             try {
@@ -190,13 +189,11 @@ public class TestClassDiscoverer implements AdditionalBeanDiscoverer {
         return testMarkers;
     }
 
-    @SuppressWarnings("unchecked")
-	private Set<Class<? extends Annotation>> findMarkers(final ClassLoader contextClassLoader) {
+    private Set<Class<? extends Annotation>> findMarkers(final ClassLoader contextClassLoader) {
         final Set<Class<? extends Annotation>> testMarkers = new HashSet<>();
         for (final String s : asList("org.junit.Test", "org.testng.annotations.Test")) {
             try {
-                @SuppressWarnings("unused")
-				boolean b = testMarkers.add((Class<? extends Annotation>) contextClassLoader.loadClass(s));
+                testMarkers.add((Class<? extends Annotation>) contextClassLoader.loadClass(s));
             } catch (final Throwable e) {
                 // no-op: deployment = false
             }

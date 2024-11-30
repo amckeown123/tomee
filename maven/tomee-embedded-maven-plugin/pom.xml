@@ -26,18 +26,48 @@
   </parent>
 
   <artifactId>tomee-embedded-maven-plugin</artifactId>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>TomEE :: Maven Plugins :: TomEE Embedded Maven Plugin</name>
 
-<dependencyManagement>
-<dependencies>
-  <dependency>
-     <groupId>org.apache.tomee.maven</groupId>
-     <artifactId>maven</artifactId>
-     <version>${project.version}</version>
-  </dependency>
-</dependencies>
-</dependencyManagement>    
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>tomee-embedded</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee.maven</groupId>
+      <artifactId>maven-util</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>livereload-tomee</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.nashorn</groupId>
+      <artifactId>nashorn-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <properties>
     <maven-plugin.prefix>tomee-embedded</maven-plugin.prefix>

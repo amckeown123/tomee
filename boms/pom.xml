@@ -46,46 +46,14 @@
   </modules>
 
   <dependencyManagement>
-
-
-    <dependencies>
-        <dependency>
+  <dependencies>
+      <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-     </dependency>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.2</version>
-      <exclusions>
-        <exclusion> <!-- Is already included in jakarta-ee-api -->
-          <artifactId>jakarta.activation</artifactId>
-          <groupId>jakarta.activation-api</groupId>
-        </exclusion>
-      </exclusions>
+        <version>${parent.project.verison}</version>
     </dependency>
-    <dependency>
-      <groupId>org.glassfish.jaxb</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <version>4.0.4</version>
-      <scope>runtime</scope>
-      <exclusions>
-        <exclusion> <!-- Is already included in jakarta-ee-api -->
-          <artifactId>jakarta.activation</artifactId>
-          <groupId>jakarta.activation-api</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.angus</groupId>
-      <artifactId>angus-activation</artifactId>
-      <version>2.0.2</version>
-    </dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
-</dependencies>
-</dependencyManagement>
-
+  </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

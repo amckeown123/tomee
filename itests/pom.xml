@@ -54,16 +54,16 @@
     <module>tomee-microprofile-itests</module>
     <module>openejb-itests-optional-classes</module>
   </modules>
- <dependencyManagement>
-    <dependencies>
-     <dependency>
+  <dependencyManagement>
+  <dependencies>
+      <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-     </dependency>
-    </dependencies>
-</dependencyManagement>
-
-   <build>
+        <version>${parent.project.verison}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
+  <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -75,3 +75,4 @@
     </plugins>
   </build>
 </project>
+

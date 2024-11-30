@@ -19,6 +19,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
+  <version>10.0.0-M4-SNAPSHOT</version>
+
   <parent>
     <artifactId>itests</artifactId>
     <groupId>org.apache.tomee</groupId>
@@ -43,13 +45,36 @@
       </plugin>
     </plugins>
   </build>
-<dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>itests</artifactId>
+      <artifactId>tomee-server-composer</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>apache-tomee</artifactId>
+      <version>10.0.0-M4-SNAPSHOT</version>
+      <type>tar.gz</type>
+      <classifier>microprofile</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>tomee-webprofile-api</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
   </dependencies>
-</dependencyManagement>
 </project>
+

@@ -26,31 +26,11 @@
     </parent>
 
     <artifactId>functional-tests</artifactId>
+    <version>10.0.0-M4-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>TomEE :: Arquillian :: Functional Tests</name>
 
     <modules />
-<dependencyManagement>
-    <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
-<dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>container</groupId>
-    <version>${project.version}</version>
-</dependency>
-<dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>arquillian</artifactId>
-    <version>${project.version}</version>
-</dependency>
-</dependencies>
-</dependencyManagement>
-
 
     <profiles>
         <profile>

@@ -38,25 +38,12 @@
   <artifactId>tomee-webprofile-api</artifactId>
 
   <name>TomEE :: BOMs :: TomEE WebProfile API</name>
-  
-    <dependencyManagement>
 
-
-    <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
-<dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>container</groupId>
-    <version>${project.version}</version>
-</dependency>
-<dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
+  <dependencies>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-mail_2.1_spec</artifactId>
+      <version>1.0.0-M1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -163,11 +150,28 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>mbean-annotation-api</artifactId>
+      <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>openejb-api</artifactId>
+      <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</project>
 
-<!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-loader -->
-</dependencies>
-</dependencyManagement>
-
-
-
-</project>                                                                        

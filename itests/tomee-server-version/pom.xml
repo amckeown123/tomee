@@ -63,13 +63,12 @@
     </plugins>
   </build>
 
-<dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>itests</artifactId>
-      <version>${project.version}</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
-</dependencyManagement>
 </project>
+

@@ -72,7 +72,7 @@
             <webappArtifact>
               <groupId>org.apache.tomee</groupId>
               <artifactId>openejb-tomcat-plus-webapp</artifactId>
-              <version>${project.version}</version>
+              <version>${tomee.version}</version>
               <contextPath>openejb</contextPath>
             </webappArtifact>
           </webapps>

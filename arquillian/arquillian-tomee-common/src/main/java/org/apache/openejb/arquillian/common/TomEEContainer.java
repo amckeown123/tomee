@@ -160,8 +160,7 @@ public abstract class TomEEContainer<Configuration extends TomEEConfiguration> i
         }
     }
 
-    @SuppressWarnings("removal")
-	protected void setPorts() {
+    protected void setPorts() {
         //
         // Set ports if they are unspecified
         //

@@ -13,20 +13,16 @@
   $ -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>examples</artifactId>
-    <groupId>org.apache.tomee</groupId>
-    <version>10.0.0-M4-SNAPSHOT</version>
-  </parent>
   <groupId>org.superbiz</groupId>
   <artifactId>connector-ear</artifactId>
   <packaging>pom</packaging>
+  <version>10.0.0-M4-SNAPSHOT</version>
   <name>TomEE :: Connector Examples :: Connector in EAR</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <tomee.version>10.0.0-M4-SNAPSHOT</tomee.version>
     <version.shrinkwrap.resolver>2.1.0</version.shrinkwrap.resolver>
-    <surefire.version>3.4.0</surefire.version>
+    <surefire.version>3.5.2</surefire.version>
   </properties>
   <repositories>
     <repository>
@@ -77,11 +73,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>${surefire.version}</version>
         <configuration>
           <systemProperties>
             <property>
               <name>tomee.version</name>
-              <value>${project.version}</value>
+              <value>${tomee.version}</value>
             </property>
           </systemProperties>
         </configuration>

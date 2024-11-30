@@ -30,13 +30,22 @@
   <properties>
     <tomee.build.name>${project.groupId}.util.mockito</tomee.build.name>
   </properties>
-<dependencyManagement>
-<dependencies>
-     <dependency>
-       <artifactId>utils</artifactId>
-       <groupId>org.apache.tomee</groupId>
-       <version>${project.version}</version>
-      </dependency>
-</dependencies>
-</dependencyManagement>    
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.14.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
 </project>

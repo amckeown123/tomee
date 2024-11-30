@@ -53,9 +53,9 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${project.version}</version>
+        <version>${tomee.version}</version>
         <configuration>
-          <tomeeVersion>${project.version}</tomeeVersion>
+          <tomeeVersion>${tomee.version}</tomeeVersion>
           <tomeeClassifier>webprofile</tomeeClassifier>
           <tomeeHttpPort>9080</tomeeHttpPort>
           <tomeeShutdownPort>9005</tomeeShutdownPort>

@@ -32,13 +32,24 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.servlets</tomee.build.name>
   </properties>
-<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>itests</artifactId>
+      <artifactId>jakartaee-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-itests-beans</artifactId>
       <version>${project.version}</version>
+      <type>ejb</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
-</dependencyManagement>
 </project>
+

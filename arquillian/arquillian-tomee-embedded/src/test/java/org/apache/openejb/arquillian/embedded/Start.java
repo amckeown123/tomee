@@ -26,8 +26,7 @@ public class Start {
     private volatile ServletContext context;
     private volatile String value;
 
-    @SuppressWarnings("unused")
-	private void capture(@Observes @Initialized(ApplicationScoped.class) final ServletContext context) {
+    private void capture(@Observes @Initialized(ApplicationScoped.class) final ServletContext context) {
         if (this.context != null) {
             throw new IllegalStateException("app context started twice");
         }

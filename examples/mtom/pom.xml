@@ -63,13 +63,13 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-junit</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-mockito</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

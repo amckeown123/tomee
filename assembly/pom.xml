@@ -33,14 +33,15 @@
     <module>openejb-lite</module>
   </modules>
   
-    <dependencyManagement>
-    <dependencies>
-     <dependency>
+ </dependencyManagement>
+  <dependencies>
+      <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-     </dependency>
-    </dependencies>
-  </dependencyManagement>
+        <version>${parent.project.verison}</version>
+    </dependency>
+  </dependencies>
+  </dependencymanagement>
   <build>
     <plugins>
       <plugin>

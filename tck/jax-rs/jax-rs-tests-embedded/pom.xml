@@ -70,11 +70,13 @@
         <dependency>
             <groupId>org.apache.tomee</groupId>
             <artifactId>tomee-webservices</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomee</groupId>
             <artifactId>tomee-jaxrs</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -128,10 +130,8 @@
                                 <!-- TODO: TOMEE-4321 / CXF-9005
                                  ee.jakarta.tck.ws.rs.jaxrs31.spec.extensions.JAXRSClientIT#featureIsRegisteredTest
                                  ee.jakarta.tck.ws.rs.jaxrs31.spec.extensions.JAXRSClientIT#dynamicFeatureIsRegisteredTest
-                                 ee.jakarta.tck.ws.rs.spec.contextprovider.JsonbContextProviderIT#shouldUseApplicationProvidedJsonbInstance
                                  -->
                                 <exclude>**/JAXRSClientIT.java</exclude>
-                                <exclude>**/JsonbContextProviderIT.java</exclude>
                             </excludes>
 
                             <dependenciesToScan>
@@ -152,6 +152,7 @@
                                 <password>j2ee</password>
                                 <authuser>javajoe</authuser>
                                 <authpassword>javajoe</authpassword>
+                                <openejb.jaxrs.skip.jakarta.json.providers.registration>false</openejb.jaxrs.skip.jakarta.json.providers.registration>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>

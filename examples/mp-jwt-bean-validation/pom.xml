@@ -37,7 +37,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.4.0</version>
+        <version>3.5.2</version>
         <configuration>
           <reuseForks>false</reuseForks>
         </configuration>
@@ -62,7 +62,7 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${project.version}</version>
+        <version>${tomee.version}</version>
         <configuration>
           <tomeeClassifier>microprofile</tomeeClassifier>
           <args>-Xmx512m -XX:PermSize=256m</args>
@@ -109,7 +109,7 @@
     <dependency>
       <groupId>com.nimbusds</groupId>
       <artifactId>nimbus-jose-jwt</artifactId>
-      <version>9.40</version>
+      <version>9.47</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -125,13 +125,13 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
+      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -161,13 +161,13 @@
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>arquillian-tomee-remote</artifactId>
-          <version>${project.version}</version>
+          <version>${tomee.version}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>apache-tomee</artifactId>
-          <version>${project.version}</version>
+          <version>${tomee.version}</version>
           <type>zip</type>
           <classifier>microprofile</classifier>
           <scope>test</scope>
@@ -175,7 +175,7 @@
         <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>mp-jwt</artifactId>
-          <version>${project.version}</version>
+          <version>${tomee.version}</version>
           <scope>provided</scope>
         </dependency>
       </dependencies>

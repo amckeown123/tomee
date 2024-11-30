@@ -94,7 +94,7 @@ public class JarLocation {
         }
     }
 
-    public static File jarLocation(final Class<JarLocation> clazz) {
+    public static File jarLocation(final Class clazz) {
         try {
             final String classFileName = clazz.getName().replace(".", "/") + ".class";
             final ClassLoader loader = clazz.getClassLoader();

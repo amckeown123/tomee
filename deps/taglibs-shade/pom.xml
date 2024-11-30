@@ -24,6 +24,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
+  <groupId>org.apache.tomee</groupId>
   <artifactId>taglibs-shade</artifactId>
   <name>TomEE :: Deps :: Taglibs Shade</name>
 
@@ -64,10 +65,18 @@
     <dependency>
       <groupId>xalan</groupId>
       <artifactId>xalan</artifactId>
+      <version>2.7.3</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>xalan</groupId>
       <artifactId>serializer</artifactId>
+      <version>2.7.2</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -82,6 +91,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -173,6 +183,7 @@
         -->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <id>workaround-makeItVisibleOnIntellij</id>
@@ -183,7 +194,7 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>${project.build.directory}/taglibs-shade-10.0.0-M4.jar</file>
+                  <file>${project.build.directory}/taglibs-shade-10.0.0-M4-SNAPSHOT.jar</file>
                   <type>jar</type>
                   <classifier>optional</classifier>
                 </artifact>

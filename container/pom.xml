@@ -29,17 +29,25 @@
   <name>TomEE :: Container</name>
 
   <modules>
+    <module>mbean-annotation-api</module>
+    <module>openejb-api</module>
+    <module>openejb-core</module>
+    <module>openejb-loader</module>
+    <module>openejb-javaagent</module>
+    <module>openejb-jee</module>
+    <module>openejb-jee-accessors</module>
     <module>openejb-jpa-integration</module>
     <module>openejb-junit</module>
     <module>openejb-junit5</module>
     <module>openejb-junit5-backward</module>
   </modules>
-    <dependencyManagement>
-    <dependencies>
-     <dependency>
+  <dependencyManagement>
+  <dependencies>
+      <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-     </dependency>
-    </dependencies>
+        <version>${parent.project.verison}</version>
+    </dependency>
+  </dependencies>
   </dependencyManagement>
 </project>

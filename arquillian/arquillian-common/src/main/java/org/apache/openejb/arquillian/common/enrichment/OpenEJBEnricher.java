@@ -111,7 +111,7 @@ public final class OpenEJBEnricher {
             final ThreadContext callContext = new ThreadContext(context, null, Operation.INJECTION);
             final ThreadContext oldContext = ThreadContext.enter(callContext);
             try {
-                final InjectionProcessor<Object> processor = new InjectionProcessor<>(testInstance, context.getInjections(), context.getJndiContext());
+                final InjectionProcessor processor = new InjectionProcessor<>(testInstance, context.getInjections(), context.getJndiContext());
                 processor.createInstance();
             } catch (final OpenEJBException e) {
                 // ignored
@@ -193,8 +193,7 @@ public final class OpenEJBEnricher {
         return values;
     }
 
-    @SuppressWarnings("unchecked")
-	private static <T> T getParamInstance(final BeanManager manager, final int position, final Method method) {
+    private static <T> T getParamInstance(final BeanManager manager, final int position, final Method method) {
         final CreationalContext<?> creational = manager.createCreationalContext(null); // TODO: release in @After
         return (T) manager.getInjectableReference(new MethodParamInjectionPoint(method, position, manager), creational);
     }
@@ -301,9 +300,7 @@ public final class OpenEJBEnricher {
         public <T extends Annotation> T getAnnotation(final Class<T> annotationType) {
             for (final Annotation a : annotations) {
                 if (a.annotationType().getName().equals(annotationType.getName())) {
-                    @SuppressWarnings("unchecked")
-					T a2 = (T) a;
-					return a2;
+                    return (T) a;
                 }
             }
             return null;

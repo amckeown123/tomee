@@ -24,9 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @SessionScoped
 public class PojoSessionScoped implements Serializable {
-    private static final long serialVersionUID = 111770977556823759L;
-
-	private static AtomicInteger ID = new AtomicInteger();
+    private static AtomicInteger ID = new AtomicInteger();
 
     private long ms;
     private int id;

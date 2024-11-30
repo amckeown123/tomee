@@ -35,13 +35,16 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.interceptors</tomee.build.name>
   </properties>
-<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>itests</artifactId>
+      <artifactId>jakartaee-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-itests-beans</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
-</dependencyManagement>
 </project>
+

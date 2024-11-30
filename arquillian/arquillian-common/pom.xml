@@ -33,15 +33,32 @@
   <properties>
     <tomee.build.name>${project.groupId}.arquillian.common</tomee.build.name>
   </properties>
-  <dependencyManagement>
-    <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
-<dependency>
- <artifactId>arquillian</artifactId>
-     <groupId>org.apache.tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
-</dependencies>
-</dependencyManagement>
 
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.test</groupId>
+      <artifactId>arquillian-test-spi</artifactId>
+      <version>${version.arquillian}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.config</groupId>
+      <artifactId>arquillian-config-impl-base</artifactId>
+      <version>${version.arquillian}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.container</groupId>
+      <artifactId>arquillian-container-spi</artifactId>
+      <version>${version.arquillian}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.tomitribe</groupId>
+      <artifactId>swizzle</artifactId>
+    </dependency>
+  </dependencies>
 </project>

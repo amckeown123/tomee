@@ -31,16 +31,37 @@
   <name>TomEE :: Server</name>
 
   <modules>
+    <module>openejb-ejbd</module>
+    <module>openejb-server</module>
+    <module>openejb-client</module>
+    <module>openejb-http</module>
+    <module>openejb-activemq</module>
+    <module>openejb-derbynet</module>
+    <module>openejb-hsql</module>
     <module>openejb-webservices</module>
+    <module>openejb-cxf</module>
+    <module>openejb-multicast</module>
+    <module>openejb-daemon</module>
+    <module>openejb-cxf-rs</module>
+    <module>openejb-cxf-transport</module>
+    <module>openejb-rest</module>
+    <module>openejb-ssh</module>
+    <module>openejb-common-cli</module>
+    <module>openejb-bonecp</module>
+    <module>openejb-hessian</module>
   </modules>
-  
-    <dependencyManagement>
-    <dependencies>
-     <dependency>
+  <dependencyManagement>
+  <dependencies>
+      <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-     </dependency>
-    </dependencies>
+        <version>${parent.project.verison}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
   </dependencyManagement>
 </project>
 

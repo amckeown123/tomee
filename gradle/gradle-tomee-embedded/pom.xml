@@ -25,13 +25,8 @@
 
   <artifactId>tomee-embedded</artifactId>
   <name>TomEE :: Gradle Plugins :: TomEE Embedded</name>
-<dependencyManagement>
-<dependencies>
-  <dependency>
-    <groupId>org.apache.tomee.gradle</groupId>
-    <artifactId>gradle</artifactId>
-    <version>${project.version}</version>
-</dependency>
-</dependencies>
-</dependencyManagement>
+
+  <dependencies>
+    <!-- don't put any tomee dependency there -->
+  </dependencies>
 </project>

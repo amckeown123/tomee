@@ -62,8 +62,7 @@ public class SampleManagedConnectionFactory implements ManagedConnectionFactory,
         return new SampleManagedConnection(this);
     }
 
-    @SuppressWarnings("rawtypes")
-	public ManagedConnection matchManagedConnections(Set connectionSet,
+    public ManagedConnection matchManagedConnections(Set connectionSet,
                                                      Subject subject, ConnectionRequestInfo cxRequestInfo) throws ResourceException {
         log.finest("matchManagedConnections()");
         ManagedConnection result = null;

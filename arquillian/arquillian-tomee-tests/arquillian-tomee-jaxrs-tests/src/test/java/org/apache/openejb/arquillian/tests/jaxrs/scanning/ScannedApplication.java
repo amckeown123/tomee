@@ -30,8 +30,7 @@ import java.util.Set;
  */
 @ApplicationPath("/rest")
 public class ScannedApplication extends Application {
-    @SuppressWarnings("unchecked")
-	public Set<Class<?>> getClasses() {
+    public Set<Class<?>> getClasses() {
         return Collections.EMPTY_SET;
     }
 }

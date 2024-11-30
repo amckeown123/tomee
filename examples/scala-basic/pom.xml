@@ -26,7 +26,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <scala.version>2.13</scala.version>
-    <scala.full-version>${scala.version}.9</scala.full-version>
+    <scala.full-version>${scala.version}.15</scala.full-version>
   </properties>
   <repositories>
     <repository>
@@ -70,7 +70,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.4.0</version>
+        <version>3.5.2</version>
         <configuration>
           <skipTests>true</skipTests>
         </configuration>

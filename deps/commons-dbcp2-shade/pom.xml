@@ -40,6 +40,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -86,6 +87,7 @@
         -->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <id>workaround-makeItVisibleOnIntellij</id>
@@ -96,7 +98,7 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>${project.build.directory}/commons-dbcp2-shade-10.0.0-M4.jar</file>
+                  <file>${project.build.directory}/commons-dbcp2-shade-10.0.0-M4-SNAPSHOT.jar</file>
                   <type>jar</type>
                   <classifier>optional</classifier>
                 </artifact>

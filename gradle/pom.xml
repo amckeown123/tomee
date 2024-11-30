@@ -27,31 +27,31 @@
   <artifactId>gradle</artifactId>
   <name>TomEE :: Gradle Plugins</name>
   <packaging>pom</packaging>
-
-  <modules>
-    <module>gradle-tomee-embedded</module>
-  </modules>
   <dependencyManagement>
   <dependencies>
-  <dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>container</groupId>
-    <version>${project.version}</version>
-</dependency>
-  <dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
-    <dependency>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+        <version>${parent.project.verison}</version>
+    </dependency>
+        <dependency>
       <groupId>org.gradle</groupId>
       <artifactId>gradle-core</artifactId>
       <version>3.0</version>
       <scope>provided</scope>
     </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>${version.groovy}</version>
+      <scope>provided</scope>
+    </dependency>
 
+  </dependencies>
+  </dependencyManagement>
+  <modules>
+    <module>gradle-tomee-embedded</module>
+  </modules>
 
   <repositories>
     <repository>

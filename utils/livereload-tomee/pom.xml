@@ -30,13 +30,28 @@
   <properties>
     <tomee.build.name>${project.groupId}.util.livereload</tomee.build.name>
   </properties>
-<dependencyManagement>
-<dependencies>
-     <dependency>
-       <artifactId>utils</artifactId>
-       <groupId>org.apache.tomee</groupId>
-       <version>${project.version}</version>
-      </dependency>
-</dependencies>
-</dependencyManagement>  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina</artifactId>
+      <version>${tomcat.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket</artifactId>
+      <version>${tomcat.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.johnzon</groupId>
+      <artifactId>johnzon-mapper</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-catalina</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>
