@@ -30,138 +30,17 @@
   <properties>
     <tomee.build.name>${project.groupId}.arquillian.tomee.webapp.remote</tomee.build.name>
   </properties>
+  
+    <dependencyManagement>
+     <dependencies>
+       <dependency>
+          <groupId>org.apache.tomee</groupId>
+          <artifactId>arquillian</artifactId>
+           <version>${parent.project.version}</version>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-openejb-transaction-provider</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.arquillian.container</groupId>
-      <artifactId>arquillian-container-spi</artifactId>
-      <version>${version.arquillian}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>shrinkwrap-descriptors-spi</artifactId>
-          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>shrinkwrap-descriptors-api-base</artifactId>
-          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.arquillian.protocol</groupId>
-      <artifactId>arquillian-protocol-servlet-jakarta</artifactId>
-      <version>${version.arquillian-protocol-servlet-jakarta}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>shrinkwrap-descriptors-spi</artifactId>
-          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-coyote</artifactId>
-      <version>${tomcat.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-jasper</artifactId>
-      <version>${tomcat.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse.jdt</groupId>
-          <artifactId>ecj</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
-      <version>${version.arquillian}</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>shrinkwrap-descriptors-spi</artifactId>
-          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-client</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.openwebbeans</groupId>
-      <artifactId>openwebbeans-impl</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.tomitribe</groupId>
-      <artifactId>swizzle</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-      <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
-      <version>${version.shrinkwrap.descriptor}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>commons-httpclient</groupId>
-      <artifactId>commons-httpclient</artifactId>
-      <version>3.1</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-  </dependencies>
 
   <build>
     <resources>

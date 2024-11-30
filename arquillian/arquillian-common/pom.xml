@@ -34,31 +34,13 @@
     <tomee.build.name>${project.groupId}.arquillian.common</tomee.build.name>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.test</groupId>
-      <artifactId>arquillian-test-spi</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.config</groupId>
-      <artifactId>arquillian-config-impl-base</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.container</groupId>
-      <artifactId>arquillian-container-spi</artifactId>
-      <version>${version.arquillian}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.tomitribe</groupId>
-      <artifactId>swizzle</artifactId>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+     <dependencies>
+       <dependency>
+          <groupId>org.apache.tomee</groupId>
+          <artifactId>arquillian</artifactId>
+           <version>${parent.project.version}</version>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
 </project>
