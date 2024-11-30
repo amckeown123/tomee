@@ -32,6 +32,17 @@
         <module>jax-rs-signature-test</module>
     </modules>
 
+<dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
+<dependency>
+    <artifactId>tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
+</dependency>
+
+</dependencies>
+</dependencyManagement>
     <profiles>
         <profile>
             <id>tck-jax-rs</id>

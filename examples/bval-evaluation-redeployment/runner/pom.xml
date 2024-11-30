@@ -26,32 +26,15 @@
   </parent>
   <artifactId>runner</artifactId>
   <packaging>jar</packaging>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>tomee-webprofile</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <type>zip</type>
-      <classifier>webprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+ <dependencyManagement>
+ <dependencies>
+ <dependency>
+   <groupId>org.superbiz</groupId>
+   <artifactId>bval-evaluation-redeployment</artifactId>
+   <version>${project.version}</version>
+</dependency>
+ </dependencies>
+ </dependencyManagement>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>

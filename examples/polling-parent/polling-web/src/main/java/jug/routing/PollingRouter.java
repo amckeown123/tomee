@@ -34,7 +34,6 @@ public class PollingRouter extends AbstractRouter {
         }
     };
 
-    @Override
     public DataSource getDataSource() {
         if (dataSources == null) {
             init();

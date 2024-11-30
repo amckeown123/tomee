@@ -135,29 +135,24 @@ language governing permissions and limitations under the License. -->
   </dependencies>
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.jboss.arquillian</groupId>
-        <artifactId>arquillian-bom</artifactId>
-        <version>1.9.1.Final</version>
-        <scope>import</scope>
-        <type>pom</type>
-      </dependency>
-      <dependency>
-        <groupId>org.arquillian</groupId>
-        <artifactId>arquillian-universe</artifactId>
-        <version>${arquillian_universe.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.11.3</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>container</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <artifactId>tomee-project</artifactId>
+    <groupId>tomee</groupId>
+    <version>${project.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.tomee</groupId>
+    <artifactId>examples</artifactId>
+    <version>${project.version}</version>
+</dependency>
+</dependencies>
+</dependencyManagement>
   <!--
   This section allows you to configure where to publish libraries for sharing.
   It is not required and may be deleted.  For more information see:

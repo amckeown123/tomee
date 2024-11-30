@@ -31,93 +31,17 @@
     <suiteFile>${project.build.directory}/dependency/beanvalidation-tck-tests-suite.xml</suiteFile>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tck-common</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jboss.test-harness</groupId>
-          <artifactId>jboss-test-harness</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
-      <type>zip</type>
-      <classifier>webprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jboss.shrinkwrap</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jboss.shrinkwrap.descriptors</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.validation</groupId>
-      <artifactId>beanvalidation-tck-tests</artifactId>
-      <version>${bval-tck.version}</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>jakarta.validation</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.interceptor</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.annotation</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.arquillian.testng</groupId>
-      <artifactId>arquillian-testng-container</artifactId>
-      <version>${version.arquillian}</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.jboss.arquillian.protocol/arquillian-protocol-servlet-jakarta -->
+<dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
 <dependency>
-    <groupId>org.jboss.arquillian.protocol</groupId>
-    <artifactId>arquillian-protocol-servlet-jakarta</artifactId>
-    <version>10.0.0.Final</version>
+    <artifactId>tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
 </dependency>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-base</artifactId>
-      <version>11</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 
+</dependencies>
+</dependencyManagement>
   <build>
     <resources>
       <resource>

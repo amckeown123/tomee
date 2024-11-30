@@ -34,26 +34,14 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.failover.ejb</tomee.build.name>
   </properties>
+  <dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
-      <scope>provided</scope>
-      <!-- does not inherit from exclusion and version of parent -->
-      <exclusions>
-        <exclusion>
-          <groupId>*</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
-      <optional>true</optional>
+      <artifactId>itests</artifactId>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
+</dependencyManagement>
 </project>
 

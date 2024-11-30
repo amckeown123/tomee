@@ -133,142 +133,15 @@
     </profile>
   </profiles>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-webapp</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.microprofile.rest.client</groupId>
-      <artifactId>microprofile-rest-client-api</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.inject</groupId>
-          <artifactId>javax.inject</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.microprofile.rest.client</groupId>
-      <artifactId>microprofile-rest-client-tck</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
-      <type>zip</type>
-      <classifier>microprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.tomakehurst</groupId>
-      <artifactId>wiremock</artifactId>
-      <version>2.27.2</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-server</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-http</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-io</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-security</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-servlet</artifactId>
-      <version>${jetty-tck.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-servlets</artifactId>
-      <version>${jetty-tck.version}</version>
-      <scope>test</scope>
-    </dependency><!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-webapp -->
-<!-- https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-webapp -->
+    <dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
 <dependency>
-    <groupId>org.eclipse.jetty.ee10</groupId>
-    <artifactId>jetty-ee10-webapp</artifactId>
-    <version>12.0.15</version>
+    <artifactId>microprofile-tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
 </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-util</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-continuation</artifactId>
-      <version>${jetty-tck.version}</version>
-      <scope>test</scope>
-    </dependency>
 
-    <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-rt-rs-mp-client</artifactId>
-      <version>${version.cxf}</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.glassfish.jaxb</groupId>
-          <artifactId>jaxb-xjc</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.json</groupId>
-          <artifactId>jakarta.json-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.json.bind</groupId>
-          <artifactId>jakarta.json.bind-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.ws.rs</groupId>
-          <artifactId>jakarta.ws.rs-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.annotation</groupId>
-          <artifactId>jakarta.annotation-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-core</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+</dependencies>
+</dependencyManagement>
 </project>

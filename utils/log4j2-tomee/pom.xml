@@ -33,29 +33,14 @@
     <log4j.groupId>org.apache.logging.log4j</log4j.groupId>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>${log4j.groupId}</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${version.log4j2}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${log4j.groupId}</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${version.log4j2}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+<dependencyManagement>
+<dependencies>
+     <dependency>
+       <artifactId>utils</artifactId>
+       <groupId>org.apache.tomee</groupId>
+       <version>${project.version}</version>
+      </dependency>
+</dependencies>
+</dependencyManagement>    
 
 </project>

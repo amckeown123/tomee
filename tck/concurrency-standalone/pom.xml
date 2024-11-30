@@ -46,90 +46,17 @@
         <targetDirectory>${project.basedir}/target</targetDirectory>
     </properties>
 
-    <!-- tag::testClientDep[] -->
-    <!-- The Arquillian test framework -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.arquillian</groupId>
-                <artifactId>arquillian-bom</artifactId>
-                <version>${version.arquillian.bom}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
+<dependency>
+    <artifactId>tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
+</dependency>
 
-    <!-- Client Dependencies -->
-    <dependencies>
-        <!-- The TCK -->
-        <dependency>
-            <groupId>jakarta.enterprise.concurrent</groupId>
-            <artifactId>jakarta.enterprise.concurrent-tck</artifactId>
-            <version>${jakarta.concurrent.version}</version>
-        </dependency>
-        <!-- The API -->
-        <dependency>
-            <groupId>jakarta.enterprise.concurrent</groupId>
-            <artifactId>jakarta.enterprise.concurrent-api</artifactId>
-            <version>${jakarta.concurrent.version}</version>
-        </dependency>
-        <!-- Arquillian Implementation for TestNG -->
-        <dependency>
-            <groupId>org.jboss.arquillian.testng</groupId>
-            <artifactId>arquillian-testng-container</artifactId>
-        </dependency>
-        <!-- Arquillian Deps for Apache TomEE -->
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>apache-tomee</artifactId>
-            <version>${project.version}</version>
-            <type>zip</type>
-            <classifier>plus</classifier>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>arquillian-tomee-remote</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- End of deps for Apache TomEE -->
-
-        <!-- Arquillian transitive dependency on Servlet -->
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>${jakarta.servlet.version}</version>
-        </dependency>
-        <!-- TestNG -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-        </dependency>
-        <!-- To ensure its available for the TomEE lib directory -->
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <version>${version.derby}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbytools</artifactId>
-            <version>${version.derby}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbyshared</artifactId>
-            <version>${version.derby}</version>
-            <scope>provided</scope>
-        </dependency>
-
-    </dependencies>
-    <!-- end::testClientDep[] -->
+</dependencies>
+</dependencyManagement>
 
     <profiles>
         <profile>

@@ -103,73 +103,16 @@
     </profile>
   </profiles>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.eclipse.microprofile.metrics</groupId>
-      <artifactId>microprofile-metrics-api</artifactId>
-      <scope>test</scope>
-    </dependency>
+    <dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
+<dependency>
+    <artifactId>microprofile-tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
+</dependency>
 
-    <dependency>
-      <groupId>org.eclipse.microprofile.metrics</groupId>
-      <artifactId>microprofile-metrics-api-tck</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jboss.arquillian.container</groupId>
-          <artifactId>arquillian-wlp-managed-8.5</artifactId>
-        </exclusion>
-      </exclusions>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.microprofile.metrics</groupId>
-      <artifactId>microprofile-metrics-rest-tck</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.microprofile.metrics</groupId>
-      <artifactId>microprofile-metrics-optional-tck</artifactId>
-      <version>${version.microprofile.metrics}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-all</artifactId>
-      <version>1.3</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
-      <type>zip</type>
-      <classifier>microprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.arquillian.junit</groupId>
-      <artifactId>arquillian-junit-container</artifactId>
-      <version>${version.arquillian}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+</dependencies>
+</dependencyManagement>
 
 </project>

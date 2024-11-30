@@ -31,47 +31,14 @@
   <properties>
     <tomee.build.name>${project.groupId}.util.eclipselink</tomee.build.name>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.openjpa</groupId>
-          <artifactId>openjpa</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.persistence</groupId>
-      <artifactId>eclipselink</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse.persistence</groupId>
-          <artifactId>jakarta.persistence</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.eclipse.persistence</groupId>
-          <artifactId>jakarta.persistence</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.validation</groupId>
-          <artifactId>validation-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.glassfish</groupId>
-          <artifactId>jakarta.json</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.sun.xml.bind</groupId>
-          <artifactId>jaxb-xjc</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.sun.xml.bind</groupId>
-          <artifactId>jaxb-core</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-  </dependencies>
+<dependencyManagement>
+<dependencies>
+     <dependency>
+       <artifactId>utils</artifactId>
+       <groupId>org.apache.tomee</groupId>
+       <version>${project.version}</version>
+      </dependency>
+</dependencies>
+</dependencyManagement>    
 
 </project>

@@ -34,48 +34,12 @@
     <module>openejb-junit5</module>
     <module>openejb-junit5-backward</module>
   </modules>
-  <dependencyManagement>
-   <dependencies>
-   <dependency>
-     <artifactId>tomee</artifactId>
-    <groupId>org.apache.tomee</groupId>
-   </dependency>
-  <!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-api -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-api</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-loader -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-loader</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-jee</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-core -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-core</artifactId>
-</dependency>
- <!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-javaagent -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-javaagent</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jpa-integration -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-jpa-integration</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/openejb-jee-accessors -->
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>openejb-jee-accessors</artifactId>
-</dependency>
-
-</dependencies>
-</dependencyManagement>
+    <dependencyManagement>
+    <dependencies>
+     <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+     </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

@@ -32,22 +32,13 @@
 
   <properties>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <type>jar</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-coyote</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+<dependencies>
+     <dependency>
+       <artifactId>utils</artifactId>
+       <groupId>org.apache.tomee</groupId>
+       <version>${project.version}</version>
+      </dependency>
+</dependencies>
+</dependencyManagement>  
 </project>

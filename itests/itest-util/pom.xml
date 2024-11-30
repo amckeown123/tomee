@@ -44,12 +44,14 @@
     </plugins>
   </build>
 
+  <dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>itests</artifactId>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
+</dependencyManagement>
 </project>
 

@@ -79,45 +79,16 @@
     </profile>
   </profiles>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.eclipse.microprofile.health</groupId>
-      <artifactId>microprofile-health-api</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.inject</groupId>
-          <artifactId>javax.inject</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+    <dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
+<dependency>
+    <artifactId>microprofile-tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
+</dependency>
 
-    <dependency>
-      <groupId>org.eclipse.microprofile.health</groupId>
-      <artifactId>microprofile-health-tck</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
-      <type>zip</type>
-      <classifier>microprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+</dependencies>
+</dependencyManagement>
 
 </project>

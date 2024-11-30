@@ -32,6 +32,15 @@
     <module>openejb-standalone</module>
     <module>openejb-lite</module>
   </modules>
+  
+    <dependencyManagement>
+    <dependencies>
+     <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+     </dependency>
+    </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

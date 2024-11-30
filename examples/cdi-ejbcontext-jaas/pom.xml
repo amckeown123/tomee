@@ -28,19 +28,15 @@
   <artifactId>cdi-ejbcontext-jaas</artifactId>
   <packaging>war</packaging>
   <name>TomEE :: Examples :: CDI, EJBContext and JAAS</name>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>10.0</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+   <dependencyManagement>
+ <dependencies>
+ <dependency>
+   <groupId>org.superbiz</groupId>
+   <artifactId>bval-evaluation-redeployment</artifactId>
+   <version>${project.version}</version>
+</dependency>
+ </dependencies>
+ </dependencyManagement>
   <build>
     <finalName>${project.artifactId}</finalName>
     <defaultGoal>install</defaultGoal>
@@ -56,7 +52,7 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>10.0.0-M4-SNAPSHOT</version>
+        <version>${project.version}</version>
         <configuration>
           <systemVariables>
             <java.security.auth.login.config>${project.build.directory}/apache-tomee/conf/login.config</java.security.auth.login.config>

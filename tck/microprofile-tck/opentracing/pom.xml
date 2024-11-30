@@ -79,95 +79,16 @@
     </profile>
   </profiles>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.eclipse.microprofile.config</groupId>
-      <artifactId>microprofile-config-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.microprofile.opentracing</groupId>
-      <artifactId>microprofile-opentracing-api</artifactId>
-      <scope>test</scope>
-    </dependency>
+    <dependencyManagement>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
+<dependency>
+    <artifactId>microprofile-tck</artifactId>
+    <groupId>org.apache.tomee</groupId>
+    <version>${parent.project.version}</version>
+</dependency>
 
-    <dependency>
-      <groupId>org.eclipse.microprofile.opentracing</groupId>
-      <artifactId>microprofile-opentracing-tck</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-rt-rs-client</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-mapper</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-jsonb</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-jaxrs</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-tomee</artifactId>
-      <version>${project.version}</version>
-      <type>zip</type>
-      <classifier>microprofile</classifier>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>arquillian-tomee-remote</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-mock</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.smallrye</groupId>
-      <artifactId>smallrye-opentracing</artifactId>
-      <version>${version.microprofile.impl.opentracing}</version>
-      <scope>provided</scope>
-    </dependency>
-
-
-  </dependencies>
+</dependencies>
+</dependencyManagement>
 
 </project>

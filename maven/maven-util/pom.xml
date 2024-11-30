@@ -27,25 +27,13 @@
   <artifactId>maven-util</artifactId>
   <name>TomEE :: Maven Plugins :: Util</name>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>maven-plugin-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>tomee-juli</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-juli</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+<dependencyManagement>
+<dependencies>
+  <dependency>
+     <groupId>org.apache.tomee.maven</groupId>
+     <artifactId>maven</artifactId>
+     <version>${project.version}</version>
+  </dependency>
+</dependencies>
+</dependencyManagement>    
 </project>

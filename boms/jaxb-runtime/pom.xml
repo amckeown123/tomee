@@ -42,32 +42,11 @@
   -->
 
   <dependencies>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.2</version>
-      <exclusions>
-        <exclusion> <!-- Is already included in jakarta-ee-api -->
-          <artifactId>jakarta.activation</artifactId>
-          <groupId>jakarta.activation-api</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jaxb</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <scope>runtime</scope>
-      <exclusions>
-        <exclusion> <!-- Is already included in jakarta-ee-api -->
-          <artifactId>jakarta.activation</artifactId>
-          <groupId>jakarta.activation-api</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.angus</groupId>
-      <artifactId>angus-activation</artifactId>
-    </dependency>
+  <dependency>
+    <groupId>org.apache.tomee.bom</groupId>
+    <artifactId>boms</artifactId>
+    <version>${project.version}</version>
+</dependency>
   </dependencies>
 
 </project>

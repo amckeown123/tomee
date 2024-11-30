@@ -30,12 +30,15 @@
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>tomee-webprofile-api</artifactId>
-    </dependency>
-  </dependencies>
+   <dependencyManagement>
+ <dependencies>
+ <dependency>
+   <groupId>org.superbiz</groupId>
+   <artifactId>bval-evaluation-redeployment</artifactId>
+   <version>${project.version}</version>
+</dependency>
+ </dependencies>
+ </dependencyManagement>
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>

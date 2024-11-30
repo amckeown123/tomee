@@ -38,18 +38,8 @@
     <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.openejb/mbean-annotation-api -->
 <dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>container</groupId>
-    <version>${project.version}</version>
-</dependency>
-<dependency>
-    <artifactId>tomee-project</artifactId>
-    <groupId>tomee</groupId>
-    <version>${project.version}</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>arquillian</artifactId>
+ <artifactId>arquillian</artifactId>
+     <groupId>org.apache.tomee</groupId>
     <version>${project.version}</version>
 </dependency>
 </dependencies>
