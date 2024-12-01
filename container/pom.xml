@@ -29,7 +29,6 @@
   <name>TomEE :: Container</name>
 
   <modules>
-    <module>mbean-annotation-api</module>
     <module>openejb-api</module>
     <module>openejb-core</module>
     <module>openejb-loader</module>
