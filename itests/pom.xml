@@ -54,12 +54,12 @@
     <module>tomee-microprofile-itests</module>
     <module>openejb-itests-optional-classes</module>
   </modules>
-  <dependencyManagement>
+   <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-        <version>${parent.project.verison}</version>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
   </dependencyManagement>

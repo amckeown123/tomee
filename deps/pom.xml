@@ -31,80 +31,15 @@
     <module>taglibs-shade</module>
     <module>commons-dbcp2-shade</module>
   </modules>
-   <dependency>
-      <groupId>org.eclipse.microprofile.config</groupId>
-      <artifactId>microprofile-config-api</artifactId>
-      <scope>provided</scope>
+   <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+        <version>${project.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-cxf-rs</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.johnzon</groupId>
-      <artifactId>johnzon-jsonb</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.bitbucket.b_c</groupId>
-      <artifactId>jose4j</artifactId>
-      <version>${version.jose4j}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.churchkey</groupId>
-      <artifactId>churchkey</artifactId>
-      <version>1.22</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.nimbusds</groupId>
-      <artifactId>nimbus-jose-jwt</artifactId>
-      <version>9.47</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.ow2.asm</groupId>
-      <artifactId>asm</artifactId>
-      <version>9.7</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.ow2.asm</groupId>
-      <artifactId>asm-util</artifactId>
-      <version>9.7.1</version>
-      <scope>test</scope>
-    </dependency>
-
+  </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>
@@ -117,4 +52,3 @@
     </plugins>
   </build>
 </project>
-02450

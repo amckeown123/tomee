@@ -31,17 +31,15 @@
   <artifactId>tomee</artifactId>
   <packaging>pom</packaging>
   <name>TomEE :: TomEE</name>
-
-    </dependencyManagement>dependencyManagement>
+<dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-        <version>${parent.project.verison}</version>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencymanagement>
-
+</dependencyManagement>  
   <!-- just set the good JPA provider. As openejb-core is needed in all modules it is easier to do it here -->
   <profiles>
     <profile>
@@ -86,19 +84,7 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
-      <dependencies>
-        <dependency>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>openejb-core</artifactId>
-          <exclusions>
-            <exclusion>
-              <groupId>${project.groupId}</groupId>
-              <artifactId>jakartaee-api</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-      </dependencies>
-    </profile>
+       </profile>
     <profile>
       <id>hibernate</id>
       <activation>
@@ -148,229 +134,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.eclipse.jdt</groupId>
-        <artifactId>ecj</artifactId>
-        <version>${version.ecj}</version>
-      </dependency>
-      <dependency>
-        <groupId>jakarta.servlet</groupId>
-        <artifactId>jstl</artifactId>
-        <version>1.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.velocity</groupId>
-        <artifactId>velocity-engine-core</artifactId>
-        <version>2.3</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.geronimo.specs</groupId>
-        <artifactId>geronimo-j2ee-deployment_1.1_spec</artifactId>
-        <version>1.1</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.ant</groupId>
-        <artifactId>ant-nodeps</artifactId>
-        <version>1.8.1</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-jdbc</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-dbcp</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-catalina</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-catalina-ha</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-coyote</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-jasper</artifactId>
-        <version>${tomcat.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>ecj</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.openwebbeans</groupId>
-        <artifactId>openwebbeans-jsf</artifactId>
-        <version>${version.openwebbeans}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.myfaces.core</groupId>
-        <artifactId>myfaces-api</artifactId>
-        <version>${version.myfaces}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.inject</groupId>
-            <artifactId>jakarta.inject-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.myfaces.core</groupId>
-        <artifactId>myfaces-impl</artifactId>
-        <version>${version.myfaces}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.annotation</groupId>
-            <artifactId>jakarta.annotation-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>jakarta.inject</groupId>
-            <artifactId>jakarta.inject-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-core</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat</artifactId>
-        <version>${tomcat.version}</version>
-        <type>zip</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-server</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-ejbd</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-rest</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-cxf-rs</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-http</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-websocket</artifactId>
-        <version>${tomcat.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-cxf-transport</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-loader</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-jee</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.glassfish</groupId>
-        <artifactId>jakarta.faces</artifactId>
-        <version>${version.mojarra}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>jakarta.annotation</groupId>
-            <artifactId>jakarta.annotation-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-webservices</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-cxf</artifactId>
-        <version>${project.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>jakarta.xml.soap</groupId>
-            <artifactId>jakarta.xml.soap-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>openejb-core-eclipselink</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-  </dependencies>
 </project>

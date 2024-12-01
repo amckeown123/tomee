@@ -26,9 +26,6 @@
     </parent>
 
     <artifactId>functional-tests</artifactId>
-    <packaging>pom</packaging>
-    <name>TomEE :: Arquillian :: Functional Tests</name>
-
   <dependencyManagement>
      <dependencies>
        <dependency>

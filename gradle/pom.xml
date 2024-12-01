@@ -27,12 +27,17 @@
   <artifactId>gradle</artifactId>
   <name>TomEE :: Gradle Plugins</name>
   <packaging>pom</packaging>
+
+  <modules>
+    <module>gradle-tomee-embedded</module>
+  </modules>
+
   <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
-        <version>${parent.project.verison}</version>
+        <version>${parent.project.version}</version>
     </dependency>
         <dependency>
       <groupId>org.gradle</groupId>
@@ -49,10 +54,6 @@
 
   </dependencies>
   </dependencyManagement>
-  <modules>
-    <module>gradle-tomee-embedded</module>
-  </modules>
-
   <repositories>
     <repository>
       <id>gradle-libs-releases-local</id>

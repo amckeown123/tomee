@@ -28,15 +28,6 @@
   <artifactId>examples</artifactId>
   <packaging>pom</packaging>
   <name>TomEE :: Examples</name>
-  <dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${parent.project.verison}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
   <modules>
     <module>access-timeout-meta</module>
     <module>access-timeout</module>
@@ -219,6 +210,15 @@
     <module>security-openid</module>
 
   </modules>
+     <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
   <profiles>
     <profile>
       <id>apache-release</id>
