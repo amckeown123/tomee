@@ -32,32 +32,15 @@
     <tomee.build.name>${project.groupId}.util.log4j2</tomee.build.name>
     <log4j.groupId>org.apache.logging.log4j</log4j.groupId>
   </properties>
-
+  
+    <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${log4j.groupId}</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${version.log4j2}</version>
-      <scope>provided</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>utils</artifactId>
+        <version>${project.verison}</version>
     </dependency>
-    <dependency>
-      <groupId>${log4j.groupId}</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${version.log4j2}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 
+  </dependencies>
+</dependencyManagement>
 </project>

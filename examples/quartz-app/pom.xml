@@ -59,40 +59,14 @@
       </plugins>
     </pluginManagement>
   </build>
-  <dependencyManagement>
-    <dependencies>
-      <!--
-      TomEE/OpenEJB uses a shaded version of quartz
-      allowing users to use their own version of quartz
-      and avoid version conflicts.
-
-      This example shows an application that uses its
-      own version of quartz.
-      -->
+         <dependencyManagement>
+  <dependencies>
       <dependency>
-        <groupId>org.quartz-scheduler</groupId>
-        <artifactId>quartz</artifactId>
-        <version>2.2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomee.bom</groupId>
-        <artifactId>tomee-plus</artifactId>
-        <version>10.0.0-M4-SNAPSHOT</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.tomee.bom</groupId>
-        <artifactId>tomee-plus-api</artifactId>
-        <version>10.0.0-M4-SNAPSHOT</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-        <scope>test</scope>
-      </dependency>
-    </dependencies>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
   </dependencyManagement>
   <!--
   This section allows you to configure where to publish libraries for sharing.

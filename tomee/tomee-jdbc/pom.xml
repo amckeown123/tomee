@@ -30,15 +30,13 @@
   <properties>
     <tomee.build.name>${project.groupId}.tomee.jdbc</tomee.build.name>
   </properties>
+  <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-jdbc</artifactId>
-      <scope>provided</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+</dependencyManagement>  
 </project>

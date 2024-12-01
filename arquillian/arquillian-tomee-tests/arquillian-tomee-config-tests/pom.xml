@@ -27,20 +27,21 @@
   <artifactId>arquillian-tomee-config-tests</artifactId>
   <name>TomEE :: Arquillian Adaptors Parent :: Tests :: Configuration Tests</name>
 
-  <dependencies>
-    <dependency>
-      <artifactId>commons-lang3</artifactId>
-      <groupId>org.apache.commons</groupId>
-      <version>${version.commons-lang3}</version>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+     <dependencies>
+       <dependency>
+          <groupId>org.apache.tomee</groupId>
+           <artifactId>arquillian-tomee-tests</artifactId>
+           <version>${project.version}</version>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.8.0</version>
         <executions>
           <execution>
             <id>copy-test-libs</id>

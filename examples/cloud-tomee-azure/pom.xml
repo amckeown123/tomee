@@ -27,14 +27,15 @@
   <properties>
     <jakartaee-api.version>10.0</jakartaee-api.version>
   </properties>
+         <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${jakartaee-api.version}</version>
-      <scope>provided</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>
@@ -49,7 +50,6 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>${project.version}</version>
         <configuration>
           <tomeeClassifier>webprofile</tomeeClassifier>
           <!--You can tweak this for your case-->

@@ -32,66 +32,13 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.webservices</tomee.build.name>
   </properties>
+   <dependencyManagement>
   <dependencies>
-    <!-- workaround for SaajUniverseTest, our ProviderLocator doesnt use system property first - we should fix it -->
-    <!-- Removed as included in jakartaee-api-9.0.0 -->
-    <!--<dependency>-->
-      <!--<groupId>jakarta.xml.soap</groupId>-->
-      <!--<artifactId>jakarta.xml.soap-api</artifactId>-->
-      <!--<version>1.4.0-b01</version>-->
-    <!--</dependency>-->
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-http</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.tomitribe</groupId>
-      <artifactId>swizzle</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.xml.messaging.saaj</groupId>
-      <artifactId>saaj-impl</artifactId>
-      <version>${version.impl.saaj}</version>
-    </dependency>
-
-    <!-- spec dependencies -->
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>wsdl4j</groupId>
-      <artifactId>wsdl4j</artifactId>
-    </dependency>
-
-    <!-- Test only dependencies -->
-    <dependency>
-      <groupId>org.apache.axis2</groupId>
-      <artifactId>axis2-saaj</artifactId>
-      <version>1.8.2</version>
-      <scope>test</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>server</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
 </project>

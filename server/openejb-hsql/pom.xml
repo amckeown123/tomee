@@ -33,43 +33,14 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.hsql</tomee.build.name>
   </properties>
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>server</artifactId>
+        <version>${project.version}</version>
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hsqldb</groupId>
-      <artifactId>hsqldb</artifactId>
-    </dependency>
-    <dependency>
-      <artifactId>commons-dbcp2-shade</artifactId>
-      <groupId>org.apache.tomee</groupId>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.commons</groupId>
-          <artifactId>commons-dbcp2</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-pool2</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
+  </dependencyManagement>
 </project>
 

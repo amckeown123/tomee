@@ -45,7 +45,7 @@
        <dependency>
          <groupId>org.apache.tomee.bom</groupId>
          <artifactId>boms</artifactId>
-         <version>${parent.project.version}</version>
+         <version>${project.version}</version>
         </dependency>
       </dependencies>
     </dependencyManagement>

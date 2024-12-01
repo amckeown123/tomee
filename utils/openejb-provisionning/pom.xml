@@ -30,28 +30,16 @@
   <properties>
     <tomee.build.name>${project.groupId}.util.provisionning</tomee.build.name>
   </properties>
+    <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.jboss.shrinkwrap.resolver</groupId>
-      <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
-      <version>${version.shrinkwrap.resolver.bom}</version>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>utils</artifactId>
+        <version>${project.verison}</version>
     </dependency>
 
-    <!-- for resolver -->
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
-
+</dependencyManagement>
   <build>
     <plugins>
       <plugin>

@@ -28,18 +28,15 @@
   <packaging>jar</packaging>
   <name>TomEE :: Container :: JUnit</name>
 
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+         <artifactId>container</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
   <properties>
     <tomee.build.name>${project.groupId}.container.junit</tomee.build.name>
     <netbeans.hint.license>openejb</netbeans.hint.license>

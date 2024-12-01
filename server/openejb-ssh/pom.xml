@@ -31,48 +31,15 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.ssh</tomee.build.name>
   </properties>
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-common-cli</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sshd</groupId>
-      <artifactId>sshd-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jline</groupId>
-      <artifactId>jline</artifactId>
-    </dependency>
-
-    <!-- dependencies we don't want to include in the zip -->
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcpkix-jdk15to18</artifactId>
-      <version>1.79</version>
-      <scope>test</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>server</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
-
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

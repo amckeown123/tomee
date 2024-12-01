@@ -30,11 +30,13 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.rest</tomee.build.name>
   </properties>
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-http</artifactId>
-      <version>${project.version}</version>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>server</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
 </project>

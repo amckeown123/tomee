@@ -62,19 +62,14 @@
       </plugins>
     </pluginManagement>
   </build>
-  <dependencyManagement>
-    <dependencies>
+         <dependencyManagement>
+  <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>jakartaee-api</artifactId>
-        <version>10.0</version>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-      </dependency>
-    </dependencies>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
   </dependencyManagement>
   <!--
   This section allows you to configure where to publish libraries for sharing.

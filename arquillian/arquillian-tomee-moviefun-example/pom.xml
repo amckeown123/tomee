@@ -33,7 +33,7 @@
        <dependency>
           <groupId>org.apache.tomee</groupId>
           <artifactId>arquillian</artifactId>
-           <version>${parent.project.version}</version>
+           <version>${project.version}</version>
         </dependency>
       </dependencies>
     </dependencyManagement>

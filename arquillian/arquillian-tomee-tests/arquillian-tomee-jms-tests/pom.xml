@@ -27,6 +27,15 @@
   <artifactId>arquillian-tomee-jms-tests</artifactId>
   <name>TomEE :: Arquillian Adaptors Parent :: Tests :: JMS</name>
 
+  <dependencyManagement>
+     <dependencies>
+       <dependency>
+          <groupId>org.apache.tomee</groupId>
+           <artifactId>arquillian-tomee-tests</artifactId>
+           <version>${project.version}</version>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
   <properties>
     <profile-under-test>plus</profile-under-test>
 

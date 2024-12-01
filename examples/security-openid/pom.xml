@@ -33,74 +33,15 @@
         <arquillian.version>1.9.1.Final</arquillian.version>
         <testcontainers-keycloak.version>3.5.1</testcontainers-keycloak.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>jakartaee-api</artifactId>
-            <version>10.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.microprofile.config</groupId>
-            <artifactId>microprofile-config-api</artifactId>
-            <version>${version.microprofile.config}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Dependencies for testing -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.arquillian.junit5</groupId>
-            <artifactId>arquillian-junit5-container</artifactId>
-            <version>${arquillian.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>arquillian-tomee-remote</artifactId>
-            <version>${version.tomee}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>apache-tomee</artifactId>
-            <version>${version.tomee}</version>
-            <classifier>microprofile</classifier>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.htmlunit</groupId>
-            <artifactId>htmlunit</artifactId>
-            <version>4.4.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- OpenID provider to test against -->
-        <dependency>
-            <groupId>com.github.dasniko</groupId>
-            <artifactId>testcontainers-keycloak</artifactId>
-            <version>${testcontainers-keycloak.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>1.20.4</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
+           <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
     <!--
     This section allows you to configure where to publish libraries for sharing.
     It is not required and may be deleted.  For more information see:

@@ -23,19 +23,15 @@
   <version>10.0.0-M4-SNAPSHOT</version>
   <name>TomEE :: Examples :: JAXRS Filter</name>
   <url>http://maven.apache.org</url>
+         <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>10.0</version>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
   <build>
     <finalName>jaxrs-filter</finalName>
   </build>

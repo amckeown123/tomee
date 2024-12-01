@@ -26,6 +26,16 @@ Licensed to the Apache Software Foundation (ASF) under one or more
   <artifactId>tomee-webapp-archetype</artifactId>
   <name>TomEE :: Maven Plugins :: TomEE Webapp Archetype</name>
 
+      <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee.maven</groupId>
+  <artifactId>maven</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
+
   <build>
     <plugins>
       <plugin>

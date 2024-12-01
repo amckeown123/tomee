@@ -90,20 +90,15 @@
     </plugins>
 
   </build>
-
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
-
+  </dependencyManagement>
   <!--
     <build>
       <plugins>

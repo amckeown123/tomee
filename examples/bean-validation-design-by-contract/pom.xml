@@ -26,6 +26,15 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <tomee.version>10.0.0-M4-SNAPSHOT</tomee.version>
   </properties>
+         <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>examples</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
@@ -48,29 +57,7 @@
       <url>https://repository.apache.org/content/groups/snapshots</url>
     </repository>
   </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>10.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-    <!--
-    The scope test is to avoid to have any openejb binaries delivered by the application.
-    -->
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>10.0.0-M4-SNAPSHOT</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+
   <!--
   This section allows you to configure where to publish libraries for sharing.
   It is not required and may be deleted.  For more information see:

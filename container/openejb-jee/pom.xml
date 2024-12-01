@@ -30,6 +30,16 @@
   <packaging>jar</packaging>
   <name>TomEE :: Container :: Java EE</name>
 
+   <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+         <artifactId>container</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
+
 
   <properties>
     <openejb.osgi.import.pkg>

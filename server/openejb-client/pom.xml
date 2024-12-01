@@ -119,37 +119,13 @@
       </plugin>
     </plugins>
   </build>
-
+ <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.geronimo.mail</groupId>
-      <artifactId>geronimo-mail_2.1_provider</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.agical.rmock</groupId>
-      <artifactId>rmock</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcmail-jdk15to18</artifactId>
-      <version>1.79</version>
-      <scope>test</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>server</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
 </project>

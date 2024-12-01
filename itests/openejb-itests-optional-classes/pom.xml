@@ -43,19 +43,14 @@
     <module>lib_with_optional_dep</module>
     <module>app</module>
   </modules>
-
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>runtime</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
+  </dependencyManagement>
 </project>
 

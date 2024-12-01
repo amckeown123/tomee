@@ -48,19 +48,14 @@
       </plugin>
     </plugins>
   </build>
-
+   <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>org.apache.openejb.itests</groupId>
-      <artifactId>failover</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
-
+  </dependencyManagement>
 </project>
 

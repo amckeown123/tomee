@@ -29,6 +29,15 @@
   <properties>
     <tomee.build.name>${project.groupId}.container.javaagent</tomee.build.name>
   </properties>
+   <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+         <artifactId>container</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>

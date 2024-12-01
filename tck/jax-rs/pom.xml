@@ -26,6 +26,16 @@
     <artifactId>jax-rs</artifactId>
     <packaging>pom</packaging>
     <name>TomEE :: TCK :: JAX-RS TCK</name>
+          <dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tCK</artifactId>
+        <version>${project.verison}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
+
     <modules>
         <module>jax-rs-tests</module>
         <module>jax-rs-tests-embedded</module>

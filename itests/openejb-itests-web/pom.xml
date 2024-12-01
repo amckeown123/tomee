@@ -35,31 +35,20 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.web</tomee.build.name>
   </properties>
+     <dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-beans</artifactId>
-      <version>${project.version}</version>
-      <type>ejb</type>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-servlets</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>runtime</scope>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
     </dependency>
   </dependencies>
-
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.4.0</version>
       </plugin>
     </plugins>
   </build>
