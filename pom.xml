@@ -241,6 +241,11 @@
 
 <dependencyManagement>
     <dependencies><!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-jee -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jakartaee-api</artifactId>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin -->
 <dependency>
     <groupId>org.apache.felix</groupId>
