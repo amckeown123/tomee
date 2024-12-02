@@ -243,6 +243,22 @@
     <dependencies><!-- https://mvnrepository.com/artifact/org.apache.openejb/openejb-jee -->
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.14.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>jakartaee-api</artifactId>
     </dependency>
 
@@ -673,18 +689,7 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>jakartaee-api</artifactId>
-        <version>${version.jakartaee-api}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>*</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
+           <dependency>
         <groupId>xml-resolver</groupId>
         <artifactId>xml-resolver</artifactId>
         <version>1.2</version>
@@ -1577,6 +1582,18 @@
     <artifactId>jakarta.persistence-api</artifactId>
     <version>3.2.0</version>
 </dependency>
+        <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket</artifactId>
+      <version>${tomcat.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-catalina</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
       
     </dependencies>
   </dependencyManagement>
@@ -2039,7 +2056,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
-            <version>3.26.0</version>
             <configuration>
               <linkXRef>true</linkXRef>
               <targetJdk>1.7</targetJdk>
