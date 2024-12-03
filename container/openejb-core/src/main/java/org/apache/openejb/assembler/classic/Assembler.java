@@ -17,7 +17,7 @@
 
 package org.apache.openejb.assembler.classic;
 
-import org.apache.geronimo.connector.GeronimoBootstrapContext;
+import.connector.GeronimoBootstrapContext;
 import org.apache.geronimo.connector.outbound.AbstractConnectionManager;
 import org.apache.geronimo.connector.work.GeronimoWorkManager;
 import org.apache.geronimo.connector.work.HintsContextHandler;
