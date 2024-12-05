@@ -35,6 +35,7 @@
          <artifactId>container</artifactId>
         <version>${project.version}</version>
     </dependency>
+   
   </dependencies>
   </dependencyManagement>
     <properties>
