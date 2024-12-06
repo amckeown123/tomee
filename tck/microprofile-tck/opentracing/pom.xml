@@ -79,16 +79,13 @@
     </profile>
   </profiles>
 
-    <dependencyManagement>
-<dependencies>
-<!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-project -->
-<dependency>
-    <artifactId>microprofile-tck</artifactId>
-    <groupId>org.apache.tomee</groupId>
-    <version>${parent.project.version}</version>
-</dependency>
-
-</dependencies>
-</dependencyManagement>
-
+<dependencyManagement>
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>microprofile-tck</artifactId>
+        <version>${project.verison}</version>
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
 </project>
