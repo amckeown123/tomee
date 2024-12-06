@@ -249,119 +249,96 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.4.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.0.0-M1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
-          <version>${version.plugin.bundle}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
-          <version>0.16.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.8.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-ear-plugin</artifactId>
-          <version>3.3.0</version>
           <dependencies>
             <dependency>
               <groupId>org.codehaus.plexus</groupId>
               <artifactId>plexus-archiver</artifactId>
-              <version>4.10.0</version>
             </dependency>
           </dependencies>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>3.5.2</version>
         </plugin>
         <plugin> <!-- maven-dependency-plugin:properties doesn't work as well as this one for us -->
           <groupId>org.apache.geronimo.buildsupport</groupId>
           <artifactId>geronimo-property-plugin</artifactId>
-          <version>3.0.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.swizzle</groupId>
           <artifactId>dependency-report-plugin</artifactId>
-          <version>1.0.2</version>
         </plugin>
         <plugin>
           <groupId>io.github.rzo1.org.metatype.sxc</groupId>
           <artifactId>sxc-jaxb-maven-plugin</artifactId>
-          <version>${version.sxc}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
-          <version>3.6.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.26.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>jaxb2-maven-plugin</artifactId>
-          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>1.2.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.4.1</version>
         </plugin>
         <plugin>
           <groupId>com.googlecode.jslint4java</groupId>
           <artifactId>jslint4java-maven-plugin</artifactId>
-          <version>2.0.5</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.gmaven</groupId>
           <artifactId>groovy-maven-plugin</artifactId>
-          <version>2.1.1</version>
         </plugin>
           <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.12</version>
           <executions>
             <execution>
               <goals>
@@ -381,12 +358,10 @@
         <plugin>
           <groupId>org.apache.tomee.patch</groupId>
           <artifactId>tomee-patch-plugin</artifactId>
-          <version>${version.tomee-patch-plugin}</version>
           <dependencies>
             <dependency>
               <groupId>org.apache.tomee.patch</groupId>
               <artifactId>tomee-patch-core</artifactId>
-              <version>${version.tomee-patch-plugin}</version>
               <exclusions>
                 <exclusion>
                   <groupId>org.apache.tomee</groupId>
@@ -977,6 +952,33 @@
     <artifactId>maven-shade-plugin</artifactId>
     <version>3.6.0</version>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.tomee.patch/cxf-api -->
+<dependency>
+    <groupId>org.apache.tomee.patch</groupId>
+    <artifactId>cxf-api</artifactId>
+    <version>2.6.17-TomEE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee.patch/cxf-rt-core -->
+<dependency>
+    <groupId>org.apache.tomee.patch</groupId>
+    <artifactId>cxf-rt-core</artifactId>
+    <version>2.6.17-TomEE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee.patch/cxf-rt-frontend-jaxws -->
+<dependency>
+    <groupId>org.apache.tomee.patch</groupId>
+    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+    <version>2.6.17-TomEE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomee.patch/cxf-testutils -->
+<dependency>
+    <groupId>org.apache.tomee.patch</groupId>
+    <artifactId>cxf-testutils</artifactId>
+    <version>2.6.17-TomEE</version>
+    <scope>test</scope>
+</dependency>
+
 
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
