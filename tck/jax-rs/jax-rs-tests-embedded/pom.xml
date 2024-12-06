@@ -28,59 +28,15 @@
     <name>TomEE :: TCK :: JAX-RS TCK :: Tests Embedded</name>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.ws.rs</groupId>
-            <artifactId>jakarta-restful-ws-tck</artifactId>
-            <version>${jaxrs.tck.version}</version>
-        </dependency>
-
-        <!-- Added for test-->
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit-bom</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-
-        <!-- Needed by some TCK tests:
-            JsonbContextProviderIT.shouldUseApplicationProvidedJsonbInstance
-            UriBuilderIT.shouldBuildValidInstanceFromScratch
-        -->
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>2.2</version>
-            <scope>test</scope>
-        </dependency>
-        <!--Tomee-Deps:-->
-        <!-- https://mvnrepository.com/artifact/org.apache.tomee/arquillian-tomee-remote -->
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>arquillian-tomee-embedded</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>tomee-webservices</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>tomee-jaxrs</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
+<dependencyManagement>
+<dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>jax-rs</artifactId>
+        <version>${project.version}</version>    
+    </dependency>
+  </dependencies>
+  </dependencyManagement>
     <profiles>
         <profile>
             <id>tck-jax-rs</id>

@@ -34,11 +34,7 @@
         <groupId>org.apache.tomee</groupId>
          <artifactId>container</artifactId>
         <version>${project.version}</version>
-    </dependency>    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
-    </dependency>
+    </dependency> 
   </dependencies>
   </dependencyManagement>
   <properties>

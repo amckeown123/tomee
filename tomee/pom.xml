@@ -92,36 +92,7 @@
           <name>hibernate</name>
         </property>
       </activation>
-      <dependencies>
-        <dependency> <!-- to avoid to force exclusions everywhere -->
-          <groupId>${project.groupId}</groupId>
-          <artifactId>openejb-core</artifactId>
-          <exclusions>
-            <exclusion>
-              <groupId>${project.groupId}</groupId>
-              <artifactId>jakartaee-api</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>openejb-core-hibernate</artifactId>
-          <version>${project.version}</version>
-          <type>pom</type>
-          <exclusions>
-            <exclusion>
-              <groupId>*</groupId>
-              <artifactId>*</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <scope>test</scope>
-        </dependency>
-      </dependencies>
-    </profile>
+     </profile>
   </profiles>
 
   <build>
