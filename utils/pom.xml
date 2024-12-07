@@ -44,7 +44,6 @@
         <artifactId>tomee-project</artifactId>
         <version>${project.verison}</version>
     </dependency>
-        <dependencies>
       <dependency>
         <groupId>org.eclipse.jdt</groupId>
         <artifactId>ecj</artifactId>
@@ -258,13 +257,6 @@
         <artifactId>openejb-core-eclipselink</artifactId>
         <version>${project.version}</version>
       </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-    
   </dependencies>
-</dependencyManagement>
-
+  </dependencyManagement>
 </project>
