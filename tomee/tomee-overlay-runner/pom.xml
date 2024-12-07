@@ -39,6 +39,31 @@
         <artifactId>tomee</artifactId>
         <version>${project.version}</version>
     </dependency>
+        <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jakartaee-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency> <!-- openejb-core is not needed but parent import it so setting it as provided to avoid wrong packaging -->
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-catalina</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina</artifactId>
+      <version>${tomcat.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
 </dependencyManagement>  
 </project>

@@ -251,6 +251,10 @@
         <artifactId>openejb-core-eclipselink</artifactId>
         <version>${project.version}</version>
       </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
 
   </dependencies>
 </dependencyManagement>  
@@ -277,7 +281,7 @@
         <module>tomee-plume-webapp</module>
         <module>tomee-webservices</module>
         <module>tomee-embedded</module>
-        <module>tomee-microprofile</module>
+        <module>tomee-tomee-microprofile</module>
         <module>apache-tomee</module>
         <module>tomee-util</module>
         <module>tomee-juli</module>
