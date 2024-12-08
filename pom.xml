@@ -973,6 +973,56 @@
   <dependencyManagement>
   
     <dependencies>
+    <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
+<dependency>
+    <groupId>jakarta.validation</groupId>
+    <artifactId>jakarta.validation-api</artifactId>
+    <version>3.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>4.0.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api-test -->
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api-test</artifactId>
+    <version>3.0.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
+<dependency>
+    <groupId>jakarta.xml.ws</groupId>
+    <artifactId>jakarta.xml.ws-api</artifactId>
+    <version>4.0.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api -->
+<dependency>
+    <groupId>jakarta.xml.soap</groupId>
+    <artifactId>jakarta.xml.soap-api</artifactId>
+    <version>3.0.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.rpc/jakarta.xml.rpc-api -->
+<dependency>
+    <groupId>jakarta.xml.rpc</groupId>
+    <artifactId>jakarta.xml.rpc-api</artifactId>
+    <version>1.1.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/jakarta.xml.registry-api -->
+<dependency>
+    <groupId>jakarta.xml.registry</groupId>
+    <artifactId>jakarta.xml.registry-api</artifactId>
+    <version>1.0.10</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/xml-registries-spec -->
+<dependency>
+    <groupId>jakarta.xml.registry</groupId>
+    <artifactId>xml-registries-spec</artifactId>
+    <version>1.0.10</version>
+    <type>pom</type>
+</dependency>
+
     <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
 <dependency>
     <groupId>jakarta.servlet</groupId>
@@ -1120,14 +1170,6 @@
 </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>${junit.version}</version>
-    <scope>test</scope>
-</dependency>
-
     <!-- https://mvnrepository.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api -->
 <dependency>
     <groupId>jakarta.enterprise</groupId>
@@ -1172,13 +1214,6 @@
     <groupId>jakarta.persistence</groupId>
     <artifactId>jakarta.persistence-api</artifactId>
     <version>3.2.0</version>
-</dependency>
-
-    <!-- https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
-<dependency>
-    <groupId>jakarta.xml.ws</groupId>
-    <artifactId>jakarta.xml.ws-api</artifactId>
-    <version>4.0.2</version>
 </dependency>
 
        <!-- Micro Profile API -->
@@ -1370,12 +1405,6 @@
         <groupId>idb</groupId>
         <artifactId>idb</artifactId>
         <version>3.26</version>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>${junit.jupiter.version}</version>
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
