@@ -31,9 +31,7 @@
   <properties>
     <tomee.build.name>${project.groupId}.util.eclipselink</tomee.build.name>
   </properties>
-    <dependencyManagement>
-  <dependencies>
-      <dependency>
+    <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>utils</artifactId>
         <version>${project.verison}</version>
@@ -83,7 +81,5 @@
           <artifactId>jaxb-core</artifactId>
         </exclusion>
       </exclusions>
-
-  </dependencies>
-</dependencyManagement>
-</project>
+      </dependency>
+      </project>
