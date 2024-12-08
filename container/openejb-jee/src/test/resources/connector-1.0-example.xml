@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE connector PUBLIC
-        "-//Sun Microsystems, Inc.//DTD Connector 1.0//EN"
-        "http://java.sun.com/dtd/connector_1_0.dtd">
 <!--
 
     Licensed to the Apache Software Foundation (ASF) under one or more
@@ -22,9 +19,9 @@
 
 <!-- $Rev$ $Date$ -->
 
-<connector id="ID001">
-    <display-name xml:lang="en-US">display-name0</display-name>
+<connector xmlns="http://java.sun.com/xml/ns/javaee" version="1.0" id="ID001">
     <description xml:lang="">description0</description>
+    <display-name xml:lang="en-US">display-name0</display-name>
     <icon xml:lang="" id="ID007">
         <small-icon>small-icon0</small-icon>
         <large-icon>large-icon0</large-icon>

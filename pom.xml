@@ -1239,12 +1239,13 @@
         <artifactId>jboss-logging</artifactId>
         <version>3.6.1.Final</version>
       </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>jakartaee-api</artifactId>
-        <version>${version.jakartaee-api}</version>
-        <classifier>tomcat</classifier>
-       </dependency>
+      <!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>${version.jakartaee-api}</version>
+    <classifier>tomcat</classifier>
+    </dependency>
       <dependency>
         <groupId>xml-resolver</groupId>
         <artifactId>xml-resolver</artifactId>
