@@ -5,8 +5,9 @@
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="3.1">
-              <xsd:include schemaLocation="jakartaee_10.xsd"/>
-            
+
+<xsd:include schemaLocation="jakartaee_10.xsd"/>
+
   <xsd:annotation>
     <xsd:documentation>
 

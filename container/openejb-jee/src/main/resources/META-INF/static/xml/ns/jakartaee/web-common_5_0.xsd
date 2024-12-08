@@ -6,6 +6,8 @@
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="5.0">
+<xsd:include schemaLocation="jakartaee_10.xsd"/>
+            
   <xsd:annotation>
     <xsd:documentation>
 
@@ -75,9 +77,7 @@
     </xsd:documentation>
   </xsd:annotation>
 
-  <xsd:include schemaLocation="jakartaee_10.xsd"/>
-
-  <xsd:include schemaLocation="jsp_4_0.xsd"/>
+  <xsd:include schemaLocation="jsp_3_0.xsd"/>
 
   <xsd:group name="web-commonType">
     <xsd:choice>
