@@ -35,17 +35,6 @@
          <artifactId>container</artifactId>
         <version>${project.version}</version>
     </dependency>
-        <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
- 
   </dependencies>
   </dependencyManagement>
   <properties>

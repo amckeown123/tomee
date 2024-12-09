@@ -41,12 +41,6 @@
     <module>openejb-junit5-backward</module>
   </modules>
   <dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
-  </dependencies>
+ 
   </dependencyManagement> 
 </project>

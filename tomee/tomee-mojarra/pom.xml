@@ -39,27 +39,6 @@
         <artifactId>tomee</artifactId>
         <version>${project.version}</version>
     </dependency>
-        <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <!--
-    provided = in the webapp
-    since MyFaces is our default implementation
-    -->
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>jakarta.faces</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
 </dependencyManagement>  
 </project>

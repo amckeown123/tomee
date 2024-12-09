@@ -39,7 +39,7 @@
   <inceptionYear>1999</inceptionYear>
 
   <prerequisites>
-    <maven>3.2.5</maven>
+    <maven>3.9.9</maven>
   </prerequisites>
 
   <issueManagement>
@@ -973,17 +973,138 @@
   <dependencyManagement>
   
     <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-coyote -->
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-coyote</artifactId>
+    <version>10.1.33</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.catalina/catalina -->
+<dependency>
+    <groupId>org.apache.catalina</groupId>
+    <artifactId>catalina</artifactId>
+    <version>6.0.26</version>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-jaxb-core -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-jaxb-core</artifactId>
+    <version>0.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-runtime -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-runtime</artifactId>
+    <version>0.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-core -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-core</artifactId>
+    <version>0.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-jaxb -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-jaxb</artifactId>
+    <version>0.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-xpath -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-xpath</artifactId>
+    <version>0.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc</artifactId>
+    <version>0.8</version>
+    <type>pom</type>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-jaxb-maven-plugin -->
+<dependency>
+    <groupId>org.metatype.sxc</groupId>
+    <artifactId>sxc-jaxb-maven-plugin</artifactId>
+    <version>0.8</version>
+</dependency>
+
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>container</artifactId>
+    </dependency>
+          <dependency>
+        <groupId>org.apache.tomee</groupId>
+        
+  <artifactId>tomee</artifactId>
+    </dependency>
+          <dependency>
+        <groupId>org.apache.tomee</groupId>
+      <artifactId>server</artifactId>
+    </dependency>
+          <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>arquillian</artifactId>
+    </dependency>
+          <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>boms</artifactId>
+    </dependency>
+           <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>itests</artifactId>
+    </dependency>    
+           <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>maven</artifactId>
+    </dependency>       
+           <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>tck</artifactId>
+    </dependency>  
+              <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>assembly</artifactId>
+    </dependency>  
+              <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>utils</artifactId>
+    </dependency>  
+                  <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>examples</artifactId>
+    </dependency>  
+                  <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>mp-jwt</artifactId>
+    </dependency>  
+                  <dependency>
+        <groupId>org.apache.tomee</groupId>
+          <artifactId>gradle</artifactId>
+    </dependency>  
+
+    <dependency>
+<groupId>jakarta.xml.bind</groupId>
+<artifactId>jakarta.xml.bind-api</artifactId>
+<version>4.0.2</version>
+</dependency>
+
+<dependency>
+<groupId>org.glassfish.jersey.media</groupId>
+<artifactId>jersey-media-jaxb</artifactId>
+</dependency>
+
+<dependency>
+<groupId>com.sun.xml.bind</groupId>
+<artifactId>jaxb-osgi</artifactId>
+<version>3.0.1</version>
+</dependency>
     <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 <dependency>
     <groupId>jakarta.validation</groupId>
     <artifactId>jakarta.validation-api</artifactId>
     <version>3.1.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
-<dependency>
-    <groupId>jakarta.xml.bind</groupId>
-    <artifactId>jakarta.xml.bind-api</artifactId>
-    <version>4.0.2</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api-test -->
 <dependency>
@@ -1020,7 +1141,6 @@
     <groupId>jakarta.xml.registry</groupId>
     <artifactId>xml-registries-spec</artifactId>
     <version>1.0.10</version>
-    <type>pom</type>
 </dependency>
 
     <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->

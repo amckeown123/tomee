@@ -37,39 +37,10 @@
          <artifactId>container</artifactId>
         <version>${project.version}</version>
     </dependency>
-        <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>xmlunit</groupId>
-      <artifactId>xmlunit</artifactId>
-      <scope>test</scope>
-    </dependency>
 
-  </dependencies>
+   </dependencies>
   </dependencyManagement>
-
-
-  <properties>
-    <openejb.osgi.import.pkg>
-      org.apache.geronimo.specs.jpa;resolution:=optional,
-      org.apache.geronimo.specs.activation;resolution:=optional,
-      *
-    </openejb.osgi.import.pkg>
-  </properties>
-  <profiles>
+    <profiles>
     <profile>
       <id>openejb.debug</id>
       <build>
@@ -102,7 +73,6 @@
             <configuration>
               <!--<schemaDirectory>src/main/xsd</schemaDirectory>-->
               <packageName>org.apache.openejb.jee</packageName>
-              <schemaListFileName>src/main/xsdlist/xsdlist.txt</schemaListFileName>
               <extension>true</extension>
             </configuration>
           </plugin>
