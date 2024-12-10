@@ -31,14 +31,5 @@
     <tomee.build.name>${project.groupId}.tomee.config</tomee.build.name>
   </properties>
 
-<dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
-</dependencyManagement>  
 
 </project>
