@@ -42,16 +42,6 @@
     <module>jarstxt-maven-plugin</module>
     <module>applicationcomposer-maven-plugin</module>
   </modules>
-<dependencyManagement>  
-    <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
-
   <build>
     <plugins>
       <plugin>

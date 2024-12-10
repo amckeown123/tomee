@@ -31,15 +31,7 @@
   <artifactId>tomee</artifactId>
   <packaging>pom</packaging>
   <name>TomEE :: TomEE</name>
-<dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
-</dependencyManagement>  
+
   <!-- just set the good JPA provider. As openejb-core is needed in all modules it is easier to do it here -->
   <profiles>
     <profile>

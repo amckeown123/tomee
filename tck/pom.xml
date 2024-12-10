@@ -52,15 +52,7 @@
     <module>microprofile-tck</module>
     <module>jax-rs</module>
   </modules>
-      <dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
+
   <build>
     <plugins>
       <plugin>

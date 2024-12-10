@@ -39,13 +39,4 @@
       <url>https://repo.gradle.org/gradle/libs-releases-local/</url>
     </repository>
   </repositories>
-       <dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
 </project>
