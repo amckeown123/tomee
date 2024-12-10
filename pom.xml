@@ -602,13 +602,28 @@
     </plugins>
   </build>
 
-  <profiles>
+    <profiles>
     <profile>
       <id>main</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
-    
+      <modules>
+        <module>deps</module>
+        <module>boms</module>
+        <module>itests</module>
+        <module>maven</module>
+        <module>gradle</module>
+        <module>container</module>
+        <module>server</module>
+        <module>mp-jwt</module>
+        <module>examples</module>
+        <module>assembly</module>
+        <module>tck</module>
+        <module>arquillian</module>
+        <module>utils</module>
+        <module>tomee</module>
+      </modules>
       <repositories>
         <repository>
           <snapshots>
@@ -708,12 +723,12 @@
             </configuration>
           </plugin>
           <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-pmd-plugin</artifactId>
-           <version>3.26.0</version>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
             <configuration>
               <linkXRef>true</linkXRef>
-              <targetJdk>17</targetJdk>
+              <sourceEncoding>utf-8</sourceEncoding>
+              <targetJdk>1.7</targetJdk>
               <printFailingErrors>true</printFailingErrors>
               <failurePriority>2</failurePriority>
               <rulesets>
@@ -874,6 +889,7 @@
       </build>
     </profile>
   </profiles>
+
   <repositories>
     <repository>
       <id>apache-snapshots</id>
@@ -958,6 +974,16 @@
   <dependencyManagement>
   
     <dependencies>
+    <dependency>
+        <groupId>jakarta.persistence</groupId>
+    <artifactId>jakarta.persistence-api</artifactId>
+    <version>4.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.persistence</groupId>
+    <artifactId>persistence-spec</artifactId>
+    <version>4.0-SNAPSHOT</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-core -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
@@ -1080,7 +1106,6 @@
     <version>2.13.0</version>
 </dependency>
 
-
 <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
 <dependency>
     <groupId>jakarta.servlet</groupId>
@@ -1144,61 +1169,6 @@
     <artifactId>sxc-jaxb-maven-plugin</artifactId>
     <version>0.8</version>
 </dependency>
-
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>container</artifactId>
-    </dependency>
-          <dependency>
-        <groupId>org.apache.tomee</groupId>
-        
-  <artifactId>tomee</artifactId>
-    </dependency>
-          <dependency>
-        <groupId>org.apache.tomee</groupId>
-      <artifactId>server</artifactId>
-    </dependency>
-          <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>arquillian</artifactId>
-    </dependency>
-          <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>boms</artifactId>
-    </dependency>
-           <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>itests</artifactId>
-    </dependency>    
-           <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>maven</artifactId>
-    </dependency>       
-           <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>tck</artifactId>
-    </dependency>  
-              <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>assembly</artifactId>
-    </dependency>  
-              <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>utils</artifactId>
-    </dependency>  
-                  <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>examples</artifactId>
-    </dependency>  
-                  <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>mp-jwt</artifactId>
-    </dependency>  
-                  <dependency>
-        <groupId>org.apache.tomee</groupId>
-          <artifactId>gradle</artifactId>
-    </dependency>  
-
     <dependency>
 <groupId>jakarta.xml.bind</groupId>
 <artifactId>jakarta.xml.bind-api</artifactId>
@@ -1435,12 +1405,11 @@
     <artifactId>jakarta.enterprise.concurrent-tck-dist</artifactId>
     <version>3.1.1</version>
 </dependency>
-
-    <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
+<!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
 <dependency>
-    <groupId>jakarta.persistence</groupId>
-    <artifactId>jakarta.persistence-api</artifactId>
-    <version>3.2.0</version>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>10.0.0</version>
 </dependency>
 
        <!-- Micro Profile API -->
