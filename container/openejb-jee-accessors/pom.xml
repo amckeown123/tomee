@@ -41,11 +41,27 @@
 
    <dependencyManagement>
   <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-         <artifactId>container</artifactId>
-        <version>${project.version}</version>
+     <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-jee</artifactId>
+      <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-loader</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jakartaee-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>xmlunit</groupId>
+      <artifactId>xmlunit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
   </dependencyManagement>
 </project>

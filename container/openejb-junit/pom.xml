@@ -31,9 +31,14 @@
    <dependencyManagement>
   <dependencies>
       <dependency>
-        <groupId>org.apache.tomee</groupId>
-         <artifactId>container</artifactId>
-        <version>${project.version}</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
   </dependencyManagement>

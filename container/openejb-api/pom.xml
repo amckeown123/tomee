@@ -36,12 +36,7 @@
 
    <dependencyManagement>
   <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-         <artifactId>container</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-        <dependency>
+    <dependency>
         <groupId>jakarta.persistence</groupId>
     <artifactId>jakarta.persistence-api</artifactId>
     <version>4.0.0-SNAPSHOT</version>
