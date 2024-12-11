@@ -972,7 +972,6 @@
 
   </pluginRepositories>
   <dependencyManagement>
-  
     <dependencies>
     <dependency>
         <groupId>jakarta.persistence</groupId>
@@ -1962,8 +1961,7 @@
         <version>${version.snakeyaml}</version>
       </dependency>
     </dependencies>
-  </dependencyManagement>
-
+</dependencyManagement>
   <distributionManagement>
     <site>
       <id>openejb-website</id>
