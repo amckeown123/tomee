@@ -20,7 +20,7 @@
 <!-- $Rev$ $Date$ -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <parent>
+ <parent>
     <artifactId>container</artifactId>
     <groupId>org.apache.tomee</groupId>
     <version>10.0.0-M4-SNAPSHOT</version>
@@ -29,14 +29,24 @@
   <artifactId>openejb-jee</artifactId>
   <packaging>jar</packaging>
   <name>TomEE :: Container :: Java EE</name>
-
-<dependencies>
+ <dependencies>
+     <!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomee.bom</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+      <type>pom</type>
+    </dependency>
       <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-  </dependencies>
+      <groupId>xmlunit</groupId>
+      <artifactId>xmlunit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies> 
     <profiles>
     <profile>
       <id>openejb.debug</id>

@@ -33,13 +33,10 @@
   <properties>
     <tomee.build.name>${project.groupId}.arquillian.common</tomee.build.name>
   </properties>
-
-<dependencies>
-      <dependency>
+  <dependencies>
+  <dependency>
         <groupId>org.apache.tomee</groupId>
-        
         <artifactId>server</artifactId>
-        <version>${project.version}</version>
       </dependency>
   </dependencies>
 </project>

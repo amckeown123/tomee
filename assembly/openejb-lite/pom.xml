@@ -32,16 +32,12 @@
   <artifactId>openejb-lite</artifactId>
   <packaging>jar</packaging>
   <name>TomEE :: Assembly :: All In One EJB Lite jar</name>
-
-     <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>assemble</artifactId>
-        <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <defaultGoal>install</defaultGoal>
     <plugins>
