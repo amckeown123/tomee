@@ -35,30 +35,12 @@
   <properties>
     <tomee.build.name>${project.groupId}.tomee.catalina</tomee.build.name>
   </properties>
-  <dependencyManagement>
-  <dependencies>
+<dependencies>
       <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-juli</artifactId>
-      <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-         </dependencies>
-</dependencyManagement>  
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
 </project>
 

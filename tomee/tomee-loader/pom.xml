@@ -35,66 +35,12 @@
   <properties>
     <tomee.build.name>${project.groupId}.tomee.loader</tomee.build.name>
   </properties>
-  <dependencyManagement>
-  <dependencies>
+<dependencies>
       <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-loader</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-jee</artifactId>
-    </dependency>
-    <dependency>
-      <artifactId>slf4j-api</artifactId>
-      <groupId>org.slf4j</groupId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-catalina</artifactId>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.tomcat</groupId>
-          <artifactId>tomcat-juli</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.xbean</groupId>
-      <artifactId>xbean-finder-shaded</artifactId>
-    </dependency>
-    <!--The order of the next two deps is important-->
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-juli</artifactId>
-      <version>${project.version}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-juli</artifactId>
-      <version>${tomcat.version}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${version.log4j2}</version>
-      <scope>provided</scope>
-    </dependency>
-    </dependencies>
-</dependencyManagement>  
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
 </project>
 
