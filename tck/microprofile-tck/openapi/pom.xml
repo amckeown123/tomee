@@ -27,16 +27,13 @@
 
   <artifactId>microprofile-openapi-tck</artifactId>
   <name>TomEE :: TCK :: MicroProfile Open API TCK</name>
-
-<dependencyManagement>
-  <dependencies>
+    <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>microprofile-tck</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <testResources>
       <testResource>

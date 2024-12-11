@@ -27,17 +27,13 @@
   <artifactId>openejb-embedded-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <name>TomEE :: Maven Plugins :: OpenEJB Embedded Maven Plugin</name>
-
-      <dependencyManagement>
   <dependencies>
       <dependency>
-        <groupId>org.apache.tomee.maven</groupId>
-  <artifactId>maven</artifactId>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
         <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencyManagement>
-
   <properties>
     <maven-plugin.prefix>openejb-embedded</maven-plugin.prefix>
   </properties>

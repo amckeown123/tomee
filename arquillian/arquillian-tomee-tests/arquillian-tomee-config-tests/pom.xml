@@ -27,16 +27,13 @@
   <artifactId>arquillian-tomee-config-tests</artifactId>
   <name>TomEE :: Arquillian Adaptors Parent :: Tests :: Configuration Tests</name>
 
-  <dependencyManagement>
-     <dependencies>
-       <dependency>
-          <groupId>org.apache.tomee</groupId>
-           <artifactId>arquillian-tomee-tests</artifactId>
-           <version>${project.version}</version>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
-
+ <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>

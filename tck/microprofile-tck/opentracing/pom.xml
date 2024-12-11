@@ -27,7 +27,13 @@
 
   <artifactId>microprofile-opentracing-tck</artifactId>
   <name>TomEE :: TCK :: MicroProfile Open Tracing TCK</name>
-
+ <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
@@ -78,14 +84,4 @@
       </build>
     </profile>
   </profiles>
-
-<dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>microprofile-tck</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
 </project>

@@ -35,7 +35,6 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.web</tomee.build.name>
   </properties>
-     <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
@@ -43,7 +42,6 @@
         <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

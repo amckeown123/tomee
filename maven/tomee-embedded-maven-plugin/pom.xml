@@ -28,19 +28,22 @@
   <artifactId>tomee-embedded-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <name>TomEE :: Maven Plugins :: TomEE Embedded Maven Plugin</name>
-
-      <dependencyManagement>
-  <dependencies>
+<dependencies>
       <dependency>
-        <groupId>org.apache.tomee.maven</groupId>
-  <artifactId>maven</artifactId>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
         <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencyManagement>
 
   <properties>
     <maven-plugin.prefix>tomee-embedded</maven-plugin.prefix>
   </properties>
-
+  <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>

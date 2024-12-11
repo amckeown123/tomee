@@ -29,5 +29,11 @@
   <properties>
     <tomee.build.name>${project.groupId}.microprofile.jwt</tomee.build.name>
   </properties>
- 
+ <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>

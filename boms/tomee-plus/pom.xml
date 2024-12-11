@@ -39,15 +39,13 @@
 
   <name>TomEE :: BOMs :: TomEE Plus</name>
 
-  <dependencyManagement>
-     <dependencies>
-       <dependency>
-         <groupId>org.apache.tomee.bom</groupId>
-         <artifactId>boms</artifactId>
-         <version>${project.version}</version>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
+ <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
 
 </project>
 

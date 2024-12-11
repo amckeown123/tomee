@@ -30,25 +30,13 @@
   <packaging>jar</packaging>
   <name>TomEE :: Container :: Java EE</name>
 
-   <dependencyManagement>
-  <dependencies>
-     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomee.bom</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-      <type>pom</type>
-    </dependency>
-     <dependency>
-      <groupId>xmlunit</groupId>
-      <artifactId>xmlunit</artifactId>
-      <scope>test</scope>
-    </dependency>
-   </dependencies>
-  </dependencyManagement>
+<dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
     <profiles>
     <profile>
       <id>openejb.debug</id>

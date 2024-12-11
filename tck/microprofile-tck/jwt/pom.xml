@@ -24,15 +24,13 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>microprofile-jwt-tck</artifactId>
   <name>TomEE :: TCK :: MicroProfile JWT TCK</name>
-<dependencyManagement>
-  <dependencies>
+     <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>microprofile-tck</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

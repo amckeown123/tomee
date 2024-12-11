@@ -40,14 +40,5 @@
     <module>opentelemetry</module>
   </modules>
   
-        <dependencyManagement>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
-  </dependencies>
-  </dependencyManagement>
-
+  
 </project>

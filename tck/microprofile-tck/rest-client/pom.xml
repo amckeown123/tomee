@@ -32,17 +32,14 @@
     <!-- Note: This old version is needed for the MP Rest Client TCK-->
     <jetty-tck.version>9.2.28.v20190418</jetty-tck.version>
   </properties>
-
-<dependencyManagement>
-  <dependencies>
+ <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>microprofile-tck</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-  
+ 
   <build>
     <plugins>
 

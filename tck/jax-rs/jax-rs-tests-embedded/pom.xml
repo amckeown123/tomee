@@ -26,17 +26,13 @@
     <artifactId>jax-rs-tests-embedded</artifactId>
     <packaging>jar</packaging>
     <name>TomEE :: TCK :: JAX-RS TCK :: Tests Embedded</name>
-
-
-<dependencyManagement>
-<dependencies>
+   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>jax-rs</artifactId>
-        <version>${project.version}</version>    
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
     <profiles>
         <profile>
             <id>tck-jax-rs</id>

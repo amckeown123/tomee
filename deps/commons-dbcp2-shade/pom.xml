@@ -27,16 +27,13 @@
   <artifactId>commons-dbcp2-shade</artifactId>
   <name>TomEE :: Deps :: Apache Commons DBCP2 shade</name>
 
-   <dependencyManagement>
-  <dependencies>
+<dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-          <artifactId>deps</artifactId>
+        <artifactid>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-
   <build>
     <plugins>
       <plugin>

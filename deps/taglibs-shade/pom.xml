@@ -27,17 +27,13 @@
   <artifactId>taglibs-shade</artifactId>
   <name>TomEE :: Deps :: Taglibs Shade</name>
   
-   <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-          <artifactId>deps</artifactId>
+        <artifactid>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-  
-
   <build>
     <plugins>
       <plugin>

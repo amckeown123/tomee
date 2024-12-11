@@ -27,17 +27,13 @@
   <artifactId>applicationcomposer-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <name>TomEE :: Maven Plugins :: ApplicationComposer Maven Plugin</name>
-
-      <dependencyManagement>
-  <dependencies>
+    <dependencies>
       <dependency>
-        <groupId>org.apache.tomee.maven</groupId>
-  <artifactId>maven</artifactId>
+        <groupId>org.apache.tomee</groupId>
+        <artifactId>itests</artifactId>
         <version>${project.version}</version>
     </dependency>
   </dependencies>
-  </dependencyManagement>
-
   <properties>
     <maven-plugin.prefix>applicationcomposer</maven-plugin.prefix>
   </properties>

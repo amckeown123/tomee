@@ -32,14 +32,12 @@
   <properties>
     <tomee.build.name>${project.groupId}.itests.servlets</tomee.build.name>
   </properties>
-     <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>itests</artifactId>
+        <artifactid>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
 </project>
 

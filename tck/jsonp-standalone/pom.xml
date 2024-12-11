@@ -26,16 +26,13 @@
     <artifactId>jsonp-standalone</artifactId>
     <name>TomEE :: TCK :: JSON-P Standalone</name>
 
-      <dependencyManagement>
-  <dependencies>
+   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-
 
     <profiles>
         <profile>

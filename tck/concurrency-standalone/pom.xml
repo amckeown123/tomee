@@ -45,17 +45,13 @@
 
         <targetDirectory>${project.basedir}/target</targetDirectory>
     </properties>
-      <dependencyManagement>
-  <dependencies>
+ <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-
-
     <profiles>
         <profile>
             <id>tck-concurrency</id>

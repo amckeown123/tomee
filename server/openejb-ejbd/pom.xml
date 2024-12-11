@@ -22,13 +22,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-
-  <parent>
+ <parent>
     <artifactId>server</artifactId>
     <groupId>org.apache.tomee</groupId>
     <version>10.0.0-M4-SNAPSHOT</version>
   </parent>
-
+ 
   <artifactId>openejb-ejbd</artifactId>
   <packaging>jar</packaging>
   <name>TomEE :: Server :: EJBd</name>
@@ -36,85 +35,13 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.ejbd</tomee.build.name>
   </properties>
-   <dependencyManagement>
-  <dependencies>
+     <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>server</artifactId>
+        <artifactid>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
-        <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>idb</groupId>
-      <artifactId>idb</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-core</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-loader</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-multicast</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-client</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-client</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-itests-beans</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.agical.rmock</groupId>
-      <artifactId>rmock</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>cglib</groupId>
-          <artifactId>cglib-nodep</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>cglib</groupId>
-      <artifactId>cglib</artifactId>
-      <version>3.3.0</version>
-      <scope>test</scope>
-    </dependency>
-
+      </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

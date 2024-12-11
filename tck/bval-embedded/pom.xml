@@ -25,15 +25,13 @@
 
   <artifactId>bval-embedded</artifactId>
   <name>TomEE :: TCK :: Bean Validation Embedded</name>
-      <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

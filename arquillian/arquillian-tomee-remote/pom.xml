@@ -32,17 +32,13 @@
     <tomee.build.name>${project.groupId}.arquillian.tomee.remote</tomee.build.name>
   </properties>
 
-  <dependencyManagement>
-     <dependencies>
-       <dependency>
-          <groupId>org.apache.tomee</groupId>
-          <artifactId>arquillian</artifactId>
-           <version>${project.version}</version>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
-
-
+ <dependencies>
+      <dependency>
+        <groupId>org.apache.tomee</groupId>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  </dependencies>
   <build>
     <resources>
       <resource>

@@ -31,28 +31,12 @@
     <tomee.build.name>${project.groupId}.server.activemq</tomee.build.name>
   </properties>
 
-  <dependencyManagement>
-  <dependencies>
+<dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>server</artifactId>
+        <artifactId>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>openejb-server</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-ra</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
 </project>
 

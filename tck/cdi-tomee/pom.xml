@@ -33,17 +33,13 @@
   <properties>
     <suite.name>passing</suite.name>
     <tomee.opts>-Xmx4g</tomee.opts>
-  </properties>
-        <dependencyManagement>
-  <dependencies>
+  </properties><dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
-
   <profiles>
     <profile>
       <id>tck-cdi</id>

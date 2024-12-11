@@ -74,14 +74,12 @@
       </plugin>
     </plugins>
   </build>
-     <dependencyManagement>
   <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>itests</artifactId>
+        <artifactid>tomee-project</artifactId>
         <version>${project.version}</version>
-    </dependency>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
 </project>
 

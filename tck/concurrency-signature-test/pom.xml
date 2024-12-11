@@ -30,15 +30,13 @@
         <jakarta.concurrent.version>3.0.4</jakarta.concurrent.version>
         <sigtest.version>2.3</sigtest.version>
     </properties>
-      <dependencyManagement>
-  <dependencies>
+    <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
-        <artifactId>tCK</artifactId>
-        <version>${project.verison}</version>
-    </dependency>
+        <artifactid>tomee-project</artifactId>
+        <version>${project.version}</version>
+      </dependency>
   </dependencies>
-  </dependencyManagement>
     <profiles>
         <profile>
             <id>tck-concurrency</id>
