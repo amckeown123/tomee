@@ -29,11 +29,11 @@
   <name>TomEE :: Container :: JUnit</name>
 
 <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
   </dependencies>
   <properties>
     <tomee.build.name>${project.groupId}.container.junit</tomee.build.name>
