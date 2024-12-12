@@ -30,8 +30,7 @@
   <properties>
     <tomee.build.name>${project.groupId}.server.common.cli</tomee.build.name>
   </properties>
- <dependencyManagement>
-  <dependencies>
+    <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>openejb-core</artifactId>
@@ -70,5 +69,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  </dependencyManagement>
 </project>

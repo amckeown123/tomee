@@ -118,11 +118,11 @@
       </plugin>
     </plugins>
   </build>
- <dependencyManagement>
-  <dependencies>
-      <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+    <dependencies>
+      <!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
     </dependency>
 
     <dependency>
@@ -133,11 +133,6 @@
       <groupId>org.apache.tomee.bom</groupId>
       <artifactId>jaxb-runtime</artifactId>
       <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.agical.rmock</groupId>
@@ -151,5 +146,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  </dependencyManagement>
-</project>
+ </project>

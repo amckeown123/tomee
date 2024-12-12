@@ -1018,31 +1018,37 @@
 <dependency>
     <groupId>org.apache.cxf</groupId>
     <artifactId>cxf-rt-ws-security</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-bindings-soap -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
     <artifactId>cxf-rt-bindings-soap</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-rs-service-description -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
     <artifactId>cxf-rt-rs-service-description</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-ws-policy -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
     <artifactId>cxf-rt-ws-policy</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-databinding-jaxb -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
     <artifactId>cxf-rt-databinding-jaxb</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-management -->
+<dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-rt-management</artifactId>
+    <version>4.0.6</version>
 </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
@@ -1475,6 +1481,19 @@
         <artifactId>jetty-server</artifactId>
         <version>12.0.15</version>
       </dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-servlet -->
+<dependency>
+    <groupId>org.eclipse.jetty.ee10</groupId>
+    <artifactId>jetty-ee10-servlet</artifactId>
+    <version>12.0.15</version>
+</dependency>
+
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+      <optional>true</optional>
+    </dependency>
+
       <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/apache-jsp -->
 <dependency>
     <groupId>org.eclipse.jetty</groupId>
