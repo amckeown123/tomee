@@ -62,12 +62,5 @@
       </plugin>
     </plugins>
   </build>
-   <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>itests</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
 </project>
 

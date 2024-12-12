@@ -33,12 +33,13 @@
   <properties>
     <tomee.build.name>${project.groupId}.tomee.webservices</tomee.build.name>
   </properties>
-<dependencies>
+  <dependencies>
       <dependency>
         <groupId>org.apache.tomee</groupId>
         <artifactId>tomee-project</artifactId>
         <version>${project.version}</version>
       </dependency>
   </dependencies>
+
 </project>
 

@@ -32,6 +32,20 @@
     <module>gradle-tomee-embedded</module>
   </modules>
 
+ <dependencies>
+    <dependency>
+      <groupId>org.gradle</groupId>
+      <artifactId>gradle-core</artifactId>
+      <version>3.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>${version.groovy}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <repositories>
     <repository>

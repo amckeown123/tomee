@@ -29,11 +29,18 @@
     </parent>
 
     <artifactId>opt-app</artifactId>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>itests</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-  </dependencies>
+     <dependencies>
+        <dependency>
+            <groupId>org.apache.tomee.itests</groupId>
+            <artifactId>opt-lib</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomee</groupId>
+            <artifactId>openejb-core</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 </project>

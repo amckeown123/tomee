@@ -90,13 +90,29 @@
     </plugins>
 
   </build>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-  </dependencies>
+         <dependencies>
+          <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jakartaee-api</artifactId>
+            <version>${version.jakartaee-api}</version>
+          </dependency>
+          <dependency>
+            <groupId>net.sourceforge.serp</groupId>
+            <artifactId>serp</artifactId>
+            <version>1.15.1</version>
+            <exclusions>
+              <exclusion>
+                <groupId>*</groupId>
+                <artifactId>*</artifactId>
+              </exclusion>
+            </exclusions>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+          </dependency>
+        </dependencies>
+
   <!--
     <build>
       <plugins>

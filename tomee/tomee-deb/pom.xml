@@ -30,15 +30,15 @@
     <distribution.workdir>${project.build.directory}/work-dir</distribution.workdir>
   </properties>
 
-<dependencyManagement>
   <dependencies>
-     <dependency>
+    <!-- Dependencies used by builder logic. -->
+    <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-core</artifactId>
       <version>3.2.1</version>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.groovy</groupId>
+      <groupId>org.apache.groovy</groupId>
       <artifactId>groovy-all</artifactId>
     </dependency>
     <dependency>
@@ -88,8 +88,6 @@
       <version>${project.version}</version>
     </dependency>
   </dependencies>
-</dependencyManagement>  
-
   <build>
     <plugins>
       <plugin>

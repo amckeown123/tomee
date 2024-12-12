@@ -29,11 +29,13 @@
     </parent>
 
     <artifactId>opt-lib</artifactId>
-<dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-  </dependencies>
+        <dependencies>
+        <dependency>
+            <groupId>org.apache.tomee.itests</groupId>
+            <artifactId>opt-3rdparty</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional> <!-- do not pass as transitive dependency! -->
+        </dependency>
+    </dependencies>
+
 </project>
