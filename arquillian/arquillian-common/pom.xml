@@ -43,22 +43,18 @@
     <dependency>
       <groupId>org.jboss.arquillian.test</groupId>
       <artifactId>arquillian-test-spi</artifactId>
-      <version>${version.arquillian}</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.config</groupId>
       <artifactId>arquillian-config-impl-base</artifactId>
-      <version>${version.arquillian}</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.container</groupId>
       <artifactId>arquillian-container-spi</artifactId>
-      <version>${version.arquillian}</version>
     </dependency>
     <dependency>
       <groupId>org.tomitribe</groupId>
       <artifactId>swizzle</artifactId>
     </dependency>
   </dependencies>
-
 </project>
