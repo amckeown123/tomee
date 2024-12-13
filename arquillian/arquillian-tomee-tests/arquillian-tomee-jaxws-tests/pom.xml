@@ -27,14 +27,22 @@
   <artifactId>arquillian-tomee-jaxws-tests</artifactId>
   <name>TomEE :: Arquillian Adaptors Parent :: Tests :: JAXWS</name>
 
- <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+   <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-webservices</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.13.0</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
-  <properties>
+
+   <properties>
     <profile-under-test>plus</profile-under-test>
   </properties>
 

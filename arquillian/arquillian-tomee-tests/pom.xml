@@ -32,15 +32,166 @@
     <module>arquillian-tomee-config-tests</module>
   </modules>
 
-  <dependencyManagement>
-     <dependencies>
-       <dependency>
-          <groupId>org.apache.tomee</groupId>
-          <artifactId>arquillian</artifactId>
-           <version>${project.version}</version>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
+   <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jakartaee-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.resolver</groupId>
+      <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+      <version>${version.shrinkwrap.resolver.bom}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpcore</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.16</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>ziplock</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.arquillian.junit</groupId>
+      <artifactId>arquillian-junit-container</artifactId>
+      <version>${version.arquillian}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-jdk14</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
+      <version>${version.shrinkwrap.descriptor}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.descriptors</groupId>
+      <artifactId>shrinkwrap-descriptors-api-javaee</artifactId>
+      <version>${version.shrinkwrap.descriptor}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-tomee-embedded</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-tomee-remote</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>arquillian-tomee-webapp-remote</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency> <!-- tomee-embedded needs it + dependencies but tomee-*-remote doesn't need dependencies so to avoid conflicts bringing it back here -->
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- ActiveMQ is optional in openejb-core -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-ra</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-jdbc-store</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.activemq</groupId>
+          <artifactId>activemq-broker</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- for tests with Hibernate -->
+
+    <dependency>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${version.hibernate.orm}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.common</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+      <version>6.0.4.Final</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>antlr</groupId>
+      <artifactId>antlr</artifactId>
+      <version>2.7.7</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss</groupId>
+      <artifactId>jandex</artifactId>
+      <version>2.4.5.Final</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy</artifactId>
+      <version>1.15.10</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- just to get it in the correct order -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>apache-tomee</artifactId>
+      <version>${project.version}</version>
+      <classifier>webprofile</classifier>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat</artifactId>
+      <version>${tomcat.version}</version>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
 
   <profiles>
 

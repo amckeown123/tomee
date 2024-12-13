@@ -29,13 +29,38 @@
   <properties>
     <suiteFile>${project.build.directory}/dependency/beanvalidation-tck-tests-suite.xml</suiteFile>
   </properties>
-  <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+    <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tck-common</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jboss.test-harness</groupId>
+          <artifactId>jboss-test-harness</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>beanvalidation-tck-tests</artifactId>
+      <version>${bval-tck.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
   <build>
     <resources>
       <resource>

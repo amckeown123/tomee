@@ -27,12 +27,19 @@
   <artifactId>arquillian-tomee-jaxrs-tests</artifactId>
   <name>TomEE :: Arquillian Adaptors Parent :: Tests :: JAXRS</name>
 
- <dependencies>
-      <dependency>
-        <groupId>org.apache.tomee</groupId>
-        <artifactId>tomee-project</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-jaxrs</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tomee-webapp</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
   </dependencies>
   <properties>
     <profile-under-test>webprofile</profile-under-test>
