@@ -63,11 +63,11 @@
           </execution>
         </executions>
         <dependencies>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jakartaee-api</artifactId>
-            <version>${version.jakartaee-api}</version>
-          </dependency>
+        <dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+              </dependency>
+
           <dependency>
             <groupId>net.sourceforge.serp</groupId>
             <artifactId>serp</artifactId>

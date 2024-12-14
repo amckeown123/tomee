@@ -45,8 +45,8 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.mail</groupId>

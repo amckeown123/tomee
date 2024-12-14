@@ -65,14 +65,12 @@
 
         <dependencies>
           <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jakartaee-api</artifactId>
-            <version>${version.jakartaee-api}</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
           </dependency>
           <dependency>
             <groupId>net.sourceforge.serp</groupId>
             <artifactId>serp</artifactId>
-            <version>1.15.1</version>
             <exclusions>
               <exclusion>
                 <groupId>*</groupId>
@@ -83,7 +81,6 @@
           <dependency>
             <groupId>org.apache.openjpa</groupId>
             <artifactId>openjpa</artifactId>
-            <version>${version.openjpa}</version>
           </dependency>
         </dependencies>
       </plugin>
@@ -92,14 +89,12 @@
   </build>
          <dependencies>
           <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jakartaee-api</artifactId>
-            <version>${version.jakartaee-api}</version>
+                      <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
           </dependency>
           <dependency>
             <groupId>net.sourceforge.serp</groupId>
             <artifactId>serp</artifactId>
-            <version>1.15.1</version>
             <exclusions>
               <exclusion>
                 <groupId>*</groupId>

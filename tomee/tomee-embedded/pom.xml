@@ -267,8 +267,8 @@
       <version>${project.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>jakartaee-api</artifactId>
-          <groupId>${project.groupId}</groupId>
+                  <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
         <exclusion>
           <artifactId>tomcat-annotations-api</artifactId>
@@ -286,20 +286,18 @@
       <artifactId>myfaces-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+              <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>compile</scope>
       <classifier>tomcat</classifier>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-websocket-api</artifactId>
-      <version>${tomcat.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-websocket-client-api</artifactId>
-      <version>${tomcat.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -316,8 +314,8 @@
           <groupId>commons-beautils</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>jakartaee-api</artifactId>
-          <groupId>${project.groupId}</groupId>
+                  <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -341,7 +339,6 @@
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>taglibs-shade</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <groupId>*</groupId>
@@ -429,27 +426,6 @@
       <version>${tomcat.version}</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!-- Required for running JUnit 4 via JUnit 5 environment -->
-    <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.eclipse.jdt</groupId>
       <artifactId>ecj</artifactId>
       <type>jar</type>
@@ -464,8 +440,8 @@
       <artifactId>openejb-client</artifactId>
       <exclusions>
         <exclusion>
-          <artifactId>jakartaee-api</artifactId>
-          <groupId>${project.groupId}</groupId>
+          <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -482,7 +458,6 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-websocket</artifactId>
-      <version>${tomcat.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>tomcat-juli</artifactId>

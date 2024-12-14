@@ -29,9 +29,9 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+  <dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -48,15 +48,9 @@
       <groupId>org.apache.tomee</groupId>
       <artifactId>taglibs-shade</artifactId>
     </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
+     <dependency>
       <groupId>org.jboss.arquillian.config</groupId>
       <artifactId>arquillian-config-api</artifactId>
-      <version>${version.arquillian}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -68,13 +62,11 @@
     <dependency>
       <groupId>org.jboss.arquillian.junit</groupId>
       <artifactId>arquillian-junit-container</artifactId>
-      <version>${version.arquillian}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-drone-selenium</artifactId>
-      <version>${version.drone}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -94,7 +86,6 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-server</artifactId>
-      <version>${version.selenium}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -114,13 +105,11 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-api</artifactId>
-      <version>${version.selenium}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-drone-impl</artifactId>
-      <version>${version.drone}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -144,19 +133,16 @@
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-drone-selenium-server</artifactId>
-      <version>${version.drone}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.arquillian.core</groupId>
       <artifactId>arquillian-core-impl-base</artifactId>
-      <version>${version.arquillian}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.shrinkwrap.descriptors</groupId>
       <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
-      <version>${version.shrinkwrap.descriptor}</version>
       <exclusions>
         <exclusion>
           <artifactId>shrinkwrap-descriptors-api-base</artifactId>
@@ -167,7 +153,6 @@
     <dependency>
       <groupId>org.jboss.shrinkwrap.descriptors</groupId>
       <artifactId>shrinkwrap-descriptors-api-base</artifactId>
-      <version>${version.shrinkwrap.descriptor}</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
@@ -183,7 +168,6 @@
     <dependency>
       <groupId>net.sourceforge.htmlunit</groupId>
       <artifactId>htmlunit</artifactId>
-      <version>2.70.0</version>
       <type>jar</type>
       <scope>test</scope>
     </dependency>
@@ -209,7 +193,6 @@
       </plugin>
       <plugin>
         <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.10</version>
         <configuration>
           <wtpapplicationxml>true</wtpapplicationxml>
           <wtpversion>2.0</wtpversion>
@@ -232,12 +215,10 @@
                 <artifactItem>
                   <groupId>jakarta.servlet.jsp.jstl</groupId>
                   <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-                  <version>3.0.2</version>
                 </artifactItem>
                 <artifactItem>
                   <groupId>log4j</groupId>
                   <artifactId>log4j</artifactId>
-                  <version>1.2.17</version>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.apache.myfaces.core</groupId>

@@ -47,8 +47,8 @@
   </reporting>
     <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+          <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <classifier>tomcat</classifier>
     </dependency>
     <dependency>

@@ -37,8 +37,8 @@
   </properties>
     <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+        <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
     </dependency>
     <dependency>
       <groupId>idb</groupId>
@@ -97,7 +97,6 @@
     <dependency>
       <groupId>cglib</groupId>
       <artifactId>cglib</artifactId>
-      <version>3.3.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

@@ -973,21 +973,140 @@
   </pluginRepositories>
   <dependencyManagement>
     <dependencies>
-<!-- https://mvnrepository.com/artifact/org.jline/jline -->
+<!-- Jakarta 
+
+This is where to put all dependiences for Jakarta items that have been reassigned from Apache
+or have there origins in this group.
+Jakarta is viewed as the based technology group for Advacndd Java development
+ -->
+
+    <dependency>
+        <groupId>jakarta.persistence</groupId>
+    <artifactId>jakarta.persistence-api</artifactId>
+    <version>3.2.0</version>
+    </dependency>
+    
+<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
 <dependency>
-    <groupId>org.jline</groupId>
-    <artifactId>jline</artifactId>
-    <version>3.27.1</version>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.1.0</version>
 </dependency>
 
- <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
-<dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat</artifactId>
-    <version>10.1.34</version>
-    <type>pom</type>
-    <scope>provided</scope>
+    <dependency>
+<groupId>jakarta.xml.bind</groupId>
+<artifactId>jakarta.xml.bind-api</artifactId>
+<version>4.0.2</version>
 </dependency>
+
+    <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
+<dependency>
+    <groupId>jakarta.validation</groupId>
+    <artifactId>jakarta.validation-api</artifactId>
+    <version>3.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api-test -->
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api-test</artifactId>
+    <version>3.0.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
+<dependency>
+    <groupId>jakarta.xml.ws</groupId>
+    <artifactId>jakarta.xml.ws-api</artifactId>
+    <version>4.0.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api -->
+<dependency>
+    <groupId>jakarta.xml.soap</groupId>
+    <artifactId>jakarta.xml.soap-api</artifactId>
+    <version>3.0.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.rpc/jakarta.xml.rpc-api -->
+<dependency>
+    <groupId>jakarta.xml.rpc</groupId>
+    <artifactId>jakarta.xml.rpc-api</artifactId>
+    <version>1.1.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/jakarta.xml.registry-api -->
+<dependency>
+    <groupId>jakarta.xml.registry</groupId>
+    <artifactId>jakarta.xml.registry-api</artifactId>
+    <version>1.0.10</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/xml-registries-spec -->
+<dependency>
+    <groupId>jakarta.xml.registry</groupId>
+    <artifactId>xml-registries-spec</artifactId>
+    <version>1.0.10</version>
+</dependency>
+
+    <!-- https://mvnrepository.com/artifact/jakarta.ejb/jakarta.ejb-api -->
+<dependency>
+    <groupId>jakarta.ejb</groupId>
+    <artifactId>jakarta.ejb-api</artifactId>
+    <version>4.0.1</version>
+</dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api -->
+<dependency>
+    <groupId>jakarta.enterprise</groupId>
+    <artifactId>jakarta.enterprise.cdi-api</artifactId>
+    <version>4.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api -->
+<dependency>
+    <groupId>jakarta.enterprise.concurrent</groupId>
+    <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+    <version>3.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-tck -->
+<dependency>
+    <groupId>jakarta.enterprise.concurrent</groupId>
+    <artifactId>jakarta.enterprise.concurrent-tck</artifactId>
+    <version>3.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/concurrency-spec -->
+<dependency>
+    <groupId>jakarta.enterprise.concurrent</groupId>
+    <artifactId>concurrency-spec</artifactId>
+    <version>3.1.1</version>
+    <type>pom</type>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent.parent -->
+<dependency>
+    <groupId>jakarta.enterprise.concurrent</groupId>
+    <artifactId>jakarta.enterprise.concurrent.parent</artifactId>
+    <version>3.1.1</version>
+    <type>pom</type>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-tck-dist -->
+<dependency>
+    <groupId>jakarta.enterprise.concurrent</groupId>
+    <artifactId>jakarta.enterprise.concurrent-tck-dist</artifactId>
+    <version>3.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
+<dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+    <version>10.0.0</version>
+</dependency>
+
+     
+ <!-- Mavewn
+ 
+ This is where to put all maven depeencdience as maven is a tool for java application development-->    
+<!-- https://mvnrepository.com/artifact/org.jline/jline -->
+
+
+<!-- Apache 
+
+This where to put all Apache dependencies as Apache is a collection of java utilies that provide one
+stop shopping for function and utilities that can be used in all projects-->
+
 
     <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
 <dependency>
@@ -997,6 +1116,7 @@
     <type>pom</type>
 </dependency>
 
+
     <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
 <dependency>
     <groupId>org.apache.ant</groupId>
@@ -1004,11 +1124,6 @@
     <version>1.10.15</version>
 </dependency>
 
-    <dependency>
-        <groupId>jakarta.persistence</groupId>
-    <artifactId>jakarta.persistence-api</artifactId>
-    <version>3.2.0</version>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-core -->
 <dependency>
     <groupId>org.apache.cxf</groupId>
@@ -1137,11 +1252,20 @@
     <version>2.13.0</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+
+<!-- Tomcat
+
+
+This is where to put all Tomcat Dependencies that are specially used for Web Communication Development-->
+
+
+ <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
 <dependency>
-    <groupId>jakarta.servlet</groupId>
-    <artifactId>jakarta.servlet-api</artifactId>
-    <version>6.1.0</version>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat</artifactId>
+    <version>10.1.34</version>
+    <type>pom</type>
+    <scope>provided</scope>
 </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-coyote -->
@@ -1155,6 +1279,22 @@
     <groupId>org.apache.catalina</groupId>
     <artifactId>catalina</artifactId>
     <version>6.0.26</version>
+</dependency>
+<!-- Tomee
+
+This is where to place all Tomee moduled references that are to be shared with other modules in tomee-->
+
+<!-- Java XMK
+
+This is where to place all the XMl dependences that are aither part of Apache or are intertwinded with Apacha and Jarakata-
+This does not include 3 party XML tools as those 3rd party tools are just encapsulations of how they think the base tools should be used-->
+
+<!--Third party
+ tools that have been selected for use in the project due to the features offered -->
+<dependency>
+    <groupId>org.jline</groupId>
+    <artifactId>jline</artifactId>
+    <version>3.27.1</version>
 </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.metatype.sxc/sxc-jaxb-core -->
@@ -1200,11 +1340,6 @@
     <artifactId>sxc-jaxb-maven-plugin</artifactId>
     <version>0.8</version>
 </dependency>
-    <dependency>
-<groupId>jakarta.xml.bind</groupId>
-<artifactId>jakarta.xml.bind-api</artifactId>
-<version>4.0.2</version>
-</dependency>
 
 <dependency>
 <groupId>org.glassfish.jersey.media</groupId>
@@ -1215,55 +1350,6 @@
 <groupId>com.sun.xml.bind</groupId>
 <artifactId>jaxb-osgi</artifactId>
 <version>3.0.1</version>
-</dependency>
-    <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
-<dependency>
-    <groupId>jakarta.validation</groupId>
-    <artifactId>jakarta.validation-api</artifactId>
-    <version>3.1.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api-test -->
-<dependency>
-    <groupId>jakarta.xml.bind</groupId>
-    <artifactId>jakarta.xml.bind-api-test</artifactId>
-    <version>3.0.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
-<dependency>
-    <groupId>jakarta.xml.ws</groupId>
-    <artifactId>jakarta.xml.ws-api</artifactId>
-    <version>4.0.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api -->
-<dependency>
-    <groupId>jakarta.xml.soap</groupId>
-    <artifactId>jakarta.xml.soap-api</artifactId>
-    <version>3.0.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.rpc/jakarta.xml.rpc-api -->
-<dependency>
-    <groupId>jakarta.xml.rpc</groupId>
-    <artifactId>jakarta.xml.rpc-api</artifactId>
-    <version>1.1.4</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/jakarta.xml.registry-api -->
-<dependency>
-    <groupId>jakarta.xml.registry</groupId>
-    <artifactId>jakarta.xml.registry-api</artifactId>
-    <version>1.0.10</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.xml.registry/xml-registries-spec -->
-<dependency>
-    <groupId>jakarta.xml.registry</groupId>
-    <artifactId>xml-registries-spec</artifactId>
-    <version>1.0.10</version>
-</dependency>
-
-    <!-- https://mvnrepository.com/artifact/jakarta.ejb/jakarta.ejb-api -->
-<dependency>
-    <groupId>jakarta.ejb</groupId>
-    <artifactId>jakarta.ejb-api</artifactId>
-    <version>4.0.1</version>
 </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
@@ -1397,51 +1483,6 @@
     <scope>test</scope>
 </dependency>
 
-
-    <!-- https://mvnrepository.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api -->
-<dependency>
-    <groupId>jakarta.enterprise</groupId>
-    <artifactId>jakarta.enterprise.cdi-api</artifactId>
-    <version>4.1.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api -->
-<dependency>
-    <groupId>jakarta.enterprise.concurrent</groupId>
-    <artifactId>jakarta.enterprise.concurrent-api</artifactId>
-    <version>3.1.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-tck -->
-<dependency>
-    <groupId>jakarta.enterprise.concurrent</groupId>
-    <artifactId>jakarta.enterprise.concurrent-tck</artifactId>
-    <version>3.1.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/concurrency-spec -->
-<dependency>
-    <groupId>jakarta.enterprise.concurrent</groupId>
-    <artifactId>concurrency-spec</artifactId>
-    <version>3.1.1</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent.parent -->
-<dependency>
-    <groupId>jakarta.enterprise.concurrent</groupId>
-    <artifactId>jakarta.enterprise.concurrent.parent</artifactId>
-    <version>3.1.1</version>
-    <type>pom</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-tck-dist -->
-<dependency>
-    <groupId>jakarta.enterprise.concurrent</groupId>
-    <artifactId>jakarta.enterprise.concurrent-tck-dist</artifactId>
-    <version>3.1.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/jakarta.platform/jakarta.jakartaee-api -->
-<dependency>
-    <groupId>jakarta.platform</groupId>
-    <artifactId>jakarta.jakartaee-api</artifactId>
-    <version>10.0.0</version>
-</dependency>
 
        <!-- Micro Profile API -->
       <dependency>
@@ -1592,19 +1633,7 @@
         <artifactId>idb</artifactId>
         <version>3.26</version>
       </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>${junit.jupiter.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.junit.vintage</groupId>
-        <artifactId>junit-vintage-engine</artifactId>
-        <version>${junit.jupiter.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
+        <dependency>
         <groupId>org.openjdk.nashorn</groupId>
         <artifactId>nashorn-core</artifactId>
         <version>${version.nashorn}</version>

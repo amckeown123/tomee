@@ -42,8 +42,8 @@
       <artifactId>myfaces-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
+             <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>

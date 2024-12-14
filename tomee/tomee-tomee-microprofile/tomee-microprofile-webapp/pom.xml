@@ -39,8 +39,8 @@
     <dependencies>
 
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+                <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <classifier>tomcat</classifier>
     </dependency>
     <dependency>
@@ -55,8 +55,9 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+        
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -66,8 +67,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -77,8 +78,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -88,8 +89,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>jakarta.xml.bind</groupId>
@@ -104,8 +105,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -116,8 +117,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -128,8 +129,11 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+ 
+ 
+ 
         </exclusion>
       </exclusions>
     </dependency>
@@ -139,8 +143,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -150,8 +154,8 @@
       <version>${project.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -160,8 +164,8 @@
       <artifactId>openejb-webservices</artifactId>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
       <scope>runtime</scope>
@@ -173,8 +177,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.apache.tomcat</groupId>
@@ -189,9 +193,10 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
+        
           <groupId>${project.groupId}</groupId>
           <artifactId>jakartaee-api</artifactId>
-        </exclusion>
+         </exclusion>
         <exclusion>
           <groupId>org.apache.tomcat</groupId>
           <artifactId>tomcat-catalina</artifactId>
@@ -205,8 +210,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -217,8 +222,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                       <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
         <exclusion><!-- 'provided' -->
           <groupId>org.apache.tomcat</groupId>
@@ -239,8 +244,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                               <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -251,8 +256,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                               <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -263,8 +268,8 @@
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>jakartaee-api</artifactId>
+                               <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency><!-- MicroProfile -->
@@ -280,7 +285,6 @@
     <dependency>
       <groupId>org.apache.myfaces.core</groupId>
       <artifactId>myfaces-api</artifactId>
-      <version>${version.myfaces}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.geronimo.specs</groupId>
@@ -291,7 +295,6 @@
     <dependency>
       <groupId>org.apache.myfaces.core</groupId>
       <artifactId>myfaces-impl</artifactId>
-      <version>${version.myfaces}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.myfaces.core</groupId>
@@ -306,7 +309,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-spi</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -317,7 +319,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-impl</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -328,7 +329,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-web</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -339,7 +339,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-el22</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -350,7 +349,6 @@
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-jsf</artifactId>
-      <version>${version.openwebbeans}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.openwebbeans</groupId>
@@ -361,25 +359,21 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-catalina</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-coyote</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-juli</artifactId>
-      <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>taglibs-shade</artifactId>
-      <version>${project.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.taglibs</groupId>
@@ -410,7 +404,6 @@
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
-      <version>5.5.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

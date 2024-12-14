@@ -43,7 +43,6 @@
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-mail_2.1_spec</artifactId>
-      <version>1.0.0-M1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -128,10 +127,9 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>10.0</version>
+     <dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -164,7 +162,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.config</groupId>
       <artifactId>microprofile-config-api</artifactId>
-      <version>3.0.3</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -175,7 +172,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.fault-tolerance</groupId>
       <artifactId>microprofile-fault-tolerance-api</artifactId>
-      <version>4.0.2</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -186,7 +182,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.health</groupId>
       <artifactId>microprofile-health-api</artifactId>
-      <version>4.0.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -197,7 +192,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.jwt</groupId>
       <artifactId>microprofile-jwt-auth-api</artifactId>
-      <version>2.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -208,7 +202,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.metrics</groupId>
       <artifactId>microprofile-metrics-api</artifactId>
-      <version>5.0.2</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -219,7 +212,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.openapi</groupId>
       <artifactId>microprofile-openapi-api</artifactId>
-      <version>3.1.2</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -230,7 +222,6 @@
     <dependency>
       <groupId>org.eclipse.microprofile.rest.client</groupId>
       <artifactId>microprofile-rest-client-api</artifactId>
-      <version>3.0.1</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -249,7 +240,5 @@
         </exclusion>
       </exclusions>
     </dependency>
-  </dependencies>
- 
+  </dependencies> 
  </project>
-

@@ -86,15 +86,8 @@
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>${version.commons-io}</version>
       <scope>test</scope>
     </dependency>
 
@@ -113,12 +106,10 @@
       <artifactId>shrinkwrap-descriptors-api-base</artifactId>
       <version>${version.shrinkwrap.descriptor}</version>
     </dependency>
-
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-    </dependency>
-
+<dependency>
+   <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+</dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>arquillian-tomee-common</artifactId>

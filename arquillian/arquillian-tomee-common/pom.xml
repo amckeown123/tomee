@@ -57,27 +57,14 @@
     </dependency>
 
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
-      <type>jar</type>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+          <type>jar</type>
     </dependency>
 
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>tomee-util</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>org.apache.xbean</groupId>
       <artifactId>xbean-finder-shaded</artifactId>
-      <version>${version.xbean}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

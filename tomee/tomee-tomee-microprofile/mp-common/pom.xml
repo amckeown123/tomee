@@ -97,8 +97,8 @@
     <!-- provided dependencies -->
 
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
+             <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
 

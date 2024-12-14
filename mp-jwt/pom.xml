@@ -41,9 +41,8 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
+           <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -93,19 +92,16 @@
     <dependency>
       <groupId>com.nimbusds</groupId>
       <artifactId>nimbus-jose-jwt</artifactId>
-      <version>9.47</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.ow2.asm</groupId>
       <artifactId>asm</artifactId>
-      <version>9.7</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.ow2.asm</groupId>
       <artifactId>asm-util</artifactId>
-      <version>9.7.1</version>
       <scope>test</scope>
     </dependency>
 

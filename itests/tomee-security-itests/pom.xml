@@ -77,27 +77,24 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>tomee-security</artifactId>
-      <version>10.0.0-M4-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.tomee</groupId>
       <artifactId>openejb-cxf-rs</artifactId>
-      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
      <dependency>
       <groupId>org.htmlunit</groupId>
       <artifactId>htmlunit</artifactId>
-      <version>4.4.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

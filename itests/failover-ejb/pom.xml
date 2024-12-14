@@ -36,9 +36,8 @@
   </properties>
      <dependencies>
     <dependency>
-      <groupId>org.apache.tomee</groupId>
-      <artifactId>jakartaee-api</artifactId>
-      <version>${version.jakartaee-api}</version>
+        <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
       <!-- does not inherit from exclusion and version of parent -->
       <exclusions>

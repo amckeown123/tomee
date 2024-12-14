@@ -33,15 +33,13 @@
   </modules>
 
    <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>jakartaee-api</artifactId>
-    </dependency>
-
+   <dependency>
+    <groupId>jakarta.platform</groupId>
+    <artifactId>jakarta.jakartaee-api</artifactId>
+</dependency>
     <dependency>
       <groupId>org.jboss.shrinkwrap.resolver</groupId>
       <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
-      <version>${version.shrinkwrap.resolver.bom}</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -61,19 +59,12 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>ziplock</artifactId>
-      <version>${project.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
 
     <dependency>
       <groupId>org.jboss.arquillian.junit</groupId>
       <artifactId>arquillian-junit-container</artifactId>
-      <version>${version.arquillian}</version>
       <scope>test</scope>
     </dependency>
 
@@ -85,24 +76,20 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.2.2</version>
     </dependency>
 
     <dependency>
       <groupId>org.jboss.shrinkwrap.descriptors</groupId>
       <artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
-      <version>${version.shrinkwrap.descriptor}</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.shrinkwrap.descriptors</groupId>
       <artifactId>shrinkwrap-descriptors-api-javaee</artifactId>
-      <version>${version.shrinkwrap.descriptor}</version>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>arquillian-tomee-embedded</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -145,25 +132,21 @@
     <dependency>
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>${version.hibernate.orm}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.hibernate.common</groupId>
       <artifactId>hibernate-commons-annotations</artifactId>
-      <version>6.0.4.Final</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>antlr</groupId>
       <artifactId>antlr</artifactId>
-      <version>2.7.7</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss</groupId>
       <artifactId>jandex</artifactId>
-      <version>2.4.5.Final</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -174,7 +157,6 @@
     <dependency>
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
-      <version>1.15.10</version>
       <scope>provided</scope>
     </dependency>
     <!-- just to get it in the correct order -->
@@ -188,7 +170,6 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat</artifactId>
-      <version>${tomcat.version}</version>
       <type>zip</type>
     </dependency>
   </dependencies>
